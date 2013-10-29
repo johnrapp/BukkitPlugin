@@ -1,0 +1,11 @@
+package se.jrp.testplugin;
+
+import java.util.List;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class LoginListener implements Listener{
+	public LoginListener(JavaPlugin owner) {
+		owner.getServer().getPluginManager().registerEvents(this, owner);
+	}
+}

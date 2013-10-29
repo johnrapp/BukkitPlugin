@@ -1,0 +1,15 @@
+package se.jrp.testplugin;
+
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class LogBlockBreakListener implements Listener {
+	public LogBlockBreakListener(JavaPlugin plugin) {
+		plugin.getServer().getPluginManager().registerEvents(this, plugin);
+	}
+	
+	@EventHandler
+    public void onBlockBreak(BlockBreakEvent event) {
+    	event.setCancelled(true);
+    }
+}

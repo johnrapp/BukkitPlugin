@@ -1,0 +1,57 @@
+package se.jrp.testplugin;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+public class TestPluginCommandExecutor implements CommandExecutor {
+	 
+		private TestPlugin plugin; // pointer to your main class, unrequired if you don't need methods from the main class
+	 
+		public TestPluginCommandExecutor(TestPlugin plugin) {
+			this.plugin = plugin;
+			plugin.getCommand("test").setExecutor(this);
+		}
+	 
+		@Override
+		public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+			if(cmd.getName().equalsIgnoreCase("test")) {
+				if (sender instanceof Player) {
+					Player target = (Bukkit.getServer().getPlayer(args[0]));
+			        if (target == null) {
+			           sender.sendMessage(args[0] + " is not online!");
+			        }
+			        
+			        if (args.length > 4) {
+			           sender.sendMessage("Too many arguments!");
+			           return false;
+			        } 
+			        if (args.length < 2) {
+			           sender.sendMessage("Not enough arguments!");
+			           return false;
+			        }
+					
+		        } else {
+		           sender.sendMessage("You must be a player!");
+		        }
+				return true;
+			}
+			
+	    	return false; 
+		}
+		public void onPlayerMove(PlayerMoveEvent event) {
+		    // Get the player's location.
+		    Location loc = event.getPlayer().getLocation();
+		    // Sets loc to five above where it used to be. Note that this doesn't change the player's position.
+		    loc.setY(loc.getY() + 5);
+		    World w = loc.getWorld();
+		    // Gets the block at the new location.
+		    Block b = w.getBlockAt(loc);
+		    // Sets the block to type id 1 (stone).
+		    b.setTypeId(1);
+		}
+		
+
+	}

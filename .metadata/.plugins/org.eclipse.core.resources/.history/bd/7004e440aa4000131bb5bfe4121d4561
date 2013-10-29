@@ -1,0 +1,23 @@
+package se.jrp.testplugin;
+
+import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class LogBlockBreakListener implements Listener {
+	public LogBlockBreakListener(JavaPlugin plugin) {
+		plugin.getServer().getPluginManager().registerEvents(this, plugin);
+	}
+	
+	@EventHandler
+    public void onBlockBreak(BlockBreakEvent event) {
+		Block block = event.getBlock();
+		if(block.getType() == Material.LOG && event.getPlayer().getItemInHand() == new ItemStack(Material.DIAMOND_AXE)) {
+			event.getPlayer().sendMessage("success");
+		}
+    }
+}

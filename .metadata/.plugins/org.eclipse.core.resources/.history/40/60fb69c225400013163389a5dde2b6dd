@@ -1,0 +1,6 @@
+package se.jrp.testplugin;
+
+public class LoginListener {
+	public LoginListener() {
+	}
+}

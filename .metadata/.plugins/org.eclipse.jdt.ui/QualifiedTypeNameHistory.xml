@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="se.jrp.testplugin.LoginListener"/>
+<fullyQualifiedTypeName name="org.bukkit.inventory.PlayerInventory"/>
+<fullyQualifiedTypeName name="org.bukkit.inventory.ItemStack"/>
+<fullyQualifiedTypeName name="org.bukkit.Material"/>
+</qualifiedTypeNameHistroy>
