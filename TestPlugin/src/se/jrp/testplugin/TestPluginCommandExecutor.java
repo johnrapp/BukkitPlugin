@@ -19,23 +19,21 @@ public class TestPluginCommandExecutor implements CommandExecutor {
 	 
 		@Override
 		public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-			if(cmd.getName().equalsIgnoreCase("test")) {
-				if (args.length > 0) {
-					for(String arg : args) {
-						Player target = Bukkit.getServer().getPlayer(arg);
-				        if (target != null) {
-							PlayerInventory inventory = target.getInventory();
-							if(inventory.contains(Material.TNT))
-								target.setHealth(Math.max(target.getHealth() - 6, 0));
-							else
-								sender.sendMessage(arg + " has no tnt");
-				        } else {
-				        	sender.sendMessage(arg + " is not online!");
-				        }
-					}
-					return true;
-		        }
-			}
+			if (args.length > 0) {
+				for(String arg : args) {
+					Player target = Bukkit.getServer().getPlayer(arg);
+			        if (target != null) {
+						PlayerInventory inventory = target.getInventory();
+						if(inventory.contains(Material.TNT))
+							target.setHealth(Math.max(target.getHealth() - 6, 0));
+						else
+							sender.sendMessage(arg + " has no tnt");
+			        } else {
+			        	sender.sendMessage(arg + " is not online!");
+			        }
+				}
+				return true;
+	        }
 	    	return false; 
 		}		
 

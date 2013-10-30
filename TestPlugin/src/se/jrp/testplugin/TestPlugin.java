@@ -13,18 +13,20 @@ import org.bukkit.plugin.java.JavaPlugin;
  
 public final class TestPlugin extends JavaPlugin implements Listener {
 	LogBlockBreakListener listener;
+	SaplingWalk saplingWalk;
 	TestPluginCommandExecutor commandExecutor;
+	Bank bank;
 	@Override
     public void onEnable(){
-		getLogger().info("onEnable has been invoked!");
-		
     	listener = new LogBlockBreakListener(this);
     	commandExecutor = new TestPluginCommandExecutor(this);
+		saplingWalk = new SaplingWalk(this);
+		bank = new Bank(this);
     }
  
     @Override
     public void onDisable() {
-    	getLogger().info("onDisable has been invoked!");
+    	saplingWalk.onDisable(this);
     }
     
     @EventHandler
