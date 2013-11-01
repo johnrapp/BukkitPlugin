@@ -3,33 +3,90 @@ package se.jrp.testplugin;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class Bank implements CommandExecutor {
+public class Bank implements CommandExecutor, FileListener {
 	private String command = "bank";
-	private HashMap<String, ArrayList<ItemStack>> bankMap;
-	public Bank(JavaPlugin plugin) {
-		plugin.getCommand(command).setExecutor(this);
+	private HashMap<String, ArrayList<ItemStack>> bankInventory = new HashMap<String, ArrayList<ItemStack>>();
+	private final static int MAX_SLOTS = 54;
+	
+	public Bank() {
+		TestPlugin.instance.addCommandExecutor(this, command);
 	}
+	
+	@Override
+	public void onLoad(HashMap<? extends Object, ? extends Object> serializedMap) {
+		for(Entry entry : serializedMap.entrySet()) {
+			bankInventory.put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
+		}
+		TestPlugin.debug(bankInventory.toString());
+	}
+	@Override
+	public HashMap onSave() {
+		HashMap<String, ArrayList<HashMap<Material, Integer>>> serializedMap = new HashMap<String, ArrayList<HashMap<Material, Integer>>>();
+		for(Entry<String, ArrayList<ItemStack>> entry : bankInventory.entrySet()) {
+			serializedMap.put(entry.getKey(), serialize(entry.getValue()));
+		}
+		return serializedMap;
+	}
+	
+	public ArrayList<HashMap<Material, Integer>> serialize(ArrayList<ItemStack> items) {
+		ArrayList<HashMap<Material, Integer>> result = new ArrayList<HashMap<Material, Integer>>();
+		for(ItemStack item : items) {
+			HashMap<Material, Integer> map = new HashMap<Material, Integer>();
+			map.put(item.getType(), item.getAmount());
+			result.add(map);
+		}
+		return result;
+	}
+	
+	public ArrayList<ItemStack> deSerialize(ArrayList<HashMap<Material, Integer>> items) {
+		ArrayList<ItemStack> result = new ArrayList<ItemStack>();
+		for(HashMap<Material, Integer> map : items) {
+			for(Entry<Material, Integer> entry : map.entrySet()) {
+				result.add(new ItemStack(entry.getKey(), entry.getValue()));
+			}
+		}
+		
+		return result;
+	}
+	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(args.length < 1) {
-			if(!(sender instanceof Player))
-				sender.sendMessage("Only players can use the Bank.");
 			return false;
+		} else if(!(sender instanceof Player)) {
+			sender.sendMessage("Only players can use the Bank.");
+			return true;
 		}
 		
 		Player player = (Player) sender;
-		String[] params = Arrays.copyOfRange(args, 1, args.length - 1);
+		String[] params = {};
+		if(args.length > 1)
+			params = Arrays.copyOfRange(args, 1, args.length - 1);
 		if(args[0].equalsIgnoreCase("get")) {
 			get(player, params);
-		}
+			return true;
+		} else if(args[0].equalsIgnoreCase("store")) {
+			store(player, params);
+			return true;
+		} else if(args[0].equalsIgnoreCase("list")) {
+			list(player);
+			return true;
+		} else if(args[0].equalsIgnoreCase("send")) {
+			send(player, params);
+			return true;
+		 }
+		
 		return false;
 	}
 	
@@ -38,11 +95,60 @@ public class Bank implements CommandExecutor {
 	}
 	
 	public void store(Player player, String[] args) {
-		
+		if(!(bankInventory.containsKey(player.getName())))
+			bankInventory.put(player.getName(), new ArrayList<ItemStack>());
+		ArrayList<ItemStack> inventory = bankInventory.get(player.getName());
+		if(args.length < 1) {
+			addItem(inventory, player.getItemInHand(), player);
+			if(player.getItemInHand().getAmount() <= 0)
+				player.getInventory().removeItem(player.getItemInHand());
+		} else {
+			//TODO
+		}
 	}
+	
+	public boolean enoughSpace(ArrayList<ItemStack> inventory, ItemStack item) {
+		Material mat = item.getType();
+		ArrayList<ItemStack> all = all(inventory, mat);
+		int busy = 0;
+		for(ItemStack itm : all) {
+			busy += itm.getAmount();
+		} 
+		return ((all.size() * mat.getMaxStackSize() - busy) >= item.getAmount()) || inventory.size() < MAX_SLOTS;
+	}
+	
+	public ArrayList<ItemStack> all(ArrayList<ItemStack> inventory, Material mat) {
+		ArrayList<ItemStack> result = new ArrayList<ItemStack>();
+		for(ItemStack item : inventory) {
+			if(item.getType() == mat)
+				result.add(item);
+		}
+		return result;
+	}
+	
+	public void addItem(ArrayList<ItemStack> inventory, ItemStack item, Player player) {
+		Material mat = item.getType();
+		ArrayList<ItemStack> all = all(inventory, mat);
+		for(ItemStack is : all) {
+			if((mat.getMaxStackSize() - is.getAmount()) >= item.getAmount()) {
+				is.setAmount(is.getAmount() + item.getAmount());
+				item.setAmount(0);
+				break;
+			} else {
+				is.setAmount(mat.getMaxStackSize());
+				item.setAmount(item.getAmount() - (mat.getMaxStackSize() - is.getAmount()));
+			}
+		}
+		if(item.getAmount() > 0 && inventory.size() < MAX_SLOTS) {
+			inventory.add(new ItemStack(mat, item.getAmount()));
+			item.setAmount(0);
+		}
+	}
+	
 	public void list(Player player) {
 		
 	}
+	
 	public void send(Player playerFrom, String[] args) {
 		
 	}

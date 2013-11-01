@@ -7,15 +7,13 @@ commands:
       usage: /test [player] ...
       permission:
       permission-message: You don't have TestPlugin.test
-   
    saplingwalk:
       description: Enables or disables saplingwalk.
       usage: /saplingwalk [enable/disable]
       permission:
       permission-message:
-   
-    bank:
-      description: Get, store, send or wiew items in bank.
+   bank:
+      description: Get, store, send or view items in bank.
       usage: /bank [get, store, send, list]
       permission:
       permission-message:
