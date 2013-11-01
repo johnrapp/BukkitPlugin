@@ -5,6 +5,8 @@ import java.util.HashMap;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import se.jrp.testplugin.Resources.Strings;
  
 public final class TestPlugin extends JavaPlugin {
 	public static TestPlugin instance;
@@ -16,8 +18,8 @@ public final class TestPlugin extends JavaPlugin {
     public void onEnable(){
 		instance = this;
 		HashMap<String, FileListener> map = new HashMap<String, FileListener>();
-		map.put(FileManager.BANK, new Bank());
-		map.put(FileManager.SAPLING_WALK, new SaplingWalk());
+		map.put(Strings.FILE_BANK, new Bank());
+		map.put(Strings.FILE_SAPLING_WALK, new SaplingWalk());
 		FileManager.onEnable(map);
     	listener = new LogBlockBreakListener();
     	commandExecutor = new TestPluginCommandExecutor();

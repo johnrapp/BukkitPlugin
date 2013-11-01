@@ -1,0 +1,273 @@
+2013-11-01 21:55:16 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 21:55:16 [INFO] Loading properties
+2013-11-01 21:55:16 [WARNING] server.properties does not exist
+2013-11-01 21:55:16 [INFO] Generating new properties file
+2013-11-01 21:55:16 [INFO] Default game type: SURVIVAL
+2013-11-01 21:55:16 [INFO] Generating keypair
+2013-11-01 21:55:17 [INFO] Starting Minecraft server on *:25565
+2013-11-01 21:55:17 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R1.0 (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 21:55:17 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (The system cannot find the file specified)
+2013-11-01 21:55:17 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (The system cannot find the file specified)
+2013-11-01 21:55:17 [INFO] Preparing level "world"
+2013-11-01 21:55:17 [INFO] Preparing start region for level 0 (Seed: -4034901309958146664)
+2013-11-01 21:55:18 [WARNING] ----- Bukkit Auto Updater -----
+2013-11-01 21:55:18 [WARNING] Your version of CraftBukkit is out of date. Version 1.6.4-R2.0 (build #2918) was released on Wed Oct 30 23:39:40 CET 2013.
+2013-11-01 21:55:18 [WARNING] Details: /downloads/craftbukkit/view/02389_1.6.4-R2.0/
+2013-11-01 21:55:18 [WARNING] Download: /downloads/craftbukkit/get/02389_1.6.4-R2.0/craftbukkit.jar
+2013-11-01 21:55:18 [WARNING] ----- ------------------- -----
+2013-11-01 21:55:18 [INFO] Preparing spawn area: 8%
+2013-11-01 21:55:20 [INFO] Preparing spawn area: 20%
+2013-11-01 21:55:21 [INFO] Preparing spawn area: 34%
+2013-11-01 21:55:22 [INFO] Preparing spawn area: 46%
+2013-11-01 21:55:23 [INFO] Preparing spawn area: 57%
+2013-11-01 21:55:24 [INFO] Preparing spawn area: 68%
+2013-11-01 21:55:25 [INFO] Preparing spawn area: 80%
+2013-11-01 21:55:26 [INFO] Preparing spawn area: 89%
+2013-11-01 21:55:27 [INFO] Preparing start region for level 1 (Seed: -4034901309958146664)
+2013-11-01 21:55:28 [INFO] Preparing spawn area: 13%
+2013-11-01 21:55:29 [INFO] Preparing spawn area: 34%
+2013-11-01 21:55:30 [INFO] Preparing spawn area: 48%
+2013-11-01 21:55:31 [INFO] Preparing spawn area: 61%
+2013-11-01 21:55:32 [INFO] Preparing spawn area: 79%
+2013-11-01 21:55:33 [INFO] Preparing spawn area: 96%
+2013-11-01 21:55:33 [INFO] Preparing start region for level 2 (Seed: -4034901309958146664)
+2013-11-01 21:55:34 [INFO] Preparing spawn area: 46%
+2013-11-01 21:55:35 [INFO] Preparing spawn area: 95%
+2013-11-01 21:55:35 [INFO] Done (18,107s)! For help, type "help" or "?"
+2013-11-01 21:55:48 [INFO] /127.0.0.1:61597 lost connection
+2013-11-01 21:55:51 [INFO] johnrapp[/127.0.0.1:61598] logged in with entity id 5322 at ([world] 109.5, 72.0, 261.5)
+2013-11-01 21:56:07 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 21:56:07 [INFO] Loading properties
+2013-11-01 21:56:07 [INFO] Default game type: SURVIVAL
+2013-11-01 21:56:07 [INFO] Generating keypair
+2013-11-01 21:56:07 [INFO] Starting Minecraft server on *:25565
+2013-11-01 21:56:07 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R1.0 (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 21:56:07 [INFO] Preparing level "world"
+2013-11-01 21:56:08 [WARNING] ----- Bukkit Auto Updater -----
+2013-11-01 21:56:08 [WARNING] Your version of CraftBukkit is out of date. Version 1.6.4-R2.0 (build #2918) was released on Wed Oct 30 23:39:40 CET 2013.
+2013-11-01 21:56:08 [WARNING] Details: /downloads/craftbukkit/view/02389_1.6.4-R2.0/
+2013-11-01 21:56:08 [WARNING] Download: /downloads/craftbukkit/get/02389_1.6.4-R2.0/craftbukkit.jar
+2013-11-01 21:56:08 [WARNING] ----- ------------------- -----
+2013-11-01 21:56:08 [INFO] Preparing start region for level 0 (Seed: -8164300048504544723)
+2013-11-01 21:56:09 [INFO] Preparing spawn area: 8%
+2013-11-01 21:56:10 [INFO] Preparing spawn area: 19%
+2013-11-01 21:56:11 [INFO] Preparing spawn area: 34%
+2013-11-01 21:56:12 [INFO] Preparing spawn area: 47%
+2013-11-01 21:56:13 [INFO] Preparing spawn area: 61%
+2013-11-01 21:56:14 [INFO] Preparing spawn area: 78%
+2013-11-01 21:56:15 [INFO] Preparing spawn area: 96%
+2013-11-01 21:56:15 [INFO] Preparing start region for level 1 (Seed: -8164300048504544723)
+2013-11-01 21:56:16 [INFO] Preparing start region for level 2 (Seed: -8164300048504544723)
+2013-11-01 21:56:16 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 21:56:16 [INFO] Done (8,532s)! For help, type "help" or "?"
+2013-11-01 21:56:21 [INFO] johnrapp[/127.0.0.1:61627] logged in with entity id 5594 at ([world] -180.5, 74.0, 272.5)
+2013-11-01 21:56:29 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-01 21:56:44 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-01 21:57:25 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 21:57:25 [INFO] Loading properties
+2013-11-01 21:57:25 [INFO] Default game type: SURVIVAL
+2013-11-01 21:57:25 [INFO] Generating keypair
+2013-11-01 21:57:25 [INFO] Starting Minecraft server on *:25565
+2013-11-01 21:57:26 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 21:57:26 [INFO] Preparing level "world"
+2013-11-01 21:57:26 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 21:57:27 [INFO] Preparing spawn area: 8%
+2013-11-01 21:57:28 [INFO] Preparing spawn area: 23%
+2013-11-01 21:57:29 [INFO] Preparing spawn area: 40%
+2013-11-01 21:57:30 [INFO] Preparing spawn area: 58%
+2013-11-01 21:57:31 [INFO] Preparing spawn area: 77%
+2013-11-01 21:57:32 [INFO] Preparing spawn area: 94%
+2013-11-01 21:57:32 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 21:57:33 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 21:57:33 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 21:57:33 [INFO] Done (7,660s)! For help, type "help" or "?"
+2013-11-01 21:57:47 [INFO] johnrapp[/127.0.0.1:61682] logged in with entity id 2436 at ([world] 233.5, 71.0, 190.5)
+2013-11-01 21:57:51 [INFO] johnrapp issued server command: /bank store
+2013-11-01 21:57:54 [INFO] johnrapp issued server command: /bank
+2013-11-01 21:59:29 [INFO] johnrapp issued server command: /stop
+2013-11-01 21:59:29 [INFO] johnrapp: Stopping the server..
+2013-11-01 21:59:29 [INFO] Stopping server
+2013-11-01 21:59:29 [INFO] Saving players
+2013-11-01 21:59:29 [WARNING] DSCT: socket closed
+2013-11-01 21:59:29 [INFO] Closing listening thread
+2013-11-01 21:59:29 [INFO] §ejohnrapp left the game.
+2013-11-01 21:59:29 [INFO] Saving worlds
+2013-11-01 21:59:29 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-01 21:59:30 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-01 21:59:30 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-01 22:00:00 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 22:00:00 [INFO] Loading properties
+2013-11-01 22:00:00 [INFO] Default game type: SURVIVAL
+2013-11-01 22:00:00 [INFO] Generating keypair
+2013-11-01 22:00:01 [INFO] Starting Minecraft server on *:25565
+2013-11-01 22:00:01 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 22:00:01 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:00:01 [INFO] Preparing level "world"
+2013-11-01 22:00:02 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 22:00:03 [INFO] Preparing spawn area: 90%
+2013-11-01 22:00:03 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 22:00:03 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 22:00:03 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:00:03 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:00:04 [INFO] Done (2,212s)! For help, type "help" or "?"
+2013-11-01 22:00:10 [INFO] /127.0.0.1:61830 lost connection
+2013-11-01 22:00:14 [INFO] johnrapp[/127.0.0.1:61834] logged in with entity id 366 at ([world] 232.0870549824869, 70.0, 191.50124245564137)
+2013-11-01 22:00:17 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:01:22 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 22:01:22 [INFO] Loading properties
+2013-11-01 22:01:22 [INFO] Default game type: SURVIVAL
+2013-11-01 22:01:22 [INFO] Generating keypair
+2013-11-01 22:01:23 [INFO] Starting Minecraft server on *:25565
+2013-11-01 22:01:23 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 22:01:23 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:01:23 [INFO] Preparing level "world"
+2013-11-01 22:01:24 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 22:01:25 [INFO] Preparing spawn area: 91%
+2013-11-01 22:01:25 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 22:01:25 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 22:01:26 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:01:26 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:01:26 [INFO] Done (2,186s)! For help, type "help" or "?"
+2013-11-01 22:01:26 [INFO] /127.0.0.1:61881 lost connection
+2013-11-01 22:01:29 [INFO] johnrapp[/127.0.0.1:61883] logged in with entity id 366 at ([world] 232.0870549824869, 70.0, 191.50124245564137)
+2013-11-01 22:01:37 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-01 22:01:37 [INFO] johnrapp: Set own game mode to CREATIVE mode
+2013-11-01 22:01:49 [INFO] johnrapp issued server command: /bank clear
+2013-11-01 22:01:52 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:01:57 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:08:55 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 22:08:55 [INFO] Loading properties
+2013-11-01 22:08:55 [INFO] Default game type: SURVIVAL
+2013-11-01 22:08:55 [INFO] Generating keypair
+2013-11-01 22:08:55 [INFO] Starting Minecraft server on *:25565
+2013-11-01 22:08:56 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 22:08:56 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:08:56 [INFO] Preparing level "world"
+2013-11-01 22:08:56 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 22:08:57 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 22:08:58 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 22:08:58 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:08:58 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:08:58 [INFO] Done (2,170s)! For help, type "help" or "?"
+2013-11-01 22:09:00 [INFO] /127.0.0.1:62131 lost connection
+2013-11-01 22:09:03 [INFO] johnrapp[/127.0.0.1:62133] logged in with entity id 286 at ([world] 232.0870549824869, 70.0, 191.50124245564137)
+2013-11-01 22:09:07 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-01 22:09:07 [INFO] johnrapp: Set own game mode to CREATIVE mode
+2013-11-01 22:09:12 [INFO] johnrapp issued server command: /bank clear
+2013-11-01 22:09:14 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:09:38 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:10:27 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 22:10:27 [INFO] Loading properties
+2013-11-01 22:10:27 [INFO] Default game type: SURVIVAL
+2013-11-01 22:10:27 [INFO] Generating keypair
+2013-11-01 22:10:28 [INFO] Starting Minecraft server on *:25565
+2013-11-01 22:10:28 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 22:10:28 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:10:28 [INFO] Preparing level "world"
+2013-11-01 22:10:28 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 22:10:29 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 22:10:30 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 22:10:30 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:10:30 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:10:30 [INFO] Done (2,087s)! For help, type "help" or "?"
+2013-11-01 22:10:34 [INFO] /127.0.0.1:62193 lost connection
+2013-11-01 22:10:36 [INFO] johnrapp[/127.0.0.1:62195] logged in with entity id 182 at ([world] 232.0870549824869, 70.0, 191.50124245564137)
+2013-11-01 22:10:38 [INFO] johnrapp issued server command: /reload
+2013-11-01 22:10:38 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-01 22:10:39 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:10:39 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:10:39 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:10:39 [INFO] johnrapp: Reload complete.
+2013-11-01 22:10:55 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-01 22:10:55 [INFO] johnrapp: Set own game mode to CREATIVE mode
+2013-11-01 22:11:03 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:13:04 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 22:13:04 [INFO] Loading properties
+2013-11-01 22:13:04 [INFO] Default game type: SURVIVAL
+2013-11-01 22:13:04 [INFO] Generating keypair
+2013-11-01 22:13:05 [INFO] Starting Minecraft server on *:25565
+2013-11-01 22:13:05 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 22:13:05 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:13:05 [INFO] Preparing level "world"
+2013-11-01 22:13:05 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 22:13:06 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 22:13:07 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 22:13:07 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:13:07 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:13:07 [INFO] Done (2,161s)! For help, type "help" or "?"
+2013-11-01 22:13:12 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 22:13:12 [INFO] Loading properties
+2013-11-01 22:13:12 [INFO] Default game type: SURVIVAL
+2013-11-01 22:13:12 [INFO] Generating keypair
+2013-11-01 22:13:13 [INFO] Starting Minecraft server on *:25565
+2013-11-01 22:13:13 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 22:13:13 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:13:13 [INFO] Preparing level "world"
+2013-11-01 22:13:14 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 22:13:14 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 22:13:15 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 22:13:15 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:13:15 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:13:15 [INFO] Done (2,035s)! For help, type "help" or "?"
+2013-11-01 22:13:20 [INFO] johnrapp[/127.0.0.1:62286] logged in with entity id 182 at ([world] 232.0870549824869, 70.0, 191.50124245564137)
+2013-11-01 22:13:26 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-01 22:13:26 [INFO] johnrapp: Set own game mode to CREATIVE mode
+2013-11-01 22:13:38 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:13:41 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:14:07 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:14:09 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:14:13 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:14:15 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:14:47 [INFO] johnrapp issued server command: /reload
+2013-11-01 22:14:47 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-01 22:14:47 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:14:47 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:14:47 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:14:47 [INFO] johnrapp: Reload complete.
+2013-11-01 22:14:48 [INFO] johnrapp issued server command: /stop
+2013-11-01 22:14:48 [INFO] johnrapp: Stopping the server..
+2013-11-01 22:14:48 [INFO] Stopping server
+2013-11-01 22:14:48 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-01 22:14:48 [WARNING] DSCT: socket closed
+2013-11-01 22:14:48 [INFO] Closing listening thread
+2013-11-01 22:14:48 [INFO] Saving players
+2013-11-01 22:14:48 [INFO] §ejohnrapp left the game.
+2013-11-01 22:14:48 [INFO] Saving worlds
+2013-11-01 22:14:48 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-01 22:14:49 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-01 22:14:49 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-01 22:19:29 [INFO] Starting minecraft server version 1.6.4
+2013-11-01 22:19:29 [INFO] Loading properties
+2013-11-01 22:19:29 [INFO] Default game type: SURVIVAL
+2013-11-01 22:19:29 [INFO] Generating keypair
+2013-11-01 22:19:30 [INFO] Starting Minecraft server on *:25565
+2013-11-01 22:19:30 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R1.1-SNAPSHOT)
+2013-11-01 22:19:30 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-01 22:19:30 [INFO] Preparing level "world"
+2013-11-01 22:19:30 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-01 22:19:31 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-01 22:19:32 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-01 22:19:32 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-01 22:19:32 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-01 22:19:32 [INFO] Done (2,087s)! For help, type "help" or "?"
+2013-11-01 22:19:37 [INFO] johnrapp[/127.0.0.1:62487] logged in with entity id 272 at ([world] 257.69999998807907, 85.0, 180.48974760415655)
+2013-11-01 22:20:57 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:21:01 [INFO] johnrapp issued server command: /bank clear
+2013-11-01 22:21:05 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:07 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:11 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:12 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:32 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:37 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:41 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:43 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:21:46 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:22:00 [INFO] johnrapp issued server command: /bank store wool 64
+2013-11-01 22:22:07 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:22:32 [INFO] johnrapp issued server command: /bank store wool 64
+2013-11-01 22:22:33 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:22:55 [INFO] johnrapp issued server command: /bank store
+2013-11-01 22:22:58 [INFO] johnrapp issued server command: /bank list
+2013-11-01 22:23:05 [INFO] johnrapp lost connection: disconnect.quitting
+2013-11-01 22:23:05 [INFO] Connection reset
+2013-11-01 22:23:05 [INFO] §ejohnrapp left the game.

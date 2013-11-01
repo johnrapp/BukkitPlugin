@@ -6,21 +6,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import net.minecraft.server.v1_6_R3.PlayerInventory;
+
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.DoubleChestInventory;
 import org.bukkit.inventory.ItemStack;
 
+import se.jrp.testplugin.Resources.Integers;
+import se.jrp.testplugin.Resources.Strings;
+
 public class Bank implements CommandExecutor, FileListener {
-	private String command = "bank";
 	private HashMap<String, ArrayList<ItemStack>> bankInventory = new HashMap<String, ArrayList<ItemStack>>();
-	private final static int MAX_SLOTS = 54;
 	
 	public Bank() {
-		TestPlugin.instance.addCommandExecutor(this, command);
+		TestPlugin.instance.addCommandExecutor(this, Strings.COMMAND_BANK);
 	}
 	
 	@Override
@@ -28,7 +32,6 @@ public class Bank implements CommandExecutor, FileListener {
 		for(Entry entry : serializedMap.entrySet()) {
 			bankInventory.put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
 		}
-		TestPlugin.debug(bankInventory.toString());
 	}
 	@Override
 	public HashMap onSave() {
@@ -56,7 +59,6 @@ public class Bank implements CommandExecutor, FileListener {
 				result.add(new ItemStack(entry.getKey(), entry.getValue()));
 			}
 		}
-		
 		return result;
 	}
 	
@@ -65,7 +67,7 @@ public class Bank implements CommandExecutor, FileListener {
 		if(args.length < 1) {
 			return false;
 		} else if(!(sender instanceof Player)) {
-			sender.sendMessage("Only players can use the Bank.");
+			sender.sendMessage(Strings.ERROR_NON_PLAYER);
 			return true;
 		}
 		
@@ -73,19 +75,22 @@ public class Bank implements CommandExecutor, FileListener {
 		String[] params = {};
 		if(args.length > 1)
 			params = Arrays.copyOfRange(args, 1, args.length - 1);
-		if(args[0].equalsIgnoreCase("get")) {
+		if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_GET)) {
 			get(player, params);
 			return true;
-		} else if(args[0].equalsIgnoreCase("store")) {
+		} else if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_STORE)) {
 			store(player, params);
 			return true;
-		} else if(args[0].equalsIgnoreCase("list")) {
-			list(player);
+		} else if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_LIST)) {
+			list(player, params);
 			return true;
-		} else if(args[0].equalsIgnoreCase("send")) {
+		} else if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_SEND)) {
 			send(player, params);
 			return true;
-		 }
+		} else if(args[0].equalsIgnoreCase("clear")) {
+			bankInventory.remove(player.getName());
+			return true;
+		}
 		
 		return false;
 	}
@@ -100,21 +105,9 @@ public class Bank implements CommandExecutor, FileListener {
 		ArrayList<ItemStack> inventory = bankInventory.get(player.getName());
 		if(args.length < 1) {
 			addItem(inventory, player.getItemInHand(), player);
-			if(player.getItemInHand().getAmount() <= 0)
-				player.getInventory().removeItem(player.getItemInHand());
 		} else {
 			//TODO
 		}
-	}
-	
-	public boolean enoughSpace(ArrayList<ItemStack> inventory, ItemStack item) {
-		Material mat = item.getType();
-		ArrayList<ItemStack> all = all(inventory, mat);
-		int busy = 0;
-		for(ItemStack itm : all) {
-			busy += itm.getAmount();
-		} 
-		return ((all.size() * mat.getMaxStackSize() - busy) >= item.getAmount()) || inventory.size() < MAX_SLOTS;
 	}
 	
 	public ArrayList<ItemStack> all(ArrayList<ItemStack> inventory, Material mat) {
@@ -129,27 +122,48 @@ public class Bank implements CommandExecutor, FileListener {
 	public void addItem(ArrayList<ItemStack> inventory, ItemStack item, Player player) {
 		Material mat = item.getType();
 		ArrayList<ItemStack> all = all(inventory, mat);
-		for(ItemStack is : all) {
-			if((mat.getMaxStackSize() - is.getAmount()) >= item.getAmount()) {
-				is.setAmount(is.getAmount() + item.getAmount());
-				item.setAmount(0);
-				break;
-			} else {
-				is.setAmount(mat.getMaxStackSize());
-				item.setAmount(item.getAmount() - (mat.getMaxStackSize() - is.getAmount()));
+		boolean remove = false;
+		while(item.getAmount() > 0 && !remove) {
+			if(all.size() > 0) {
+				ItemStack is = all.get(0);
+				if(is.getAmount() >= mat.getMaxStackSize()) {
+					all.remove(is);
+				} else {
+					if((item.getAmount() + is.getAmount()) <= mat.getMaxStackSize()) {
+						is.setAmount(item.getAmount() + is.getAmount());
+						remove = true;
+					} else {
+						item.setAmount(item.getAmount() - (mat.getMaxStackSize() - is.getAmount()));
+						is.setAmount(mat.getMaxStackSize());
+					}
+				}
+			} else if(inventory.size() < Integers.BANK_MAX_SLOTS) {
+				inventory.add(new ItemStack(mat, item.getAmount()));
+				remove = true;
 			}
 		}
-		if(item.getAmount() > 0 && inventory.size() < MAX_SLOTS) {
-			inventory.add(new ItemStack(mat, item.getAmount()));
-			item.setAmount(0);
-		}
+		if(remove) player.getInventory().removeItem(item);
 	}
 	
-	public void list(Player player) {
-		
+	public void list(Player player, String[] args) {
+		if(!bankInventory.containsKey(player.getName())) return;
+		if(args.length > 1 && args[0].equalsIgnoreCase("all"))
+			player.sendMessage(bankInventory.toString());
+		else
+			player.sendMessage(bankInventory.get(player.getName()).toString());
 	}
 	
 	public void send(Player playerFrom, String[] args) {
 		
 	}
 }
+
+/*public boolean enoughSpace(ArrayList<ItemStack> inventory, ItemStack item) {
+Material mat = item.getType();
+ArrayList<ItemStack> all = all(inventory, mat);
+int busy = 0;
+for(ItemStack itm : all) {
+	busy += itm.getAmount();
+} 
+return ((all.size() * mat.getMaxStackSize() - busy) >= item.getAmount()) || inventory.size() < MAX_SLOTS;
+}*/

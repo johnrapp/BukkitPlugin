@@ -16,9 +16,6 @@ public class FileManager {
 	public static String path;
 	public static HashMap<String, FileListener> listeners;
 	
-	public final static String SAPLING_WALK = "saplingwalk";
-	public final static String BANK = "bank";
-	
 	public static void onEnable(HashMap<String, FileListener> listeners) {
 		FileManager.listeners = listeners;
 		path = TestPlugin.instance.getDataFolder() + File.separator;
