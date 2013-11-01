@@ -10,11 +10,8 @@ import org.bukkit.inventory.PlayerInventory;
 
 public class TestPluginCommandExecutor implements CommandExecutor {
 	 
-		private TestPlugin plugin; // pointer to your main class, unrequired if you don't need methods from the main class
-	 
-		public TestPluginCommandExecutor(TestPlugin plugin) {
-			this.plugin = plugin;
-			plugin.getCommand("test").setExecutor(this);
+		public TestPluginCommandExecutor() {
+			TestPlugin.instance.addCommandExecutor(this, "test");
 		}
 	 
 		@Override

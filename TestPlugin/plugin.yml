@@ -12,8 +12,13 @@ commands:
       usage: /saplingwalk [enable/disable]
       permission:
       permission-message:
+<<<<<<< HEAD
     bank:
       description: Get, store, send or wiew items in bank.
+=======
+   bank:
+      description: Get, store, send or view items in bank.
+>>>>>>> 4ceb1d4a467f84dadf7a4667b11ea0654104f036
       usage: /bank [get, store, send, list]
       permission:
       permission-message:

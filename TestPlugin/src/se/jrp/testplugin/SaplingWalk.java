@@ -1,6 +1,5 @@
 package se.jrp.testplugin;
 
-import java.io.File;
 import java.util.HashMap;
 
 import org.bukkit.Location;
@@ -15,29 +14,30 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class SaplingWalk implements Listener, CommandExecutor {
-	public HashMap<String, Boolean> enables = new HashMap<>();
+public class SaplingWalk implements Listener, CommandExecutor, FileListener {
 	private String command = "saplingwalk";
-	private String path;
+	private HashMap<String, Boolean> toggles;
 	
-	public SaplingWalk(JavaPlugin plugin) {
-		plugin.getServer().getPluginManager().registerEvents(this, plugin);
-		plugin.getCommand(command).setExecutor(this);
-		path = plugin.getDataFolder() + File.separator + "saplingwalk.bin";
-		if((new File(path)).exists()) // check if file exists before loading to avoid errors!
-			enables = (HashMap<String, Boolean>) FileManager.load(path);
-	} 
+	public SaplingWalk() {
+		TestPlugin.instance.addEventListener(this);
+		TestPlugin.instance.addCommandExecutor(this, command);
+	}
 	
-	public void onDisable(JavaPlugin plugin) {
-		FileManager.save(enables, path);
+	@Override
+	public void onLoad(HashMap<? extends Object, ? extends Object> map) {
+		toggles = (HashMap<String, Boolean>) map;
+		
+	}
+	@Override
+	public HashMap<? extends Object, ? extends Object> onSave() {
+		return toggles;
 	}
 	
 	@EventHandler
 	public void onPlayerMove(PlayerMoveEvent event) {
 		Player player = event.getPlayer();
-		if(enables.containsKey(player.getName()) && !enables.get(player.getName())) return;
+		if(toggles.containsKey(player.getName()) && !toggles.get(player.getName())) return;
 		
 		PlayerInventory inventory = player.getInventory();
 		if(inventory.contains(Material.SAPLING)) {
@@ -61,6 +61,7 @@ public class SaplingWalk implements Listener, CommandExecutor {
 					}
 				}
 			}
+			
 			if(place) {
 				ItemStack sapling = (ItemStack) inventory.all(Material.SAPLING).values().toArray()[0];
 				w.getBlockAt(loc).setType(Material.SAPLING);
@@ -78,11 +79,11 @@ public class SaplingWalk implements Listener, CommandExecutor {
 		if(sender instanceof Player) {
 			if(args.length == 1) {
 				if(args[0].equalsIgnoreCase("enable")) {
-					enables.put(sender.getName(), true);
+					toggles.put(sender.getName(), true);
 					return true;
 				}
 				if(args[0].equalsIgnoreCase("disable")) {
-					enables.put(sender.getName(), false);
+					toggles.put(sender.getName(), false);
 					return true;
 				}
 			}

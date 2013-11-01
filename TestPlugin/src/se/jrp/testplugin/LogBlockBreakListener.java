@@ -10,8 +10,8 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LogBlockBreakListener implements Listener {
-	public LogBlockBreakListener(JavaPlugin plugin) {
-		plugin.getServer().getPluginManager().registerEvents(this, plugin);
+	public LogBlockBreakListener() {
+		TestPlugin.instance.addEventListener(this);
 	}
 	
 	@EventHandler
