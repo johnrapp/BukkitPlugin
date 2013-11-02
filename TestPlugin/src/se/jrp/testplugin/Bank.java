@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.DoubleChestInventory;
 import org.bukkit.inventory.ItemStack;
 
-import se.jrp.testplugin.Resources.Integers;
+import se.jrp.testplugin.Resources.Values;
 import se.jrp.testplugin.Resources.Strings;
 
 public class Bank implements CommandExecutor, FileListener {
@@ -102,11 +102,11 @@ public class Bank implements CommandExecutor, FileListener {
 	public void store(Player player, String[] args) {
 		if(!(bankInventory.containsKey(player.getName())))
 			bankInventory.put(player.getName(), new ArrayList<ItemStack>());
-		ArrayList<ItemStack> inventory = bankInventory.get(player.getName());
-		if(args.length < 1) {
-			addItem(inventory, player.getItemInHand(), player);
+		if(player.getItemInHand() == null) {
+			player.sendMessage(Strings.ERROR_BANK_NOTHING_IN_HAND);
 		} else {
-			//TODO
+	 		addItem(bankInventory.get(player.getName()), player.getItemInHand(), player);
+			player.sendMessage(Strings.BANK_ADDED_ITEM);
 		}
 	}
 	
@@ -137,20 +137,28 @@ public class Bank implements CommandExecutor, FileListener {
 						is.setAmount(mat.getMaxStackSize());
 					}
 				}
-			} else if(inventory.size() < Integers.BANK_MAX_SLOTS) {
+			} else if(inventory.size() < Values.BANK_MAX_SLOTS) {
 				inventory.add(new ItemStack(mat, item.getAmount()));
 				remove = true;
+			} else if(inventory.size() >= Values.BANK_MAX_SLOTS) {
+				player.sendMessage(Strings.ERROR_BANK_NO_SLOTS);
+				break;
 			}
 		}
 		if(remove) player.getInventory().removeItem(item);
 	}
 	
 	public void list(Player player, String[] args) {
-		if(!bankInventory.containsKey(player.getName())) return;
-		if(args.length > 1 && args[0].equalsIgnoreCase("all"))
-			player.sendMessage(bankInventory.toString());
-		else
-			player.sendMessage(bankInventory.get(player.getName()).toString());
+		if(!bankInventory.containsKey(player.getName())) {
+			player.sendMessage(Strings.ERROR_BANK_NO_ACCOUNT);
+			return;
+		}
+		ArrayList<ItemStack> inventory = bankInventory.get(player.getName());
+		player.sendMessage(player.getName() + Strings.BANK_PLAYER_ACCOUNT);
+		for(int i = 0; i < inventory.size(); i++) {
+			ItemStack item = inventory.get(i);
+			player.sendMessage(i + ". " + item.getAmount() + "x " + item.getType().toString() + "\n");
+		}
 	}
 	
 	public void send(Player playerFrom, String[] args) {
