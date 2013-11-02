@@ -172,9 +172,21 @@ public class Bank implements CommandExecutor, FileListener {
 		timestamp.add(getTimeStamp());
 		ArrayList<String> pages = new ArrayList<String>();
 		StringBuilder sz = new StringBuilder();
+		int rows = 0;
+		int page = 0;
 		for(int i = 0; i < inventory.size(); i++) {
 			ItemStack item = inventory.get(i);
-			sz.append(i + ". " + item.getAmount() + "x " + item.getType().toString() + "\n");
+			String s = i + ". " + item.getAmount() + "x " + item.getType().toString();
+			int height = (int) Math.floor(s.length() / Values.BOOK_MAX_COLUMNS);
+			rows += height;
+			if(rows > Values.BOOK_MAX_ROWS) {
+				pages.add(s);
+				page++;
+				rows = height;
+			} else {
+				
+			}
+			
 		}
 		pages.add(sz.toString());
 		giveBook(player, new Book(Strings.PLUGIN_NAME, player.getName() + Strings.BANK_PLAYER_ACCOUNT, pages, timestamp));

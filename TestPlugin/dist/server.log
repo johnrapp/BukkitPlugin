@@ -541,3 +541,18 @@ Caused by: java.lang.ClassNotFoundException: se.jrp.testplugin.TestPlugin
 2013-11-02 17:43:18 [INFO] Server permissions file permissions.yml is empty, ignoring it
 2013-11-02 17:43:18 [INFO] CONSOLE: [0;32;1mReload complete.[m
 2013-11-02 17:43:21 [INFO] johnrapp issued server command: /bank list
+2013-11-02 17:51:29 [INFO] Cotfsm lost connection: disconnect.quitting
+2013-11-02 17:51:29 [INFO] Connection reset
+2013-11-02 17:51:29 [INFO] §eCotfsm left the game.
+2013-11-02 17:57:49 [INFO] CONSOLE: Stopping the server..[m
+2013-11-02 17:57:49 [INFO] Stopping server
+2013-11-02 17:57:49 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-02 17:57:49 [INFO] Saving players
+2013-11-02 17:57:49 [WARNING] DSCT: socket closed
+2013-11-02 17:57:49 [INFO] Closing listening thread
+2013-11-02 17:57:49 [INFO] §ejohnrapp left the game.
+2013-11-02 17:57:49 [INFO] Saving worlds
+2013-11-02 17:57:49 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-02 17:57:50 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-02 17:57:50 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-02 17:57:50 [INFO] Stopping server

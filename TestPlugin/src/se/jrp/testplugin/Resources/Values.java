@@ -3,6 +3,9 @@ package se.jrp.testplugin.Resources;
 import org.bukkit.Material;
 
 public class Values {
+	public final static int BOOK_MAX_COLUMNS = 19;
+	public final static int BOOK_MAX_ROWS = 15;
+	
 	public final static int BANK_MAX_SLOTS = 16;
 	public static final Material[] BANK_ACCEPTED_ITEMS = {Material.LAPIS_BLOCK, Material.GOLD_BLOCK, Material.IRON_BLOCK,
 		Material.TNT, Material.OBSIDIAN, Material.DIAMOND_BLOCK, Material.PUMPKIN, Material.MELON_BLOCK, Material.MYCEL, Material.NETHER_BRICK,
