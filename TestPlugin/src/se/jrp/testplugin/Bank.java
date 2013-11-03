@@ -3,17 +3,24 @@ package se.jrp.testplugin;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map.Entry;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 
+import com.avaje.ebeaninternal.util.ValueUtil;
+
+import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;
 
@@ -71,7 +78,7 @@ public class Bank implements CommandExecutor, FileListener {
 		Player player = (Player) sender;
 		String[] params = {};
 		if(args.length > 1)
-			params = Arrays.copyOfRange(args, 1, args.length - 1);
+			params = Arrays.copyOfRange(args, 1, args.length);
 		if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_GET)) {
 			get(player, params);
 			return true;
@@ -84,11 +91,11 @@ public class Bank implements CommandExecutor, FileListener {
 		} else if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_ACCEPTED)) {
 			accepted(player, params);
 			return true;
-		} else if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_SEND)) {
-			send(player, params);
-			return true;			
 		} else if(args[0].equalsIgnoreCase("clear")) {
 			bankInventory.remove(player.getName());
+			return true;
+		} else if(args[0].equalsIgnoreCase("debug")) {
+			player.sendMessage(player.getItemInHand().getType().name());
 			return true;
 		}
 		
@@ -96,12 +103,50 @@ public class Bank implements CommandExecutor, FileListener {
 	}
 	
 	public void get(Player player, String[] args) {
-		
+		PlayerInventory inventory = player.getInventory();
+		ArrayList<ItemStack> bank = bankInventory.get(player.getName());
+		if(args.length < 1) {
+			player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
+			player.sendMessage("1");
+		} else if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_GET_INDEX)) {
+			if(args.length > 1) {
+				ArrayList<Integer> remove = new ArrayList<Integer>();
+				for(int i = 1; i < args.length; i++) {
+					if(Functions.isInteger(args[i])) {
+						int index = Integer.parseInt(args[i]);
+						if(Functions.usedSlots(inventory) < inventory.getSize()) {
+							if(bank.size() > index) {
+								inventory.addItem(bank.get(index));
+								remove.add(index);
+							} else {
+								player.sendMessage(ChatColor.RED + "Index " + index + Strings.ERROR_DONT_EXIST);
+							}
+						} else {
+							player.sendMessage(Strings.ERROR_INVENTORY_FULL);
+							break;
+						}
+					} else {
+						player.sendMessage(ChatColor.RED + args[i] + Strings.ERROR_NON_NUMBER);
+					}
+				}
+				Collections.sort(remove, Collections.reverseOrder());
+				for (int i : remove)
+				    bank.remove(i);
+			} else {
+				player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
+			}
+		} else {
+			
+		}
 	}
 	
 	public void store(Player player, String[] args) {
 		if(!(bankInventory.containsKey(player.getName())))
 			bankInventory.put(player.getName(), new ArrayList<ItemStack>());
+		if(args.length > 0) {
+			player.sendMessage(Strings.ERROR_BANK_STORE);
+			return;
+		}
 		ItemStack item = player.getItemInHand();
 		if(item.getAmount() <= 0) {
 			player.sendMessage(Strings.ERROR_BANK_NOTHING_IN_HAND);
@@ -169,50 +214,30 @@ public class Bank implements CommandExecutor, FileListener {
 			return;
 		}
 		ArrayList<String> timestamp = new ArrayList<String>();
-		timestamp.add(getTimeStamp());
-		ArrayList<String> pages = new ArrayList<String>();
-		StringBuilder sz = new StringBuilder();
-		int rows = 0;
-		int page = 0;
+		timestamp.add(Functions.getTimeStamp());
+		ArrayList<String> rows = new ArrayList<String>();
+		rows.add(player.getName() + Strings.BANK_PLAYER_ACCOUNT);
+		rows.add("");
 		for(int i = 0; i < inventory.size(); i++) {
 			ItemStack item = inventory.get(i);
-			String s = i + ". " + item.getAmount() + "x " + item.getType().toString();
-			int height = (int) Math.floor(s.length() / Values.BOOK_MAX_COLUMNS);
-			rows += height;
-			if(rows > Values.BOOK_MAX_ROWS) {
-				pages.add(s);
-				page++;
-				rows = height;
-			} else {
-				
-			}
-			
+			rows.add(i + ". " + Functions.parseMaterial(item.getType()) + " " + item.getAmount());
 		}
-		pages.add(sz.toString());
-		giveBook(player, new Book(Strings.PLUGIN_NAME, player.getName() + Strings.BANK_PLAYER_ACCOUNT, pages, timestamp));
+		Book.giveBook(player, new Book(player.getName() + Strings.BANK_PLAYER_ACCOUNT,
+				Book.fitToBook(rows), timestamp));
 	}
 	
 	public void accepted(Player player, String[] args) {
-		
-	}
-	
-	public void send(Player playerFrom, String[] args) {
-		
-	}
-	
-	public void giveBook(Player player, Book book) {
-		if(player.getInventory().getSize() < player.getInventory().getMaxStackSize()) {
-			player.getInventory().addItem(book);
-			player.sendMessage(Strings.BOOK_ADDED);
-		} else {
-			player.sendMessage(Strings.ERROR_INVENTORY_FULL);
+		ArrayList<String> rows = new ArrayList<String>();
+		rows.add(Strings.BANK_ACCEPTED_ITEMS);
+		rows.add("");
+		for(Material mat : Values.BANK_ACCEPTED_ITEMS) {
+			rows.add(Functions.parseMaterial(mat));
 		}
+		ArrayList<String> pages = Book.fitToBook(rows);
+		pages.add(0, Strings.BANK_ACCEPTED_GUIDLINES);
+		Book.giveBook(player, new Book(Strings.BANK_ACCEPTED_ITEMS, pages, null));
 	}
 	
-	public String getTimeStamp() {
-		SimpleDateFormat format = new SimpleDateFormat("dd/MM HH:mm:ss");
-		return format.format(new Date());
-	}
 }
 
 /*public boolean enoughSpace(ArrayList<ItemStack> inventory, ItemStack item) {

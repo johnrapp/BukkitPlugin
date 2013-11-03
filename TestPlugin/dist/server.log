@@ -556,3 +556,65 @@ Caused by: java.lang.ClassNotFoundException: se.jrp.testplugin.TestPlugin
 2013-11-02 17:57:50 [INFO] Saving chunks for level 'world_nether'/Nether
 2013-11-02 17:57:50 [INFO] Saving chunks for level 'world_the_end'/The End
 2013-11-02 17:57:50 [INFO] Stopping server
+2013-11-02 20:12:16 [INFO] Starting minecraft server version 1.6.4
+2013-11-02 20:12:16 [INFO] Loading properties
+2013-11-02 20:12:16 [INFO] Default game type: SURVIVAL
+2013-11-02 20:12:16 [INFO] Generating keypair
+2013-11-02 20:12:17 [INFO] Starting Minecraft server on *:25565
+2013-11-02 20:12:19 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-02 20:12:19 [INFO] Preparing level "world"
+2013-11-02 20:12:20 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-02 20:12:21 [INFO] Preparing spawn area: 0%
+2013-11-02 20:12:22 [INFO] Preparing spawn area: 5%
+2013-11-02 20:12:23 [INFO] Preparing spawn area: 26%
+2013-11-02 20:12:24 [INFO] Preparing spawn area: 53%
+2013-11-02 20:12:25 [INFO] Preparing spawn area: 93%
+2013-11-02 20:12:25 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-02 20:12:26 [INFO] Preparing spawn area: 28%
+2013-11-02 20:12:27 [INFO] Preparing spawn area: 45%
+2013-11-02 20:12:28 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-02 20:12:29 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-02 20:12:29 [INFO] Done (10.220s)! For help, type "help" or "?"
+2013-11-02 20:12:36 [INFO] Cotfsm[/127.0.0.1:54044] logged in with entity id 77 at ([world] 175.72705185252042, 69.13826163422078, -273.45523967652883)
+2013-11-02 20:12:38 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-11-02 20:12:46 [INFO] Cotfsm issued server command: /bank list
+2013-11-02 20:12:52 [INFO] Cotfsm issued server command: /bank
+2013-11-02 20:14:02 [INFO] CONSOLE: Stopping the server..[m
+2013-11-02 20:14:02 [INFO] Stopping server
+2013-11-02 20:14:02 [INFO] Saving players
+2013-11-02 20:14:02 [WARNING] DSCT: socket closed
+2013-11-02 20:14:02 [INFO] Closing listening thread
+2013-11-02 20:14:02 [INFO] §eCotfsm left the game.
+2013-11-02 20:14:02 [INFO] Saving worlds
+2013-11-02 20:14:02 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-02 20:14:04 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-02 20:14:04 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-02 20:15:48 [INFO] Starting minecraft server version 1.6.4
+2013-11-02 20:15:48 [INFO] Loading properties
+2013-11-02 20:15:48 [INFO] Default game type: SURVIVAL
+2013-11-02 20:15:48 [INFO] Generating keypair
+2013-11-02 20:15:50 [INFO] Starting Minecraft server on *:25565
+2013-11-02 20:15:51 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-02 20:15:52 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-02 20:15:52 [INFO] Preparing level "world"
+2013-11-02 20:15:53 [INFO] Preparing start region for level 0 (Seed: 505380102226849806)
+2013-11-02 20:15:54 [INFO] Preparing spawn area: 0%
+2013-11-02 20:15:55 [INFO] Preparing spawn area: 6%
+2013-11-02 20:15:56 [INFO] Preparing spawn area: 34%
+2013-11-02 20:15:57 [INFO] Preparing spawn area: 83%
+2013-11-02 20:15:57 [INFO] Preparing start region for level 1 (Seed: 505380102226849806)
+2013-11-02 20:15:58 [INFO] Preparing spawn area: 40%
+2013-11-02 20:15:59 [INFO] Preparing start region for level 2 (Seed: 505380102226849806)
+2013-11-02 20:16:00 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-02 20:16:00 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-02 20:16:00 [INFO] Done (8.525s)! For help, type "help" or "?"
+2013-11-02 20:16:08 [INFO] CONSOLE: Stopping the server..[m
+2013-11-02 20:16:08 [INFO] Stopping server
+2013-11-02 20:16:08 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-02 20:16:08 [INFO] Saving players
+2013-11-02 20:16:08 [WARNING] DSCT: socket closed
+2013-11-02 20:16:08 [INFO] Saving worlds
+2013-11-02 20:16:08 [INFO] Closing listening thread
+2013-11-02 20:16:08 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-02 20:16:12 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-02 20:16:12 [INFO] Saving chunks for level 'world_the_end'/The End

@@ -14,7 +14,7 @@ commands:
       permission-message:
    bank:
       description: Get, store, send or view items in bank.
-      usage: /bank [get, store, send, list]
+      usage: /bank <get, store, list>
       permission:
       permission-message:
   

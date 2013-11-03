@@ -2,12 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="C:/Users/John/Documents/GitHub/BukkitPlugin/TestPlugin/lib/bukkit-1.6.4-R1.1-20131024.063232-1.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="http://jd.bukkit.org/rb/apidocs/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/John/Documents/GitHub/BukkitPlugin/TestPlugin/dist/craftbukkit.jar"/>
-	<classpathentry kind="lib" path="C:/Users/John/Documents/GitHub/BukkitPlugin/TestPlugin/dist/minecraft_server.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sara/Documents/GitHub/BukkitPlugin/TestPlugin/lib/bukkit-1.6.4-R2.1-20131031.000035-1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sara/Documents/GitHub/BukkitPlugin/TestPlugin/dist/craftbukkit.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
