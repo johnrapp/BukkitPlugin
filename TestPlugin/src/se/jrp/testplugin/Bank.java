@@ -107,11 +107,13 @@ public class Bank implements CommandExecutor, FileListener {
 		ArrayList<ItemStack> bank = bankInventory.get(player.getName());
 		if(args.length < 1) {
 			player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
-			player.sendMessage("1");
-		} else if(args[0].equalsIgnoreCase(Strings.COMMAND_BANK_GET_INDEX)) {
+		} else if(Functions.usedSlots(inventory) >= inventory.getSize()) {
+			player.sendMessage(Strings.ERROR_INVENTORY_FULL);
+			return;
+		} else if(Functions.isInteger(args[0])) {
 			if(args.length > 1) {
 				ArrayList<Integer> remove = new ArrayList<Integer>();
-				for(int i = 1; i < args.length; i++) {
+				for(int i = 0; i < args.length; i++) {
 					if(Functions.isInteger(args[i])) {
 						int index = Integer.parseInt(args[i]);
 						if(Functions.usedSlots(inventory) < inventory.getSize()) {
@@ -122,7 +124,7 @@ public class Bank implements CommandExecutor, FileListener {
 								player.sendMessage(ChatColor.RED + "Index " + index + Strings.ERROR_DONT_EXIST);
 							}
 						} else {
-							player.sendMessage(Strings.ERROR_INVENTORY_FULL);
+							player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
 							break;
 						}
 					} else {
@@ -143,8 +145,12 @@ public class Bank implements CommandExecutor, FileListener {
 	public void store(Player player, String[] args) {
 		if(!(bankInventory.containsKey(player.getName())))
 			bankInventory.put(player.getName(), new ArrayList<ItemStack>());
+		ArrayList<ItemStack> inventory =  bankInventory.get(player.getName());
 		if(args.length > 0) {
 			player.sendMessage(Strings.ERROR_BANK_STORE);
+			return;
+		} else if(inventory.size() >= Values.BANK_MAX_SLOTS) {
+			player.sendMessage(Strings.ERROR_BANK_FULL);
 			return;
 		}
 		ItemStack item = player.getItemInHand();
@@ -152,7 +158,7 @@ public class Bank implements CommandExecutor, FileListener {
 			player.sendMessage(Strings.ERROR_BANK_NOTHING_IN_HAND);
 		} else {
 			boolean accepted = itemAccepted(item.getType());
-			if(accepted && addItem(bankInventory.get(player.getName()), item, player)) {
+			if(accepted && addItem(inventory, item, player)) {
 	 			player.sendMessage(Strings.BANK_ADDED_ITEM);
 			} else if(!accepted) {
 				player.sendMessage(Strings.ERROR_BANK_NOT_ACCEPTED);
@@ -199,7 +205,7 @@ public class Bank implements CommandExecutor, FileListener {
 				inventory.add(new ItemStack(mat, item.getAmount()));
 				remove = true;
 			} else if(inventory.size() >= Values.BANK_MAX_SLOTS) {
-				player.sendMessage(Strings.ERROR_BANK_NO_SLOTS);
+				player.sendMessage(Strings.ERROR_BANK_STORE_NOT_EVERYTHING);
 				break;
 			}
 		}
