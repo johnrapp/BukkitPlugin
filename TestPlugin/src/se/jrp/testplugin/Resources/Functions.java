@@ -1,6 +1,7 @@
 package se.jrp.testplugin.Resources;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 import org.bukkit.Material;
@@ -31,5 +32,9 @@ public class Functions {
 				used++;
 		}
 		return used;
+	}
+	
+	public static String[] cutFirstIndex(String[] array) {
+		return Arrays.copyOfRange(array, 1, array.length);
 	}
 }

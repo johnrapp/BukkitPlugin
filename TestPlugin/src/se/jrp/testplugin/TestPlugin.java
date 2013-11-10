@@ -6,6 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import se.jrp.testplugin.Bank.Bank;
 import se.jrp.testplugin.Resources.Strings;
  
 public final class TestPlugin extends JavaPlugin {
