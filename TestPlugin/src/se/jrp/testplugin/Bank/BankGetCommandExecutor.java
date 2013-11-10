@@ -2,7 +2,6 @@ package se.jrp.testplugin.Bank;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -19,7 +18,7 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 	}
 	public void onCommand(Player player, String[] args) {
 		PlayerInventory inventory = player.getInventory();
-		ArrayList<ItemStack> depositBox = bank.bankInventory.get(player.getName());
+		ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
 		if(args.length < 1) {
 			player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
 		} else if(Functions.usedSlots(inventory) >= inventory.getSize()) {
@@ -38,7 +37,7 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 		for(int i = 0; i < args.length; i++) {
 			if(Functions.isInteger(args[i])) {
 				int index = Integer.parseInt(args[i]);
-				if(Functions.usedSlots(inventory) < inventory.getSize()) {
+				if(Functions.usedSlots(inventory) < inventory.getSize()){
 					if(depositBox.size() > index) {
 						inventory.addItem(depositBox.get(index));
 						remove.add(index);
@@ -59,33 +58,29 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 	}
 	
 	public void getByName(Player player, ArrayList<ItemStack> depositBox, String [] args) {
-		if(args.length > 1) {
-			PlayerInventory inventory = player.getInventory();
-			ArrayList<Integer> remove = new ArrayList<Integer>();
-			for(int i = 0; i < args.length; i++) {
-				if(Functions.isInteger(args[i])) {
-					int index = Integer.parseInt(args[i]);
-					if(Functions.usedSlots(inventory) < inventory.getSize()) {
-						if(depositBox.size() > index) {
-							inventory.addItem(depositBox.get(index));
-							remove.add(index);
-						} else {
-							player.sendMessage(ChatColor.RED + "Index " + index + Strings.ERROR_DONT_EXIST);
-						}
+		PlayerInventory inventory = player.getInventory();
+		ArrayList<Integer> remove = new ArrayList<Integer>();
+		for(int i = 0; i < args.length; i++) {
+			if(Functions.isInteger(args[i])) {
+				int index = Integer.parseInt(args[i]);
+				if(Functions.usedSlots(inventory) < inventory.getSize()){
+					if(depositBox.size() > index) {
+						inventory.addItem(depositBox.get(index));
+						remove.add(index);
 					} else {
-						player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
-						break;
+						player.sendMessage(ChatColor.RED + "Index " + index + Strings.ERROR_DONT_EXIST);
 					}
 				} else {
-					player.sendMessage(ChatColor.RED + args[i] + Strings.ERROR_NON_NUMBER);
+					player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
+					break;
 				}
+			} else {
+				player.sendMessage(ChatColor.RED + args[i] + Strings.ERROR_NON_NUMBER);
 			}
-			Collections.sort(remove, Collections.reverseOrder());
-			for (int i : remove)
-			    depositBox.remove(i);
-		} else {
-			player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
 		}
+		Collections.sort(remove, Collections.reverseOrder());
+		for (int i : remove)
+		    depositBox.remove(i);
 	}
 
 }

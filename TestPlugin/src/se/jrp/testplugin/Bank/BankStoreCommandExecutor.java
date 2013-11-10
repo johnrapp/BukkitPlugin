@@ -15,13 +15,13 @@ public class BankStoreCommandExecutor extends BankCommandExecutor {
 	}
 
 	public void onCommand(Player player, String[] args) {
-		if(!(bank.bankInventory.containsKey(player.getName())))
-			bank.bankInventory.put(player.getName(), new ArrayList<ItemStack>());
-		ArrayList<ItemStack> inventory = bank.bankInventory.get(player.getName());
+		if(!(bank.inventory.containsKey(player.getName())))
+			bank.inventory.put(player.getName(), new ArrayList<ItemStack>());
+		ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
 		if(args.length > 0) {
 			player.sendMessage(Strings.ERROR_BANK_STORE);
 			return;
-		} else if(inventory.size() >= Values.BANK_MAX_SLOTS) {
+		} else if(bank.inventory.full(player.getName())) {
 			player.sendMessage(Strings.ERROR_BANK_FULL);
 			return;
 		}
@@ -29,8 +29,8 @@ public class BankStoreCommandExecutor extends BankCommandExecutor {
 		if(item.getAmount() <= 0) {
 			player.sendMessage(Strings.ERROR_BANK_NOTHING_IN_HAND);
 		} else {
-			boolean accepted = Bank.itemAccepted(item.getType());
-			if(accepted && bank.addItem(inventory, item, player)) {
+			boolean accepted = BankInventory.accepted(item.getType());
+			if(accepted && bank.inventory.addItem(player, item)) {
 	 			player.sendMessage(Strings.BANK_ADDED_ITEM);
 			} else if(!accepted) {
 				player.sendMessage(Strings.ERROR_BANK_NOT_ACCEPTED);

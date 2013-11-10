@@ -22,7 +22,7 @@ import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;
 
 public class Bank implements CommandExecutor, FileListener {
-	public HashMap<String, ArrayList<ItemStack>> bankInventory = new HashMap<String, ArrayList<ItemStack>>();
+	public BankInventory inventory = new BankInventory();
 	public HashMap<String, BankCommandExecutor> commandExecutors = new HashMap<String, BankCommandExecutor>();
 	
 	public Bank() {
@@ -36,13 +36,13 @@ public class Bank implements CommandExecutor, FileListener {
 	@Override
 	public void onLoad(HashMap<? extends Object, ? extends Object> serializedMap) {
 		for(Entry entry : serializedMap.entrySet()) {
-			bankInventory.put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
+			inventory.put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
 		}
 	}
 	@Override
 	public HashMap onSave() {
 		HashMap<String, ArrayList<HashMap<Material, Integer>>> serializedMap = new HashMap<String, ArrayList<HashMap<Material, Integer>>>();
-		for(Entry<String, ArrayList<ItemStack>> entry : bankInventory.entrySet()) {
+		for(Entry<String, ArrayList<ItemStack>> entry : inventory.entrySet()) {
 			serializedMap.put(entry.getKey(), serialize(entry.getValue()));
 		}
 		return serializedMap;
@@ -85,55 +85,6 @@ public class Bank implements CommandExecutor, FileListener {
 		
 		return false;
 	}
-	
-	public static boolean itemAccepted(Material mat) {
-		for(Material item : Values.BANK_ACCEPTED_ITEMS) {
-			if(mat == item)
-				return true;
-		}
-		return false;
-	}
-	
-	public ArrayList<ItemStack> all(ArrayList<ItemStack> inventory, Material mat) {
-		ArrayList<ItemStack> result = new ArrayList<ItemStack>();
-		for(ItemStack item : inventory) {
-			if(item.getType() == mat)
-				result.add(item);
-		}
-		return result;
-	}
-	
-	public boolean addItem(ArrayList<ItemStack> inventory, ItemStack item, Player player) {
-		Material mat = item.getType();
-		ArrayList<ItemStack> all = all(inventory, mat);
-		boolean remove = false;
-		while(item.getAmount() > 0 && !remove) {
-			if(all.size() > 0) {
-				ItemStack is = all.get(0);
-				if(is.getAmount() >= mat.getMaxStackSize()) {
-					all.remove(is);
-				} else {
-					if((item.getAmount() + is.getAmount()) <= mat.getMaxStackSize()) {
-						is.setAmount(item.getAmount() + is.getAmount());
-						remove = true;
-					} else {
-						item.setAmount(item.getAmount() - (mat.getMaxStackSize() - is.getAmount()));
-						is.setAmount(mat.getMaxStackSize());
-					}
-				}
-			} else if(inventory.size() < Values.BANK_MAX_SLOTS) {
-				inventory.add(new ItemStack(mat, item.getAmount()));
-				remove = true;
-			} else if(inventory.size() >= Values.BANK_MAX_SLOTS) {
-				player.sendMessage(Strings.ERROR_BANK_STORE_NOT_EVERYTHING);
-				break;
-			}
-		}
-		if(remove) player.getInventory().removeItem(item);
-		return remove;
-	}
-
-	
 }
 
 /*public boolean enoughSpace(ArrayList<ItemStack> inventory, ItemStack item) {

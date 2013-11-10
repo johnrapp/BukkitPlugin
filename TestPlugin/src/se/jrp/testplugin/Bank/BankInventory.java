@@ -2,8 +2,6 @@ package se.jrp.testplugin.Bank;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
-
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -13,20 +11,25 @@ import se.jrp.testplugin.Resources.Values;
 
 public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 	
-	public ArrayList<ItemStack> all(ArrayList<ItemStack> inventory, Material mat) {
+	public ArrayList<ItemStack> all(String key, Material mat) {
 		ArrayList<ItemStack> result = new ArrayList<ItemStack>();
-		for(ItemStack item : inventory) {
+		for(ItemStack item : get(key)) {
 			if(item.getType() == mat)
 				result.add(item);
 		}
 		return result;
 	}
 	
-	public boolean addItem(ArrayList<ItemStack> inventory, ItemStack item, Player player) {
+	public boolean full(String key) {
+		return get(key).size() >= Values.BANK_MAX_SLOTS;
+	}
+	
+	public boolean addItem(Player player, ItemStack item) {
 		Material mat = item.getType();
-		ArrayList<ItemStack> all = all(inventory, mat);
+		ArrayList<ItemStack> all = all(player.getName(), mat);
 		boolean remove = false;
 		while(item.getAmount() > 0 && !remove) {
+			boolean full = this.full(player.getName());
 			if(all.size() > 0) {
 				ItemStack is = all.get(0);
 				if(is.getAmount() >= mat.getMaxStackSize()) {
@@ -40,10 +43,10 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 						is.setAmount(mat.getMaxStackSize());
 					}
 				}
-			} else if(inventory.size() < Values.BANK_MAX_SLOTS) {
-				inventory.add(new ItemStack(mat, item.getAmount()));
+			} else if(!full) {
+				get(player.getName()).add(new ItemStack(mat, item.getAmount()));
 				remove = true;
-			} else if(inventory.size() >= Values.BANK_MAX_SLOTS) {
+			} else if(full) {
 				player.sendMessage(Strings.ERROR_BANK_STORE_NOT_EVERYTHING);
 				break;
 			}
@@ -52,23 +55,11 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 		return remove;
 	}
 	
-	public ArrayList<HashMap<Material, Integer>> serialize(ArrayList<ItemStack> items) {
-		ArrayList<HashMap<Material, Integer>> result = new ArrayList<HashMap<Material, Integer>>();
-		for(ItemStack item : items) {
-			HashMap<Material, Integer> map = new HashMap<Material, Integer>();
-			map.put(item.getType(), item.getAmount());
-			result.add(map);
+	public static boolean accepted(Material mat) {
+		for(Material item : Values.BANK_ACCEPTED_ITEMS) {
+			if(mat == item)
+				return true;
 		}
-		return result;
-	}
-	
-	public ArrayList<ItemStack> deSerialize(ArrayList<HashMap<Material, Integer>> items) {
-		ArrayList<ItemStack> result = new ArrayList<ItemStack>();
-		for(HashMap<Material, Integer> map : items) {
-			for(Entry<Material, Integer> entry : map.entrySet()) {
-				result.add(new ItemStack(entry.getKey(), entry.getValue()));
-			}
-		}
-		return result;
+		return false;
 	}
 }

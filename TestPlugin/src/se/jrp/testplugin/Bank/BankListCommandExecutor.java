@@ -18,7 +18,7 @@ public class BankListCommandExecutor extends BankCommandExecutor {
 	@Override
 	public void onCommand(Player player, String[] args) {
 		ArrayList<ItemStack> inventory;
-		if(!bank.bankInventory.containsKey(player.getName()) || (inventory = bank.bankInventory.get(player.getName())).size() < 1) {
+		if(!bank.inventory.containsKey(player.getName()) || (inventory = bank.inventory.get(player.getName())).size() < 1) {
 			player.sendMessage(Strings.ERROR_BANK_NOTHING_STORED);
 			return;
 		}
