@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
@@ -60,23 +61,14 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 	public void getByName(Player player, ArrayList<ItemStack> depositBox, String [] args) {
 		PlayerInventory inventory = player.getInventory();
 		ArrayList<Integer> remove = new ArrayList<Integer>();
-		for(int i = 0; i < args.length; i++) {
-			if(Functions.isInteger(args[i])) {
-				int index = Integer.parseInt(args[i]);
-				if(Functions.usedSlots(inventory) < inventory.getSize()){
-					if(depositBox.size() > index) {
-						inventory.addItem(depositBox.get(index));
-						remove.add(index);
-					} else {
-						player.sendMessage(ChatColor.RED + "Index " + index + Strings.ERROR_DONT_EXIST);
-					}
-				} else {
-					player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
-					break;
-				}
+		for(int i = 0; i < args.length; i += 2) {
+			Material mat = Functions.getMaterialFromName(args[i]);
+			if(mat != null) {
+				
 			} else {
-				player.sendMessage(ChatColor.RED + args[i] + Strings.ERROR_NON_NUMBER);
+				
 			}
+			
 		}
 		Collections.sort(remove, Collections.reverseOrder());
 		for (int i : remove)

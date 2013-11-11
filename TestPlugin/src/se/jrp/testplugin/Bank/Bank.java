@@ -70,16 +70,14 @@ public class Bank implements CommandExecutor, FileListener {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if(args.length < 1) {
-			return false;
-		} else if(!(sender instanceof Player)) {
+		if(!(sender instanceof Player)) {
 			sender.sendMessage(Strings.ERROR_NON_PLAYER);
 			return true;
+		} else if(args.length < 1) {
+			return false;
 		}
-		Player player = (Player) sender;
-		String[] params = Functions.cutFirstIndex(args);
 		if(commandExecutors.containsKey(args[0])) {
-			commandExecutors.get(args[0]).onCommand(player, params);
+			commandExecutors.get(args[0]).onCommand((Player) sender, Functions.cutFirstIndex(args));
 			return true;
 		} 
 		

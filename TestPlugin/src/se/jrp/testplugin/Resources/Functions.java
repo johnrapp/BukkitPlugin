@@ -14,9 +14,18 @@ public class Functions {
 	}
 
 	public static String parseMaterial(Material material) {
+		if(Values.MATERIAL_DISPLAY_EXCEPTIONS.containsKey(material))
+			return Values.MATERIAL_DISPLAY_EXCEPTIONS.get(material);
 		String name = material.toString().toLowerCase();
 		String result = Character.toUpperCase(name.charAt(0)) + name.substring(1);
 		return result.replaceAll("_", " ");
+	}
+	
+	public static Material getMaterialFromName(String name) {
+		if(Values.MATERIAL_WRITE_EXCEPTIONS.containsKey(name))
+			return Values.MATERIAL_WRITE_EXCEPTIONS.get(name);
+		
+		return Material.getMaterial(name);
 	}
 	
 	public static boolean isInteger(String s) {

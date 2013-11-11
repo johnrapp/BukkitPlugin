@@ -1,5 +1,7 @@
 package se.jrp.testplugin.Resources;
 
+import java.util.HashMap;
+
 import org.bukkit.Material;
 
 public class Values {
@@ -16,4 +18,13 @@ public class Values {
 		Material.LEATHER, Material.COMPASS, Material.WATCH, Material.COOKED_FISH, Material.CAKE, Material.BED, Material.COOKIE, Material.MELON,
 		Material.COOKED_BEEF, Material.COOKED_CHICKEN, Material.ENDER_PEARL, Material.BLAZE_ROD, Material.GHAST_TEAR, Material.NETHER_WARTS,
 		Material.EYE_OF_ENDER, Material.EMERALD, Material.CARROT, Material.BAKED_POTATO, Material.GOLDEN_CARROT, Material.PUMPKIN_PIE};
+	
+	public final static HashMap<Material, String> MATERIAL_DISPLAY_EXCEPTIONS =	new HashMap<Material, String>();
+	public final static HashMap<String, Material> MATERIAL_WRITE_EXCEPTIONS = new HashMap<String, Material>();
+	
+	public static void init() {
+		MATERIAL_DISPLAY_EXCEPTIONS.put(Material.TNT, "TNT");
+		//MATERIAL_WRITE_EXCEPTIONS.put("COOCKED_PORKSHOP", Material.GRILLED_PORK);
+		//MATERIAL_EXCEPTIONS.put(Material.GRILLED_PORK, "Coocked Porkchop");
+	}
 }
