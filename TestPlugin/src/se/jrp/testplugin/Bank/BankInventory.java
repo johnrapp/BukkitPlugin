@@ -25,11 +25,12 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 	}
 	
 	public boolean addItem(Player player, ItemStack item) {
+		//TODO kolla igenom och förbättra
 		Material mat = item.getType();
 		ArrayList<ItemStack> all = all(player.getName(), mat);
 		boolean remove = false;
 		while(item.getAmount() > 0 && !remove) {
-			boolean full = this.full(player.getName());
+			boolean full = full(player.getName());
 			if(all.size() > 0) {
 				ItemStack is = all.get(0);
 				if(is.getAmount() >= mat.getMaxStackSize()) {
@@ -53,6 +54,25 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 		}
 		if(remove) player.getInventory().removeItem(item);
 		return remove;
+	}
+	
+	public void getItem(Player player, ItemStack item) {
+		Material mat = item.getType();
+		ArrayList<ItemStack> all = all(player.getName(), mat);
+		int index = -1;
+		while(item.getAmount() > 0) {
+			ItemStack is = all.get(++index);
+			
+		}
+	} 
+	
+	public boolean contains(String player, Material material) {
+		for(ItemStack item : get(player)) {
+			if(item.getType() == material) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static boolean accepted(Material mat) {

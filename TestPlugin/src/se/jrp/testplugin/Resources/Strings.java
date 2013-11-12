@@ -32,6 +32,9 @@ public class Strings {
 	public final static String ERROR_BANK_NOTHING_IN_HAND = ChatColor.RED + "You have nothing in your hand to store.";
 	public final static String ERROR_BANK_FULL = ChatColor.RED + "Your Bank is full.";
 	public final static String ERROR_BANK_NOT_ACCEPTED = ChatColor.RED + "The Bank does not accept this item.\nType \"/bank accepted\" to see a list of accepted items.";
+	public final static String ERROR_BANK_NON_ITEM = " is not an item in your Bank inventory.\ntype \"/bank list\" to see your Bank inventory\n"
+			+ "If you want to know more, type \"/bank help\"";
+	
 	
 	public final static String BOOK_ADDED = "A book was added to your inventory.";
 	

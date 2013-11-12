@@ -43,7 +43,7 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 						inventory.addItem(depositBox.get(index));
 						remove.add(index);
 					} else {
-						player.sendMessage(ChatColor.RED + "Index " + index + Strings.ERROR_DONT_EXIST);
+						player.sendMessage(ChatColor.RED + "Slot " + index + Strings.ERROR_DONT_EXIST);
 					}
 				} else {
 					player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
@@ -62,13 +62,23 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 		PlayerInventory inventory = player.getInventory();
 		ArrayList<Integer> remove = new ArrayList<Integer>();
 		for(int i = 0; i < args.length; i += 2) {
-			Material mat = Functions.getMaterialFromName(args[i]);
-			if(mat != null) {
-				
+			if(Functions.usedSlots(inventory) < inventory.getSize()) {
+				Material mat = Functions.getMaterialFromName(args[i]);
+				if(mat != null && bank.inventory.contains(player.getName(), mat)) {
+					String amount = args[i + 1];
+					if(Functions.isInteger(amount)) {
+						bank.inventory.getItem(player, new ItemStack(mat, Integer.parseInt(amount)));
+					} else {
+						player.sendMessage(ChatColor.RED + amount + Strings.ERROR_NON_NUMBER);
+						break;
+					}
+				} else {
+					player.sendMessage(ChatColor.RED + args [i] + Strings.ERROR_BANK_NON_ITEM);
+				}
 			} else {
-				
+				player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
+				break;
 			}
-			
 		}
 		Collections.sort(remove, Collections.reverseOrder());
 		for (int i : remove)
