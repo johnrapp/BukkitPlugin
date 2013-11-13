@@ -62,8 +62,8 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 		PlayerInventory inventory = player.getInventory();
 		ArrayList<Integer> remove = new ArrayList<Integer>();
 		for(int i = 0; i < args.length; i += 2) {
-			if(Functions.usedSlots(inventory) < inventory.getSize()) {
-				Material mat = Functions.getMaterialFromName(args[i]);
+			if(!Functions.full(inventory)) {
+				Material mat = Functions.getMaterialFromName(args[i].toUpperCase());
 				if(mat != null && bank.inventory.contains(player.getName(), mat)) {
 					String amount = args[i + 1];
 					if(Functions.isInteger(amount)) {

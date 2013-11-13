@@ -26,6 +26,8 @@ public class Strings {
 	public final static String ERROR_BANK_GET_NOT_EVERYTHING = ChatColor.RED + "You don't have enough space in your inventory to store everything.";
 	public final static String ERROR_BANK_GET_NON_NUMBER = " is not a number.\nIf you want to get an item by its name, type \"/bank get (example_item) (amount)\".\n"
 			+ "If you want to know more, type \"/bank help\"";
+	public final static String ERROR_BANK_GET_NOT_ENOUGH1 = ChatColor.RED + "You only had ";
+	public final static String ERROR_BANK_GET_NOT_ENOUGH2 = " in you Bank inventory.";
 	public final static String ERROR_BANK_STORE = ChatColor.RED + "You can only store what's in your hand. Just type \"/bank store\"";
 	public final static String ERROR_BANK_STORE_NOT_EVERYTHING = ChatColor.RED + "Your Bank is too full to store everything.";
 	public final static String ERROR_BANK_NOTHING_STORED = ChatColor.RED + "You don't have anything in the Bank.";
@@ -34,6 +36,8 @@ public class Strings {
 	public final static String ERROR_BANK_NOT_ACCEPTED = ChatColor.RED + "The Bank does not accept this item.\nType \"/bank accepted\" to see a list of accepted items.";
 	public final static String ERROR_BANK_NON_ITEM = " is not an item in your Bank inventory.\ntype \"/bank list\" to see your Bank inventory\n"
 			+ "If you want to know more, type \"/bank help\"";
+	public final static String ERROR_BANK_NONE_OF_MATERIAL1 = ChatColor.RED + "You have no ";
+	public final static String ERROR_BANK_NONE_OF_MATERIAL2 = " in your inventory";
 	
 	
 	public final static String BOOK_ADDED = "A book was added to your inventory.";

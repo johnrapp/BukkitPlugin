@@ -8,6 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
+import com.google.common.base.Function;
+
 import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;
@@ -62,39 +64,63 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 	public void getItem(Player player, ItemStack item) {
 		Material mat = item.getType();
 		PlayerInventory inventory = player.getInventory();
+		ArrayList<ItemStack> depositBox = get(player.getName());
 		ArrayList<ItemStack> all = all(player.getName(), mat);
-		int index = -1;
-		while(item.getAmount() > 0 && ++index < all.size()) {
+		if(all.size() < 1) {
+			player.sendMessage(Strings.ERROR_BANK_NONE_OF_MATERIAL1 + Functions.parseMaterial(mat)
+				+ Strings.ERROR_BANK_NONE_OF_MATERIAL2);
+		}
+		int added = item.getAmount();
+		while(all.size() > 0) {
 			if(!Functions.full(inventory)) {
-				ItemStack is = all.get(index);
-				//TODO
+				ItemStack least = all.get(0);
+				for(int i = 1; i < all.size(); i++) {
+					ItemStack is = all.get(i);
+					if(is.getAmount() < least.getAmount())
+						least = is;
+				}
+				
+				if(least.getAmount() >= item.getAmount()) {
+					least.setAmount(least.getAmount() - item.getAmount());
+					if(least.getAmount() <= 0)
+						depositBox.remove(least);
+					inventory.addItem(item);
+					added -= item.getAmount();
+					break;
+				} else {
+					item.setAmount(item.getAmount() - least.getAmount());
+					inventory.addItem(least);
+					added -= least.getAmount();
+					depositBox.remove(least);
+					all.remove(least);
+				}
 			} else {
 				player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
-				break;
+				return;
 			}
 		}
+		
+		player.sendMessage(Strings.ERROR_BANK_GET_NOT_ENOUGH1 + added + " " + Functions.parseMaterial(mat)
+				+ Strings.ERROR_BANK_GET_NOT_ENOUGH2);
 	}
 	
-	public void notifyChanges(String player) {
+	/*public void notifyChanges(String player) {
 		ArrayList<ItemStack> depositBox = get(player);
 		HashMap<Material, ArrayList<ItemStack>> materials = new HashMap<Material, ArrayList<ItemStack>>();
 		for(ItemStack is : depositBox) {
-			if(!materials.containsKey(is.getType()))
-				materials.put(is.getType(), new ArrayList<ItemStack>());
-			materials.get(is.getType()).add(is);
+			if(is.getAmount() < is.getType().getMaxStackSize()) {
+				if(!materials.containsKey(is.getType()))
+					materials.put(is.getType(), new ArrayList<ItemStack>());
+				materials.get(is.getType()).add(is);
+			}
 		}
-		
 		for(ArrayList<ItemStack> array : materials.values()) {
-			ArrayList<ItemStack> nonFull = new ArrayList<ItemStack>();
+			int amount = 0;
 			for(ItemStack is : array) {
-				if(is.getAmount() < is.getType().getMaxStackSize())
-					nonFull.add(is);
-			}
-			if(nonFull.size() > 1) {
-				
+				amount += is.getAmount();
 			}
 		}
-	}
+	}*/
 	
 	public boolean contains(String player, Material material) {
 		for(ItemStack item : get(player)) {
