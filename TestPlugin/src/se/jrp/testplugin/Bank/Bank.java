@@ -1,25 +1,20 @@
 package se.jrp.testplugin.Bank;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
 
-import se.jrp.testplugin.Book;
 import se.jrp.testplugin.FileListener;
 import se.jrp.testplugin.TestPlugin;
 import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
-import se.jrp.testplugin.Resources.Values;
 
 public class Bank implements CommandExecutor, FileListener {
 	public BankInventory inventory = new BankInventory();

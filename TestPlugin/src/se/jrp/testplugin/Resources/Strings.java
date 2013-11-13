@@ -23,7 +23,7 @@ public class Strings {
 	public final static String ERROR_DONT_EXIST = " does not exist.";
 	
 	public final static String ERROR_BANK_GET_NO_ARGUMENTS = ChatColor.RED + "You didn't write what to get.\nType \"/bank help\" for help.";
-	public final static String ERROR_BANK_GET_NOT_EVERYTHING = ChatColor.RED + "You don't have enough space to store everything.";
+	public final static String ERROR_BANK_GET_NOT_EVERYTHING = ChatColor.RED + "You don't have enough space in your inventory to store everything.";
 	public final static String ERROR_BANK_GET_NON_NUMBER = " is not a number.\nIf you want to get an item by its name, type \"/bank get (example_item) (amount)\".\n"
 			+ "If you want to know more, type \"/bank help\"";
 	public final static String ERROR_BANK_STORE = ChatColor.RED + "You can only store what's in your hand. Just type \"/bank store\"";

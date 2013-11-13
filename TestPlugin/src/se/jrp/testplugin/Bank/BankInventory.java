@@ -2,10 +2,13 @@ package se.jrp.testplugin.Bank;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 
+import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;
 
@@ -58,13 +61,40 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 	
 	public void getItem(Player player, ItemStack item) {
 		Material mat = item.getType();
+		PlayerInventory inventory = player.getInventory();
 		ArrayList<ItemStack> all = all(player.getName(), mat);
 		int index = -1;
-		while(item.getAmount() > 0) {
-			ItemStack is = all.get(++index);
-			
+		while(item.getAmount() > 0 && ++index < all.size()) {
+			if(!Functions.full(inventory)) {
+				ItemStack is = all.get(index);
+				//TODO
+			} else {
+				player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);
+				break;
+			}
 		}
-	} 
+	}
+	
+	public void notifyChanges(String player) {
+		ArrayList<ItemStack> depositBox = get(player);
+		HashMap<Material, ArrayList<ItemStack>> materials = new HashMap<Material, ArrayList<ItemStack>>();
+		for(ItemStack is : depositBox) {
+			if(!materials.containsKey(is.getType()))
+				materials.put(is.getType(), new ArrayList<ItemStack>());
+			materials.get(is.getType()).add(is);
+		}
+		
+		for(ArrayList<ItemStack> array : materials.values()) {
+			ArrayList<ItemStack> nonFull = new ArrayList<ItemStack>();
+			for(ItemStack is : array) {
+				if(is.getAmount() < is.getType().getMaxStackSize())
+					nonFull.add(is);
+			}
+			if(nonFull.size() > 1) {
+				
+			}
+		}
+	}
 	
 	public boolean contains(String player, Material material) {
 		for(ItemStack item : get(player)) {

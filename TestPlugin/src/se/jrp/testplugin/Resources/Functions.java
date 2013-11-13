@@ -43,6 +43,10 @@ public class Functions {
 		return used;
 	}
 	
+	public static boolean full(PlayerInventory inventory) {
+		return Functions.usedSlots(inventory) >= inventory.getSize();
+	}
+	
 	public static String[] cutFirstIndex(String[] array) {
 		return Arrays.copyOfRange(array, 1, array.length);
 	}

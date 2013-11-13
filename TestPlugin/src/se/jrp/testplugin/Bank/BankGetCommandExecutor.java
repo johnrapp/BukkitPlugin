@@ -22,7 +22,7 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 		ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
 		if(args.length < 1) {
 			player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
-		} else if(Functions.usedSlots(inventory) >= inventory.getSize()) {
+		} else if(Functions.full(inventory)) {
 			player.sendMessage(Strings.ERROR_INVENTORY_FULL);
 			return;
 		} else if(Functions.isInteger(args[0])) {
