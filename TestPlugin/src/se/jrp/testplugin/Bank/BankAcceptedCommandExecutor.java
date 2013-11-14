@@ -18,6 +18,8 @@ public class BankAcceptedCommandExecutor extends BankCommandExecutor {
 
 	@Override
 	public void onCommand(Player player, String[] args) {
+		/*if(args.length < 1) {
+			player.sendMessage(Strings.ERROR_BANK_NO_ARGUMENTS);*/
 		ArrayList<String> rows = new ArrayList<String>();
 		rows.add(Strings.BANK_ACCEPTED_ITEMS);
 		rows.add("");

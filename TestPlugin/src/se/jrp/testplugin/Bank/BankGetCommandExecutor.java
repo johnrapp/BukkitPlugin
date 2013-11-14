@@ -60,7 +60,6 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 	
 	public void getByName(Player player, ArrayList<ItemStack> depositBox, String [] args) {
 		PlayerInventory inventory = player.getInventory();
-		ArrayList<Integer> remove = new ArrayList<Integer>();
 		for(int i = 0; i < args.length; i += 2) {
 			if(!Functions.full(inventory)) {
 				Material mat = Functions.getMaterialFromName(args[i].toUpperCase());
@@ -80,9 +79,6 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 				break;
 			}
 		}
-		Collections.sort(remove, Collections.reverseOrder());
-		for (int i : remove)
-		    depositBox.remove(i);
 	}
 
 }

@@ -19,6 +19,8 @@ public class Values {
 		Material.COOKED_BEEF, Material.COOKED_CHICKEN, Material.ENDER_PEARL, Material.BLAZE_ROD, Material.GHAST_TEAR, Material.NETHER_WARTS,
 		Material.EYE_OF_ENDER, Material.EMERALD, Material.CARROT, Material.BAKED_POTATO, Material.GOLDEN_CARROT, Material.PUMPKIN_PIE};
 	
+	public final static String[] BANK_HELP_PAGES = {Strings.BANK_HELP_GET, Strings.BANK_HELP_STORE};
+	
 	public final static HashMap<Material, String> MATERIAL_DISPLAY_EXCEPTIONS =	new HashMap<Material, String>();
 	public final static HashMap<String, Material> MATERIAL_WRITE_EXCEPTIONS = new HashMap<String, Material>();
 	

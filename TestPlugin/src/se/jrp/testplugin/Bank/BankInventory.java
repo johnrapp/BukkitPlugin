@@ -31,6 +31,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 	
 	public boolean addItem(Player player, ItemStack item) {
 		//TODO kolla igenom och förbättra
+		//om man tar något ifrån en sack längre bort tas det från en tidigare
 		Material mat = item.getType();
 		ArrayList<ItemStack> all = all(player.getName(), mat);
 		boolean remove = false;
@@ -70,7 +71,6 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 			player.sendMessage(Strings.ERROR_BANK_NONE_OF_MATERIAL1 + Functions.parseMaterial(mat)
 				+ Strings.ERROR_BANK_NONE_OF_MATERIAL2);
 		}
-		int added = item.getAmount();
 		while(all.size() > 0) {
 			if(!Functions.full(inventory)) {
 				ItemStack least = all.get(0);
@@ -79,18 +79,15 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 					if(is.getAmount() < least.getAmount())
 						least = is;
 				}
-				
 				if(least.getAmount() >= item.getAmount()) {
 					least.setAmount(least.getAmount() - item.getAmount());
 					if(least.getAmount() <= 0)
 						depositBox.remove(least);
 					inventory.addItem(item);
-					added -= item.getAmount();
-					break;
+					return;
 				} else {
 					item.setAmount(item.getAmount() - least.getAmount());
 					inventory.addItem(least);
-					added -= least.getAmount();
 					depositBox.remove(least);
 					all.remove(least);
 				}
@@ -100,7 +97,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 			}
 		}
 		
-		player.sendMessage(Strings.ERROR_BANK_GET_NOT_ENOUGH1 + added + " " + Functions.parseMaterial(mat)
+		player.sendMessage(Strings.ERROR_BANK_GET_NOT_ENOUGH1 + Functions.parseMaterial(mat)
 				+ Strings.ERROR_BANK_GET_NOT_ENOUGH2);
 	}
 	

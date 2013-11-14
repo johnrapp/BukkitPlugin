@@ -26,6 +26,7 @@ public class Bank implements CommandExecutor, FileListener {
 		commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor(this));
 		commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor(this));
 		commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor(this));
+		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));
 	}
 	
 	@Override
