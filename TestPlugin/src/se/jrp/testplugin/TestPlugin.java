@@ -20,7 +20,7 @@ public final class TestPlugin extends JavaPlugin {
     public void onEnable(){
 		instance = this;
 		Values.init();
-		HashMap<String, FileListener> map = new HashMap<String, FileListener>();
+		HashMap<String, FileSubscriber> map = new HashMap<String, FileSubscriber>();
 		map.put(Strings.FILE_BANK, new Bank());
 		map.put(Strings.FILE_SAPLING_WALK, new SaplingWalk());
 		FileManager.onEnable(map);

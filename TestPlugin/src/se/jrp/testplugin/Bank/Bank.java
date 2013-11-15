@@ -11,12 +11,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import se.jrp.testplugin.FileListener;
+import se.jrp.testplugin.FileSubscriber;
 import se.jrp.testplugin.TestPlugin;
 import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
 
-public class Bank implements CommandExecutor, FileListener {
+public class Bank implements CommandExecutor, FileSubscriber {
 	public BankInventory inventory = new BankInventory();
 	public HashMap<String, BankCommandExecutor> commandExecutors = new HashMap<String, BankCommandExecutor>();
 	
@@ -30,13 +30,13 @@ public class Bank implements CommandExecutor, FileListener {
 	}
 	
 	@Override
-	public void onLoad(HashMap<? extends Object, ? extends Object> serializedMap) {
+	public void onLoad(String id, HashMap<? extends Object, ? extends Object> serializedMap) {
 		for(Entry entry : serializedMap.entrySet()) {
 			inventory.put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
 		}
 	}
 	@Override
-	public HashMap onSave() {
+	public HashMap onSave(String id) {
 		HashMap<String, ArrayList<HashMap<Material, Integer>>> serializedMap = new HashMap<String, ArrayList<HashMap<Material, Integer>>>();
 		for(Entry<String, ArrayList<ItemStack>> entry : inventory.entrySet()) {
 			serializedMap.put(entry.getKey(), serialize(entry.getValue()));

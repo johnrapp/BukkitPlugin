@@ -15,7 +15,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-public class SaplingWalk implements Listener, CommandExecutor, FileListener {
+public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
 	private String command = "saplingwalk";
 	private HashMap<String, Boolean> toggles;
 	
@@ -25,12 +25,12 @@ public class SaplingWalk implements Listener, CommandExecutor, FileListener {
 	}
 	
 	@Override
-	public void onLoad(HashMap<? extends Object, ? extends Object> map) {
+	public void onLoad(String id, HashMap<? extends Object, ? extends Object> map) {
 		toggles = (HashMap<String, Boolean>) map;
 		
 	}
 	@Override
-	public HashMap<? extends Object, ? extends Object> onSave() {
+	public HashMap<? extends Object, ? extends Object> onSave(String id) {
 		return toggles;
 	}
 	

@@ -14,19 +14,19 @@ import org.bukkit.event.Listener;
 public class FileManager {
 	public final static String FILE_EXTENSION = ".bin";
 	public static String path;
-	public static HashMap<String, FileListener> listeners;
+	public static HashMap<String, FileSubscriber> subscribers;
 	
-	public static void onEnable(HashMap<String, FileListener> listeners) {
-		FileManager.listeners = listeners;
+	public static void onEnable(HashMap<String, FileSubscriber> subscribers) {
+		FileManager.subscribers = subscribers;
 		path = TestPlugin.instance.getDataFolder() + File.separator;
-		for(Entry<String, FileListener> entry : listeners.entrySet()) {
-			entry.getValue().onLoad(load(entry.getKey()));
+		for(Entry<String, FileSubscriber> entry : subscribers.entrySet()) {
+			entry.getValue().onLoad(entry.getKey(), load(entry.getKey()));
 		}
 	}
 	
 	public static void onDisable() {
-		for(Entry<String, FileListener> entry : listeners.entrySet()) {
-			save(entry.getValue().onSave(), entry.getKey());
+		for(Entry<String, FileSubscriber> entry : subscribers.entrySet()) {
+			save(entry.getValue().onSave(entry.getKey()), entry.getKey());
 		}
 	}
 
