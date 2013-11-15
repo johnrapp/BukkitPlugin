@@ -62,7 +62,7 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 		PlayerInventory inventory = player.getInventory();
 		for(int i = 0; i < args.length; i += 2) {
 			if(!Functions.full(inventory)) {
-				Material mat = Functions.getMaterialFromName(args[i].toUpperCase());
+				Material mat = Functions.getMaterialFromName(args[i]);
 				if(mat != null && bank.inventory.contains(player.getName(), mat)) {
 					String amount = args[i + 1];
 					if(Functions.isInteger(amount)) {
@@ -72,7 +72,7 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 						break;
 					}
 				} else {
-					player.sendMessage(ChatColor.RED + args [i] + Strings.ERROR_BANK_NON_ITEM);
+					player.sendMessage(ChatColor.RED + args[i] + Strings.ERROR_BANK_NON_ITEM);
 				}
 			} else {
 				player.sendMessage(Strings.ERROR_BANK_GET_NOT_EVERYTHING);

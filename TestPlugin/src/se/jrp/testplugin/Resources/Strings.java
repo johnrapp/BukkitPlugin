@@ -41,9 +41,10 @@ public class Strings {
 	public final static String ERROR_BANK_NONE_OF_MATERIAL1 = ChatColor.RED + "You have no ";
 	public final static String ERROR_BANK_NONE_OF_MATERIAL2 = " in your inventory";
 	
-	
 	public final static String BOOK_ADDED = "A book was added to your inventory.";
 	
+	public final static String BANK_LIST_MATERIAL1 = "You have ";
+	public final static String BANK_LIST_MATERIAL2 = " in your Bank inventory.";
 	public final static String BANK_HELP_BOOK_TITLE = "Bank tutorial";
 	public final static String BANK_PLAYER_ACCOUNT = "'s Bank account";
 	public final static String BANK_ADDED_ITEM = ChatColor.GREEN + "Item added successfully!";
@@ -51,12 +52,25 @@ public class Strings {
 	public final static String BANK_ACCEPTED_GUIDLINES = ChatColor.BLUE + "What's accepted in the Bank?\n\n" + 
 			ChatColor.BLACK + "General rules:\n" + ChatColor.GRAY + "*All cooked food.\n" +
 			"*Ingots and gems.\n" + "*No ores, tools or armor.\n" + "*Most rare stuff worth keeping.";
-	public final static String BANK_HELP_GET = ChatColor.BLUE + "How to use the Bank\n\n" + 
-			ChatColor.BLACK + "GET:\n" + ChatColor.GRAY + "/bank get (index) - To get a item by its Bank-inventory index.\n" + "/bank get (material) (amount) - "
-					+ "To get a item by its type. \n" + "/bank get (index) (index) (index) - You can get several items by adding Indexes\n" 
-			+ "/bank get (material) (amount) (material) (amount) - Or by material type";
-	public final static String BANK_HELP_STORE = ChatColor.BLUE + "How to use the Bank\n\n" + 
-			ChatColor.BLACK + "STORE:\n" + ChatColor.GRAY + "/bank store - To store the item in hand.\n" + "/bank list - To see your Bank inventory" 
-			+ "/bank accepted - To recieve a Book with items accepted by Bank."
-		;
+	
+	
+	public final static String BANK_HELP_PAGE1 = ChatColor.BLUE + "How to use the Bank\n\n" 
+				+ ChatColor.BLACK + "/bank get (slot) ...\n"
+					+ ChatColor.GRAY + "- Get a item by its slot.\n\n"
+				+ ChatColor.BLACK + "/bank get (material) (amount) ...\n"
+					+ ChatColor.GRAY + "- Get a item by its name.\n\n"
+					+ "Use underscore instead of space in item names.";
+	
+	public final static String BANK_HELP_PAGE2 = ChatColor.GRAY + "Three dots after eachother means that you can stack arguments.\n\n"
+			+ "Examples\n/bank get 0 1 5\n/bank get diamond 34 iron_ingot 54";
+	
+	public final static String BANK_HELP_PAGE3 = ChatColor.BLACK + "/bank store\n"
+			+ ChatColor.GRAY + "- Store the item in your hand.\n\n"
+			+ ChatColor.BLACK + "/bank accepted\n"
+					+ ChatColor.GRAY + "- Get a book showing items accepted by the Bank.\n\n"
+			+ ChatColor.BLACK + "/bank list\n"
+					+ ChatColor.GRAY + "- Get a book showing your Bank inventory.";
+	
+	public final static String BANK_HELP_PAGE4 = ChatColor.BLACK + "/bank list (material) ...\n"
+			+ ChatColor.GRAY + "- See how much of a perticular material you have.";
 }

@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import se.jrp.testplugin.Resources.Strings;
-import se.jrp.testplugin.Resources.Values;
 
 public class BankStoreCommandExecutor extends BankCommandExecutor {
 
@@ -17,7 +16,6 @@ public class BankStoreCommandExecutor extends BankCommandExecutor {
 	public void onCommand(Player player, String[] args) {
 		if(!(bank.inventory.containsKey(player.getName())))
 			bank.inventory.put(player.getName(), new ArrayList<ItemStack>());
-		ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
 		if(args.length > 0) {
 			player.sendMessage(Strings.ERROR_BANK_STORE);
 			return;

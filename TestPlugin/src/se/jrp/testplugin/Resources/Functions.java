@@ -21,7 +21,13 @@ public class Functions {
 		return result.replaceAll("_", " ");
 	}
 	
+	public static String parseMaterialPlural(Material material) {
+		String name = parseMaterial(material);
+		return name.substring(name.length() - 1).equalsIgnoreCase("s") ? name : name + "s";
+	}
+	
 	public static Material getMaterialFromName(String name) {
+		name = name.toUpperCase();
 		if(Values.MATERIAL_WRITE_EXCEPTIONS.containsKey(name))
 			return Values.MATERIAL_WRITE_EXCEPTIONS.get(name);
 		

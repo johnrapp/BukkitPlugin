@@ -3,11 +3,9 @@ package se.jrp.testplugin.Bank;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 import se.jrp.testplugin.Book;
-import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;
 

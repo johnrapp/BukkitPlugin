@@ -8,8 +8,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-import com.google.common.base.Function;
-
 import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;
