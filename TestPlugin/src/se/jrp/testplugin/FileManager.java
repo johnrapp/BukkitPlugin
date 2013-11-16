@@ -18,6 +18,8 @@ public class FileManager {
         public static void onEnable(String path, HashMap<String, FileSubscriber> subscribers) {
                 FileManager.subscribers = subscribers;
                 FileManager.path = path;
+				File dir = new File(path);
+				if (!dir.exists()) dir.mkdir();
                 for(Entry<String, FileSubscriber> entry : subscribers.entrySet()) {
 					entry.getValue().onLoad(entry.getKey(), load(entry.getKey()));
                 }
