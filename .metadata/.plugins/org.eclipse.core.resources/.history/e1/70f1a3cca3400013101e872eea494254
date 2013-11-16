@@ -1,9 +1,0 @@
-name: TestPlugin
-main: se.jrp.testplugin.TestPlugin
-version: 1
-commands:
-   test:
-      description: A testing command.
-      usage: /<test> [this]
-      permission:
-      permission-message: You don't have TestPlugin.test

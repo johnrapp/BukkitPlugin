@@ -1,7 +1,0 @@
-package se.jrp.testplugin;
-
-import org.bukkit.event.Listener;
-
-public class LogBlockBreakListener implements Listener {
-
-}

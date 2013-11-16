@@ -4,3 +4,9 @@
 *.war
 *.ear
 *.classpath
+/BukkitFileManager/nbproject/private/
+/TestPlugin/nbproject/private/
+/TestPlugin/dist/
+/TestPlugin/build/
+/BukkitFileManager/build/
+/BukkitFileManager/dist/
