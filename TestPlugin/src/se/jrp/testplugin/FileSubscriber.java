@@ -1,5 +1,7 @@
 package se.jrp.testplugin;
 
+
+
 import java.util.HashMap;
 
 public interface FileSubscriber {

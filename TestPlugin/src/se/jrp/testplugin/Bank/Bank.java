@@ -10,8 +10,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-
+//import se.jrp.bukkitfilemanager.FileSubscriber;
 import se.jrp.testplugin.FileSubscriber;
+
 import se.jrp.testplugin.TestPlugin;
 import se.jrp.testplugin.Resources.Functions;
 import se.jrp.testplugin.Resources.Strings;
@@ -75,7 +76,7 @@ public class Bank implements CommandExecutor, FileSubscriber {
 		if(commandExecutors.containsKey(args[0])) {
 			commandExecutors.get(args[0]).onCommand((Player) sender, Functions.cutFirstIndex(args));
 			return true;
-		} 
+		}
 		
 		return false;
 	}

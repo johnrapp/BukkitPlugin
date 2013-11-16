@@ -28,8 +28,8 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 	}
 	
 	public boolean addItem(Player player, ItemStack item) {
-		//TODO kolla igenom och förbättra
-		//om man tar något ifrån en sack längre bort tas det från en tidigare
+		//TODO kolla igenom och fÃ¶rbÃ¤ttra
+		//om man tar nÃ¥got ifrï¿½n en sack lÃ¤ngre bort tas det frÃ¥n en tidigare
 		Material mat = item.getType();
 		ArrayList<ItemStack> all = all(player.getName(), mat);
 		boolean remove = false;

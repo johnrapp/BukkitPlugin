@@ -1,0 +1,773 @@
+2013-11-16 17:37:44 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 17:37:44 [INFO] Loading properties
+2013-11-16 17:37:44 [WARNING] lasspath does not exist
+2013-11-16 17:37:44 [INFO] Generating new properties file
+2013-11-16 17:37:44 [WARNING] Failed to save lasspath
+java.io.FileNotFoundException: lasspath (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at net.minecraft.server.v1_6_R3.PropertyManager.savePropertiesFile(PropertyManager.java:78)
+	at net.minecraft.server.v1_6_R3.PropertyManager.getString(PropertyManager.java:101)
+	at net.minecraft.server.v1_6_R3.PropertyManager.getBoolean(PropertyManager.java:118)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:65)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-16 17:37:44 [INFO] Generating new properties file
+2013-11-16 17:37:44 [INFO] Default game type: SURVIVAL
+2013-11-16 17:37:44 [INFO] Generating keypair
+2013-11-16 17:37:44 [INFO] Starting Minecraft server on *:25565
+2013-11-16 17:37:44 [WARNING] **** FAILED TO BIND TO PORT!
+2013-11-16 17:37:44 [WARNING] The exception was: java.net.BindException: Address already in use: JVM_Bind
+2013-11-16 17:37:44 [WARNING] Perhaps a server is already running on that port?
+2013-11-16 17:38:50 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 17:38:50 [INFO] Loading properties
+2013-11-16 17:38:50 [INFO] Default game type: SURVIVAL
+2013-11-16 17:38:50 [INFO] Generating keypair
+2013-11-16 17:38:50 [INFO] Starting Minecraft server on *:25565
+2013-11-16 17:38:50 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 17:38:50 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 17:38:50 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (The system cannot find the file specified)
+2013-11-16 17:38:50 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (The system cannot find the file specified)
+2013-11-16 17:38:50 [INFO] Preparing level "world"
+2013-11-16 17:38:50 [WARNING] Unable to find spawn biome
+2013-11-16 17:38:51 [INFO] Preparing start region for level 0 (Seed: 1392329111933120956)
+2013-11-16 17:38:52 [INFO] Preparing spawn area: 9%
+2013-11-16 17:38:53 [INFO] Preparing spawn area: 28%
+2013-11-16 17:38:54 [INFO] Preparing spawn area: 44%
+2013-11-16 17:38:55 [INFO] Preparing spawn area: 62%
+2013-11-16 17:38:56 [INFO] Preparing spawn area: 81%
+2013-11-16 17:38:57 [INFO] Preparing start region for level 1 (Seed: 1392329111933120956)
+2013-11-16 17:38:58 [INFO] Preparing spawn area: 18%
+2013-11-16 17:38:59 [INFO] Preparing spawn area: 40%
+2013-11-16 17:39:00 [INFO] Preparing spawn area: 55%
+2013-11-16 17:39:01 [INFO] Preparing spawn area: 67%
+2013-11-16 17:39:02 [INFO] Preparing spawn area: 85%
+2013-11-16 17:39:03 [INFO] Preparing spawn area: 98%
+2013-11-16 17:39:03 [INFO] Preparing start region for level 2 (Seed: 1392329111933120956)
+2013-11-16 17:39:04 [INFO] Preparing spawn area: 51%
+2013-11-16 17:39:05 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 17:39:05 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/filemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.filemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 17:39:05 [INFO] Done (14,575s)! For help, type "help" or "?"
+2013-11-16 17:45:34 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 17:45:34 [INFO] Loading properties
+2013-11-16 17:45:34 [INFO] Default game type: SURVIVAL
+2013-11-16 17:45:34 [INFO] Generating keypair
+2013-11-16 17:45:34 [INFO] Starting Minecraft server on *:25565
+2013-11-16 17:45:34 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 17:45:34 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 17:45:34 [INFO] Preparing level "world"
+2013-11-16 17:45:35 [INFO] Preparing start region for level 0 (Seed: 278519824392524203)
+2013-11-16 17:45:36 [INFO] Preparing spawn area: 8%
+2013-11-16 17:45:37 [INFO] Preparing spawn area: 25%
+2013-11-16 17:45:38 [INFO] Preparing spawn area: 51%
+2013-11-16 17:45:39 [INFO] Preparing spawn area: 70%
+2013-11-16 17:45:40 [INFO] Preparing spawn area: 86%
+2013-11-16 17:45:41 [INFO] Preparing start region for level 1 (Seed: 278519824392524203)
+2013-11-16 17:45:41 [INFO] Preparing start region for level 2 (Seed: 278519824392524203)
+2013-11-16 17:45:41 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 17:45:41 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/filemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.filemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 17:45:41 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 17:45:41 [INFO] Done (6,803s)! For help, type "help" or "?"
+2013-11-16 17:46:01 [INFO] johnrapp[/127.0.0.1:53071] logged in with entity id 6781 at ([world] -117.5, 77.0, 254.5)
+2013-11-16 17:46:05 [INFO] johnrapp issued server command: /reload
+2013-11-16 17:47:28 [INFO] johnrapp issued server command: /stop
+2013-11-16 17:47:31 [INFO] Connection reset
+2013-11-16 17:47:31 [INFO] johnrapp lost connection: disconnect.endOfStream
+2013-11-16 17:47:31 [INFO] §ejohnrapp left the game.
+2013-11-16 17:49:40 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 17:49:40 [INFO] Loading properties
+2013-11-16 17:49:40 [INFO] Default game type: SURVIVAL
+2013-11-16 17:49:40 [INFO] Generating keypair
+2013-11-16 17:49:40 [INFO] Starting Minecraft server on *:25565
+2013-11-16 17:49:40 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 17:49:40 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 17:49:40 [INFO] Preparing level "world"
+2013-11-16 17:49:41 [INFO] Preparing start region for level 0 (Seed: -2658423994312132561)
+2013-11-16 17:49:42 [INFO] Preparing spawn area: 11%
+2013-11-16 17:49:43 [INFO] Preparing spawn area: 25%
+2013-11-16 17:49:44 [INFO] Preparing spawn area: 55%
+2013-11-16 17:49:45 [INFO] Preparing spawn area: 85%
+2013-11-16 17:49:45 [INFO] Preparing start region for level 1 (Seed: -2658423994312132561)
+2013-11-16 17:49:45 [INFO] Preparing start region for level 2 (Seed: -2658423994312132561)
+2013-11-16 17:49:46 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 17:49:46 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/filemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.filemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 17:49:46 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 17:49:46 [INFO] Done (5,459s)! For help, type "help" or "?"
+2013-11-16 17:49:51 [INFO] johnrapp[/127.0.0.1:53334] logged in with entity id 3768 at ([world] -119.19941210120454, 79.0, 259.57423099955884)
+2013-11-16 17:49:53 [INFO] johnrapp issued server command: /reload
+2013-11-16 17:49:53 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-16 17:49:53 [SEVERE] Error occurred while disabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/filemanager/FileManager
+	at se.jrp.testplugin.TestPlugin.onDisable(TestPlugin.java:39)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:219)
+	at org.bukkit.plugin.java.JavaPluginLoader.disablePlugin(JavaPluginLoader.java:481)
+	at org.bukkit.plugin.SimplePluginManager.disablePlugin(SimplePluginManager.java:400)
+	at org.bukkit.plugin.SimplePluginManager.disablePlugins(SimplePluginManager.java:393)
+	at org.bukkit.plugin.SimplePluginManager.clearPlugins(SimplePluginManager.java:434)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.reload(CraftServer.java:585)
+	at org.bukkit.Bukkit.reload(Bukkit.java:277)
+	at org.bukkit.command.defaults.ReloadCommand.execute(ReloadCommand.java:23)
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:192)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.dispatchCommand(CraftServer.java:528)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.handleCommand(PlayerConnection.java:968)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.chat(PlayerConnection.java:886)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.a(PlayerConnection.java:837)
+	at net.minecraft.server.v1_6_R3.Packet3Chat.handle(SourceFile:49)
+	at net.minecraft.server.v1_6_R3.NetworkManager.b(NetworkManager.java:296)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.e(PlayerConnection.java:116)
+	at net.minecraft.server.v1_6_R3.ServerConnection.b(SourceFile:37)
+	at net.minecraft.server.v1_6_R3.DedicatedServerConnection.b(SourceFile:30)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.t(MinecraftServer.java:592)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.t(DedicatedServer.java:227)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.s(MinecraftServer.java:488)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:421)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.filemanager.FileManager
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 24 more
+2013-11-16 17:49:53 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 17:49:53 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 17:49:53 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/filemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.reload(CraftServer.java:615)
+	at org.bukkit.Bukkit.reload(Bukkit.java:277)
+	at org.bukkit.command.defaults.ReloadCommand.execute(ReloadCommand.java:23)
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:192)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.dispatchCommand(CraftServer.java:528)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.handleCommand(PlayerConnection.java:968)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.chat(PlayerConnection.java:886)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.a(PlayerConnection.java:837)
+	at net.minecraft.server.v1_6_R3.Packet3Chat.handle(SourceFile:49)
+	at net.minecraft.server.v1_6_R3.NetworkManager.b(NetworkManager.java:296)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.e(PlayerConnection.java:116)
+	at net.minecraft.server.v1_6_R3.ServerConnection.b(SourceFile:37)
+	at net.minecraft.server.v1_6_R3.DedicatedServerConnection.b(SourceFile:30)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.t(MinecraftServer.java:592)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.t(DedicatedServer.java:227)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.s(MinecraftServer.java:488)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:421)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.filemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 39 more
+2013-11-16 17:49:53 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 17:49:53 [INFO] johnrapp: Reload complete.
+2013-11-16 17:55:12 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 17:55:12 [INFO] Loading properties
+2013-11-16 17:55:12 [INFO] Default game type: SURVIVAL
+2013-11-16 17:55:12 [INFO] Generating keypair
+2013-11-16 17:55:12 [INFO] Starting Minecraft server on *:25565
+2013-11-16 17:55:13 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 17:55:13 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 17:55:13 [INFO] Preparing level "world"
+2013-11-16 17:55:13 [INFO] Preparing start region for level 0 (Seed: -6354455618885535287)
+2013-11-16 17:55:14 [INFO] Preparing spawn area: 15%
+2013-11-16 17:55:15 [INFO] Preparing spawn area: 43%
+2013-11-16 17:55:16 [INFO] Preparing spawn area: 72%
+2013-11-16 17:55:16 [INFO] Preparing start region for level 1 (Seed: -6354455618885535287)
+2013-11-16 17:55:17 [INFO] Preparing start region for level 2 (Seed: -6354455618885535287)
+2013-11-16 17:55:17 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 17:55:17 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/filemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.filemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 17:55:17 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 17:55:17 [INFO] Done (4,570s)! For help, type "help" or "?"
+2013-11-16 17:55:17 [INFO] /127.0.0.1:53885 lost connection
+2013-11-16 17:58:13 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 17:58:13 [INFO] Loading properties
+2013-11-16 17:58:13 [INFO] Default game type: SURVIVAL
+2013-11-16 17:58:13 [INFO] Generating keypair
+2013-11-16 17:58:13 [INFO] Starting Minecraft server on *:25565
+2013-11-16 17:58:13 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 17:58:13 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 17:58:13 [INFO] Preparing level "world"
+2013-11-16 17:58:14 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 17:58:15 [INFO] Preparing spawn area: 11%
+2013-11-16 17:58:16 [INFO] Preparing spawn area: 32%
+2013-11-16 17:58:17 [INFO] Preparing spawn area: 63%
+2013-11-16 17:58:18 [INFO] Preparing spawn area: 85%
+2013-11-16 17:58:18 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 17:58:19 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 17:58:19 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 17:58:19 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 17:58:19 [INFO] Done (5,605s)! For help, type "help" or "?"
+2013-11-16 17:58:23 [INFO] /127.0.0.1:53960 lost connection
+2013-11-16 17:58:26 [INFO] johnrapp[/127.0.0.1:53961] logged in with entity id 5818 at ([world] -119.19941210120454, 79.0, 259.57423099955884)
+2013-11-16 17:58:38 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-16 17:58:38 [INFO] johnrapp: Set own game mode to CREATIVE mode
+2013-11-16 17:58:43 [INFO] johnrapp issued server command: /bank list
+2013-11-16 17:58:50 [INFO] johnrapp issued server command: /bank help
+2013-11-16 17:59:27 [INFO] johnrapp issued server command: /bank store
+2013-11-16 17:59:30 [INFO] johnrapp issued server command: /bank store
+2013-11-16 17:59:33 [INFO] johnrapp issued server command: /bank store
+2013-11-16 17:59:35 [INFO] johnrapp issued server command: /bank store
+2013-11-16 17:59:37 [INFO] johnrapp issued server command: /bank store
+2013-11-16 17:59:44 [INFO] johnrapp issued server command: /bank list
+2013-11-16 17:59:57 [INFO] johnrapp issued server command: /bank get emerald 21
+2013-11-16 18:00:04 [INFO] johnrapp issued server command: /bank get emerald 64
+2013-11-16 18:00:16 [INFO] johnrapp issued server command: /bank list
+2013-11-16 18:01:51 [INFO] johnrapp issued server command: /bank store
+2013-11-16 18:02:50 [INFO] johnrapp issued server command: /stop
+2013-11-16 18:02:50 [INFO] johnrapp: Stopping the server..
+2013-11-16 18:02:50 [INFO] Stopping server
+2013-11-16 18:02:50 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-16 18:02:50 [INFO] Saving players
+2013-11-16 18:02:50 [WARNING] DSCT: socket closed
+2013-11-16 18:02:50 [INFO] Closing listening thread
+2013-11-16 18:02:50 [INFO] §ejohnrapp left the game.
+2013-11-16 18:02:50 [INFO] Saving worlds
+2013-11-16 18:02:50 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-16 18:02:51 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-16 18:02:51 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-16 18:02:51 [INFO] Stopping server
+2013-11-16 18:02:51 [INFO] Saving players
+2013-11-16 18:03:12 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:03:12 [INFO] Loading properties
+2013-11-16 18:03:12 [INFO] Default game type: SURVIVAL
+2013-11-16 18:03:12 [INFO] Generating keypair
+2013-11-16 18:03:12 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:03:12 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:03:12 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:03:12 [INFO] Preparing level "world"
+2013-11-16 18:03:12 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:03:13 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:03:14 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:03:14 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:03:14 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:03:14 [INFO] Done (1,849s)! For help, type "help" or "?"
+2013-11-16 18:03:21 [INFO] johnrapp[/127.0.0.1:54010] logged in with entity id 238 at ([world] 80.7652620479343, 71.0, 264.30000001192093)
+2013-11-16 18:03:23 [INFO] johnrapp issued server command: /bank store
+2013-11-16 18:05:34 [INFO] johnrapp lost connection: disconnect.endOfStream
+2013-11-16 18:05:34 [INFO] §ejohnrapp left the game.
+2013-11-16 18:05:34 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-11-16 18:05:41 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-11-16 18:05:43 [INFO] johnrapp[/127.0.0.1:54044] logged in with entity id 559 at ([world] 80.7652620479343, 71.0, 264.30000001192093)
+2013-11-16 18:06:02 [INFO] johnrapp issued server command: /stop
+2013-11-16 18:06:02 [INFO] johnrapp: Stopping the server..
+2013-11-16 18:06:06 [INFO] Stopping server
+2013-11-16 18:06:06 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-16 18:06:06 [WARNING] DSCT: socket closed
+2013-11-16 18:06:06 [INFO] Closing listening thread
+2013-11-16 18:06:06 [INFO] Saving players
+2013-11-16 18:06:06 [INFO] §ejohnrapp left the game.
+2013-11-16 18:06:06 [INFO] Saving worlds
+2013-11-16 18:06:06 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-16 18:06:07 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-16 18:06:08 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-16 18:16:31 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:16:31 [INFO] Loading properties
+2013-11-16 18:16:31 [INFO] Default game type: SURVIVAL
+2013-11-16 18:16:31 [INFO] Generating keypair
+2013-11-16 18:16:32 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:16:32 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:16:32 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:16:32 [INFO] Preparing level "world"
+2013-11-16 18:16:32 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:16:33 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:16:33 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:16:34 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:16:34 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/bukkitfilemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.bukkitfilemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 18:16:34 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:16:34 [INFO] Done (1,744s)! For help, type "help" or "?"
+2013-11-16 18:19:51 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:19:51 [INFO] Loading properties
+2013-11-16 18:19:51 [INFO] Default game type: SURVIVAL
+2013-11-16 18:19:51 [INFO] Generating keypair
+2013-11-16 18:19:52 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:19:52 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:19:52 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:19:52 [INFO] Preparing level "world"
+2013-11-16 18:19:52 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:19:53 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:19:53 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:19:54 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:19:54 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/bukkitfilemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.bukkitfilemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 18:19:54 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:19:54 [INFO] Done (1,738s)! For help, type "help" or "?"
+2013-11-16 18:20:37 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:20:37 [INFO] Loading properties
+2013-11-16 18:20:37 [INFO] Default game type: SURVIVAL
+2013-11-16 18:20:37 [INFO] Generating keypair
+2013-11-16 18:20:37 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:20:37 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:20:37 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:20:37 [INFO] Preparing level "world"
+2013-11-16 18:20:37 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:20:38 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:20:39 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:20:39 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:20:39 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:20:39 [INFO] Done (1,753s)! For help, type "help" or "?"
+2013-11-16 18:20:46 [INFO] johnrapp [/127.0.0.1:54201] lost connection
+2013-11-16 18:22:08 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:22:08 [INFO] Loading properties
+2013-11-16 18:22:08 [INFO] Default game type: SURVIVAL
+2013-11-16 18:22:08 [INFO] Generating keypair
+2013-11-16 18:22:09 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:22:09 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:22:09 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:22:09 [INFO] Preparing level "world"
+2013-11-16 18:22:09 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:22:10 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:22:11 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:22:11 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:22:11 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/bukkitfilemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.bukkitfilemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 18:22:11 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:22:11 [INFO] Done (1,787s)! For help, type "help" or "?"
+2013-11-16 18:24:20 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:24:20 [INFO] Loading properties
+2013-11-16 18:24:20 [INFO] Default game type: SURVIVAL
+2013-11-16 18:24:20 [INFO] Generating keypair
+2013-11-16 18:24:20 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:24:21 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:24:21 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:24:21 [INFO] Preparing level "world"
+2013-11-16 18:24:21 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:24:22 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:24:22 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:24:23 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:24:23 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/bukkitfilemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.bukkitfilemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 18:24:23 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:24:23 [INFO] Done (1,829s)! For help, type "help" or "?"
+2013-11-16 18:25:38 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:25:38 [INFO] Loading properties
+2013-11-16 18:25:38 [INFO] Default game type: SURVIVAL
+2013-11-16 18:25:38 [INFO] Generating keypair
+2013-11-16 18:25:38 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:25:39 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:25:39 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:25:39 [INFO] Preparing level "world"
+2013-11-16 18:25:39 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:25:40 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:25:40 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:25:40 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:25:41 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:25:41 [INFO] Done (1,815s)! For help, type "help" or "?"
+2013-11-16 18:25:45 [INFO] johnrapp[/127.0.0.1:54243] logged in with entity id 231 at ([world] 69.068590868844, 72.0, 254.2161742248216)
+2013-11-16 18:25:48 [INFO] johnrapp issued server command: /bank list
+2013-11-16 18:26:18 [INFO] johnrapp issued server command: /stop
+2013-11-16 18:26:18 [INFO] johnrapp: Stopping the server..
+2013-11-16 18:26:18 [INFO] Stopping server
+2013-11-16 18:26:18 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-16 18:26:18 [INFO] Saving players
+2013-11-16 18:26:18 [WARNING] DSCT: socket closed
+2013-11-16 18:26:18 [INFO] Closing listening thread
+2013-11-16 18:26:18 [INFO] §ejohnrapp left the game.
+2013-11-16 18:26:18 [INFO] Saving worlds
+2013-11-16 18:26:18 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-16 18:26:18 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-16 18:26:18 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-16 18:26:18 [INFO] Stopping server
+2013-11-16 18:26:18 [INFO] Saving players
+2013-11-16 18:26:18 [INFO] Saving worlds
+2013-11-16 18:26:18 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-16 18:26:29 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:26:29 [INFO] Loading properties
+2013-11-16 18:26:29 [INFO] Default game type: SURVIVAL
+2013-11-16 18:26:29 [INFO] Generating keypair
+2013-11-16 18:26:29 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:26:30 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:26:30 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:26:30 [INFO] Preparing level "world"
+2013-11-16 18:26:30 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:26:31 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:26:31 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:26:31 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:26:31 [SEVERE] Error occurred while enabling TestPlugin v1 (Is it up to date?)
+java.lang.NoClassDefFoundError: se/jrp/bukkitfilemanager/FileSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.JavaPluginLoader.getClassByName0(JavaPluginLoader.java:300)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:76)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at se.jrp.testplugin.TestPlugin.onEnable(TestPlugin.java:30)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ClassNotFoundException: se.jrp.bukkitfilemanager.FileSubscriber
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass0(PluginClassLoader.java:80)
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:53)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 27 more
+2013-11-16 18:26:31 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:26:31 [INFO] Done (1,763s)! For help, type "help" or "?"
+2013-11-16 18:27:58 [INFO] Starting minecraft server version 1.6.4
+2013-11-16 18:27:58 [INFO] Loading properties
+2013-11-16 18:27:58 [INFO] Default game type: SURVIVAL
+2013-11-16 18:27:58 [INFO] Generating keypair
+2013-11-16 18:27:59 [INFO] Starting Minecraft server on *:25565
+2013-11-16 18:27:59 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-16 18:27:59 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-16 18:27:59 [INFO] Preparing level "world"
+2013-11-16 18:27:59 [INFO] Preparing start region for level 0 (Seed: -5183199298795885261)
+2013-11-16 18:28:00 [INFO] Preparing start region for level 1 (Seed: -5183199298795885261)
+2013-11-16 18:28:00 [INFO] Preparing start region for level 2 (Seed: -5183199298795885261)
+2013-11-16 18:28:00 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-16 18:28:01 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-16 18:28:01 [INFO] Done (1,745s)! For help, type "help" or "?"
+2013-11-16 18:28:05 [INFO] /127.0.0.1:54271 lost connection
+2013-11-16 18:28:07 [INFO] johnrapp[/127.0.0.1:54275] logged in with entity id 229 at ([world] 64.71929599057584, 72.73901677465356, 249.30000001192093)
+2013-11-16 18:28:15 [INFO] johnrapp issued server command: /bank list
+2013-11-16 18:28:28 [INFO] johnrapp issued server command: /bank list diamond
+2013-11-16 18:37:02 [INFO] johnrapp issued server command: /bank help

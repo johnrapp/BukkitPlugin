@@ -28,8 +28,8 @@ public class Strings {
 	public final static String ERROR_BANK_GET_NOT_EVERYTHING = ChatColor.RED + "You don't have enough space in your inventory to store everything.";
 	public final static String ERROR_BANK_GET_NON_NUMBER = " is not a number.\nIf you want to get an item by its name, type \"/bank get (example_item) (amount)\".\n"
 			+ "If you want to know more, type \"/bank help\"";
-	public final static String ERROR_BANK_GET_NOT_ENOUGH1 = ChatColor.RED + "You only had ";
-	public final static String ERROR_BANK_GET_NOT_ENOUGH2 = " in you Bank inventory.";
+	public final static String ERROR_BANK_GET_NOT_ENOUGH1 = ChatColor.RED + "You didn't have all the ";
+	public final static String ERROR_BANK_GET_NOT_ENOUGH2 = " you asked for.";
 	public final static String ERROR_BANK_STORE = ChatColor.RED + "You can only store what's in your hand. Just type \"/bank store\"";
 	public final static String ERROR_BANK_STORE_NOT_EVERYTHING = ChatColor.RED + "Your Bank is too full to store everything.";
 	public final static String ERROR_BANK_NOTHING_STORED = ChatColor.RED + "You don't have anything in the Bank.";
@@ -55,12 +55,12 @@ public class Strings {
 	
 	
 	public final static String BANK_HELP_PAGE1 = ChatColor.BLUE + "How to use the Bank\n\n" 
-				+ ChatColor.BLACK + "/bank get (slot) ...\n"
-					+ ChatColor.GRAY + "- Get a item by its slot.\n\n"
-				+ ChatColor.BLACK + "/bank get (material) (amount) ...\n"
-					+ ChatColor.GRAY + "- Get a item by its name.\n\n"
-					+ "Use underscore instead of space in item names.";
-	
+			+ ChatColor.BLACK + "/bank get (slot) ...\n"
+				+ ChatColor.GRAY + "- Get a item by its slot.\n\n"
+			+ ChatColor.BLACK + "/bank get (material) (amount) ...\n"
+				+ ChatColor.GRAY + "- Get a item by its name.\n\n"
+				+ "Use underscore instead of space in item names.";
+
 	public final static String BANK_HELP_PAGE2 = ChatColor.GRAY + "Three dots after eachother means that you can stack arguments.\n\n"
 			+ "Examples\n/bank get 0 1 5\n/bank get diamond 34 iron_ingot 54";
 	

@@ -14,6 +14,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+//import se.jrp.bukkitfilemanager.FileSubscriber;
 
 public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
 	private String command = "saplingwalk";
