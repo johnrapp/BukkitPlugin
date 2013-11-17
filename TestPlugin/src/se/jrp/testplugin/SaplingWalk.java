@@ -1,5 +1,6 @@
 package se.jrp.testplugin;
 
+import se.jrp.testplugin.Resources.FileSubscriber;
 import java.util.HashMap;
 
 import org.bukkit.Location;
@@ -14,15 +15,15 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import se.jrp.testplugin.Resources.Strings;
 //import se.jrp.bukkitfilemanager.FileSubscriber;
 
 public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
-	private String command = "saplingwalk";
 	private HashMap<String, Boolean> toggles;
 	
 	public SaplingWalk() {
 		TestPlugin.instance.addEventListener(this);
-		TestPlugin.instance.addCommandExecutor(this, command);
+		TestPlugin.instance.addCommandExecutor(this, Strings.COMMAND_SAPLING_WALK);
 	}
 	
 	@Override
