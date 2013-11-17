@@ -1,0 +1,9 @@
+name: MarketPlugin
+main: se.jrp.marketplugin.MarketPlugin
+version: 1
+commands:
+   marketbuy:
+      description: 
+      usage:
+      permission:
+      permission-message:

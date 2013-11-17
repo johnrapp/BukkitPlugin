@@ -1,4 +1,4 @@
-package se.jrp.bankplugin.resources;
+package se.jrp.bukkitfilemanager;
 
 
 

@@ -21,8 +21,8 @@ public class Values {
 	
 	public final static String[] BANK_HELP_PAGES = {Strings.BANK_HELP_PAGE1, Strings.BANK_HELP_PAGE2,Strings.BANK_HELP_PAGE3, Strings.BANK_HELP_PAGE4};
 	
-	public final static HashMap<Material, String> MATERIAL_DISPLAY_EXCEPTIONS =	new HashMap<Material, String>();
-	public final static HashMap<String, Material> MATERIAL_WRITE_EXCEPTIONS = new HashMap<String, Material>();
+	public final static HashMap<Material, String> MATERIAL_DISPLAY_EXCEPTIONS = new HashMap<>();
+	public final static HashMap<String, Material> MATERIAL_WRITE_EXCEPTIONS = new HashMap<>();
 	
 	public static void init() {
 		MATERIAL_DISPLAY_EXCEPTIONS.put(Material.TNT, "TNT");

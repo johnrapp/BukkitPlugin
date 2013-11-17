@@ -1,4 +1,6 @@
-package se.jrp.bankplugin.resources;
+package se.jrp.bukkitfilemanager;
+
+
 
 import java.io.File;
 import java.io.FileInputStream;

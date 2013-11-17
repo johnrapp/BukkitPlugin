@@ -8,8 +8,6 @@ import java.util.HashMap;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-//import se.jrp.bukkitfilemanager.FileManager;
-//import se.jrp.bukkitfilemanager.FileSubscriber;
 
 import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;

@@ -18,11 +18,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import se.jrp.bankplugin.resources.FileManager;
-import se.jrp.bankplugin.resources.FileSubscriber;
 import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.Strings;
 import se.jrp.bankplugin.resources.Values;
+import se.jrp.bukkitfilemanager.FileManager;
+import se.jrp.bukkitfilemanager.FileSubscriber;
 
 public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubscriber {
 	public BankInventory inventory = new BankInventory();
@@ -34,16 +34,16 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	@Override
     public void onEnable() {
         Values.init();
-		HashMap subscribers = new HashMap<>();
+        HashMap subscribers = new HashMap<>();
         subscribers.put(Strings.FILE_BANK, this);
-		FileManager.onEnable(getDataFolder() + File.separator, subscribers);
-		
-		getCommand(Strings.COMMAND_BANK).setExecutor(this);
-		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
-		commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor(this));
-		commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor(this));
-		commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor(this));
-		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));}
+        FileManager.onEnable(getDataFolder() + File.separator, subscribers);
+
+        getCommand(Strings.COMMAND_BANK).setExecutor(this);
+        commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
+        commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor(this));
+        commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor(this));
+        commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor(this));
+        commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));}
  
     @Override
     public void onDisable() {
@@ -68,9 +68,9 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	public ArrayList<HashMap<Material, Integer>> serialize(ArrayList<ItemStack> items) {
 		ArrayList<HashMap<Material, Integer>> result = new ArrayList<>();
 		for(ItemStack item : items) {
-			HashMap<Material, Integer> map = new HashMap<>();
-			map.put(item.getType(), item.getAmount());
-			result.add(map);
+            HashMap<Material, Integer> map = new HashMap<>();
+            map.put(item.getType(), item.getAmount());
+            result.add(map);
 		}
 		return result;
 	}
