@@ -6,6 +6,8 @@ public class Strings {
 	public final static String PLUGIN_NAME = "BankPlugin";
 	
 	public final static String FILE_BANK = "bank";
+	public final static String FILE_ACCEPTED = "accepted";
+
 	
 	public final static String COMMAND_BANK = "bank";
 	public final static String COMMAND_BANK_GET = "get";

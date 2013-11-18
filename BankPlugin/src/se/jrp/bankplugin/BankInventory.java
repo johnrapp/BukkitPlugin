@@ -7,15 +7,19 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import se.jrp.bankplugin.filemanager.FileSubscriber;
 
 import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.Strings;
 import se.jrp.bankplugin.resources.Values;
 
-public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
+public class BankInventory extends HashMap<String, ArrayList<ItemStack>> implements FileSubscriber {
+	public final static String DIVISION_SYMBOL = ":";
+	public static ArrayList<Material> acceptedItems = new ArrayList<>();
+
 	
 	public ArrayList<ItemStack> all(String key, Material mat) {
-		ArrayList<ItemStack> result = new ArrayList<ItemStack>();
+		ArrayList<ItemStack> result = new ArrayList<>();
 		for(ItemStack item : get(key)) {
 			if(item.getType() == mat)
 				result.add(item);
@@ -109,11 +113,40 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> {
 	}
 	
 	public static boolean accepted(Material mat) {
-		for(Material item : Values.BANK_ACCEPTED_ITEMS) {
-			if(mat == item)
-				return true;
+		return acceptedItems.contains(mat);
+	}
+	
+	@Override
+	public void onLoad(String id, Object object) {
+		ArrayList<String> lines = (ArrayList<String>) object;
+		for(String line : lines) {
+			String[] parts = line.split(DIVISION_SYMBOL);
+			if(Boolean.parseBoolean(parts[1]))
+				acceptedItems.add(Material.getMaterial(parts[0]));
 		}
+	}
+
+	@Override
+	public Object onSave(String id) {
+		return null;
+	}
+
+	@Override
+	public Object getDefault(String id) {
+		return createAccepted();
+	}
+
+	@Override
+	public boolean isSaving(String id) {
 		return false;
+	}
+	
+	public ArrayList<String> createAccepted() {
+		ArrayList<String> lines = new ArrayList<>();
+		for(Material material : Material.values()) {
+			lines.add(material.name() + DIVISION_SYMBOL + Values.DEFAULT_ACCEPTED_ITEMS.contains(material));
+		}
+		return lines;
 	}
 }
 /*public void notifyChanges(String player) {

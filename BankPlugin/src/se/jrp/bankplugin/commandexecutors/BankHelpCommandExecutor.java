@@ -19,6 +19,6 @@ public class BankHelpCommandExecutor extends BankCommandExecutor  {
     @Override
 	public void onCommand(Player player, String[] args) {
 		Book.giveBook(player, new Book(Strings.BANK_HELP_BOOK_TITLE,
-			new ArrayList<>(Arrays.asList(Values.BANK_HELP_PAGES)), null));
+			new ArrayList<>(Arrays.asList(Values.HELP_PAGES)), null));
 	}
 }

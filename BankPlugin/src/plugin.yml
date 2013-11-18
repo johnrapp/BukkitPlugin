@@ -1,0 +1,9 @@
+name: BankPlugin
+main: se.jrp.bankplugin.BankPlugin
+version: 1
+commands:
+   bank:
+      description: Get, store, or receive help about or view items in bank.
+      usage: /bank <get, store, list, help, acceted>
+      permission:
+      permission-message:

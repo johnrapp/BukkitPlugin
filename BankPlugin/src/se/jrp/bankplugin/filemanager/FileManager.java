@@ -1,6 +1,4 @@
-package se.jrp.bukkitfilemanager;
-
-
+package se.jrp.bankplugin.filemanager;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,24 +6,23 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
-import java.util.Map.Entry;
 
 public class FileManager {
 	public final static String FILE_EXTENSION = ".bin";
 	public static String path;
-	public static HashMap<String, FileSubscriber> subscribers;
+	public static FileManipulator[] manipulators;
 
-	public static void onEnable(String path, HashMap<String, FileSubscriber> subscribers) {
-		FileManager.subscribers = subscribers;
+	public static void onEnable(String path, FileManipulator[] manipulators) {
+		FileManager.manipulators = manipulators;
 		FileManager.path = path;
-		for(Entry<String, FileSubscriber> entry : subscribers.entrySet()) {
-			entry.getValue().onLoad(entry.getKey(), load(entry.getKey()));
+		for(FileManipulator manipulator : manipulators) {
+			manipulator.onLoad(path);
 		}
 	}
 
 	public static void onDisable() {
-		for(Entry<String, FileSubscriber> entry : subscribers.entrySet()) {
-			save(entry.getValue().onSave(entry.getKey()), entry.getKey());
+		for(FileManipulator manipulator : manipulators) {
+			manipulator.onSave(path);
 		}
 	}
 

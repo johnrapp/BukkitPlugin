@@ -43,9 +43,9 @@ public class BankListCommandExecutor extends BankCommandExecutor {
 				}
 			}
 		} else {
-			ArrayList<String> timestamp = new ArrayList<String>();
+			ArrayList<String> timestamp = new ArrayList<>();
 			timestamp.add(Functions.getTimeStamp());
-			ArrayList<String> rows = new ArrayList<String>();
+			ArrayList<String> rows = new ArrayList<>();
 			rows.add(player.getName() + Strings.BANK_PLAYER_ACCOUNT);
 			rows.add("");
 			for(int i = 0; i < inventory.size(); i++) {

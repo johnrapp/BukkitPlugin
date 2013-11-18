@@ -18,15 +18,19 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+import se.jrp.bankplugin.filemanager.EditableStringFileManipulator;
+import se.jrp.bankplugin.filemanager.FileManager;
+import se.jrp.bankplugin.filemanager.FileManipulator;
+import se.jrp.bankplugin.filemanager.FileSubscriber;
+import se.jrp.bankplugin.filemanager.ObjectFileManipulator;
 import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.Strings;
 import se.jrp.bankplugin.resources.Values;
-import se.jrp.bukkitfilemanager.FileManager;
-import se.jrp.bukkitfilemanager.FileSubscriber;
 
 public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubscriber {
 	public BankInventory inventory = new BankInventory();
 	public HashMap<String, BankCommandExecutor> commandExecutors = new HashMap<>();
+	public HashMap<String, HashMap<Material, Integer>> defaultObject = new HashMap<>();
 	
 	public static void main(String[] args) {
     }
@@ -34,16 +38,16 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	@Override
     public void onEnable() {
         Values.init();
-        HashMap subscribers = new HashMap<>();
-        subscribers.put(Strings.FILE_BANK, this);
-        FileManager.onEnable(getDataFolder() + File.separator, subscribers);
+        FileManager.onEnable(getDataFolder() + File.separator, 
+				new FileManipulator[]{new ObjectFileManipulator(this, Strings.FILE_BANK),
+				new EditableStringFileManipulator(inventory, Strings.FILE_ACCEPTED)});
 
         getCommand(Strings.COMMAND_BANK).setExecutor(this);
-        commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
+		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
         commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor(this));
         commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor(this));
-        commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor(this));
-        commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));}
+		commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor(this));
+		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));}
  
     @Override
     public void onDisable() {
@@ -51,7 +55,8 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
     }
 	
 	@Override
-	public void onLoad(String id, HashMap<? extends Object, ? extends Object> serializedMap) {
+	public void onLoad(String id, Object object) {
+		HashMap<String, HashMap<Material, Integer>> serializedMap = (HashMap<String, HashMap<Material, Integer>>) object;
 		for(Entry entry : serializedMap.entrySet()) {
 			inventory.put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
 		}
@@ -99,5 +104,15 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 		}
 		
 		return false;
+	}
+
+	@Override
+	public Object getDefault(String id) {
+		return defaultObject;
+	}
+
+	@Override
+	public boolean isSaving(String id) {
+		return true;
 	}
 }
