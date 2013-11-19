@@ -2,11 +2,14 @@ package se.jrp.bankplugin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import se.jrp.bankplugin.filemanager.HumanReadableFileManipulator;
+import se.jrp.bankplugin.filemanager.FileManipulator;
 import se.jrp.bankplugin.filemanager.FileSubscriber;
 
 import se.jrp.bankplugin.resources.Functions;
@@ -16,7 +19,7 @@ import se.jrp.bankplugin.resources.Values;
 public class BankInventory extends HashMap<String, ArrayList<ItemStack>> implements FileSubscriber {
 	public final static String DIVISION_SYMBOL = ":";
 	public static ArrayList<Material> acceptedItems = new ArrayList<>();
-
+	public boolean save = false;
 	
 	public ArrayList<ItemStack> all(String key, Material mat) {
 		ArrayList<ItemStack> result = new ArrayList<>();
@@ -33,7 +36,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	
 	public boolean addItem(Player player, ItemStack item) {
 		//TODO kolla igenom och förbättra
-		//om man tar något ifr�n en sack längre bort tas det från en tidigare
+		//om man tar något ifrån en sack längre bort tas det från en tidigare
 		Material mat = item.getType();
 		ArrayList<ItemStack> all = all(player.getName(), mat);
 		boolean remove = false;
@@ -124,29 +127,38 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 			if(Boolean.parseBoolean(parts[1]))
 				acceptedItems.add(Material.getMaterial(parts[0]));
 		}
+		if(lines.size() < Material.values().length) {
+			save = true;
+		}
 	}
 
 	@Override
 	public Object onSave(String id) {
-		return null;
+		return generateFile(acceptedItems);
 	}
-
-	@Override
-	public Object getDefault(String id) {
-		return createAccepted();
-	}
-
+	
 	@Override
 	public boolean isSaving(String id) {
 		return false;
 	}
+
+	@Override
+	public Object getDefault(String id) {
+		save = true;
+		return generateFile(Values.DEFAULT_ACCEPTED_ITEMS);
+	}
 	
-	public ArrayList<String> createAccepted() {
+	public ArrayList<String> generateFile(List<Material> accepted) {
 		ArrayList<String> lines = new ArrayList<>();
 		for(Material material : Material.values()) {
-			lines.add(material.name() + DIVISION_SYMBOL + Values.DEFAULT_ACCEPTED_ITEMS.contains(material));
+			lines.add(material.name() + DIVISION_SYMBOL + accepted.contains(material));
 		}
 		return lines;
+	}
+
+	@Override
+	public FileManipulator getManipulator(String id) {
+		return new HumanReadableFileManipulator(this, id);
 	}
 }
 /*public void notifyChanges(String player) {

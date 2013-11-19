@@ -18,7 +18,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import se.jrp.bankplugin.filemanager.EditableStringFileManipulator;
+import se.jrp.bankplugin.filemanager.HumanReadableFileManipulator;
 import se.jrp.bankplugin.filemanager.FileManager;
 import se.jrp.bankplugin.filemanager.FileManipulator;
 import se.jrp.bankplugin.filemanager.FileSubscriber;
@@ -38,16 +38,16 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	@Override
     public void onEnable() {
         Values.init();
-        FileManager.onEnable(getDataFolder() + File.separator, 
-				new FileManipulator[]{new ObjectFileManipulator(this, Strings.FILE_BANK),
-				new EditableStringFileManipulator(inventory, Strings.FILE_ACCEPTED)});
-
+        FileManager.onEnable(getDataFolder() + File.separator, new FileManipulator[] {
+				//getManipulator(Strings.FILE_BANK), :))) <-- rolig smily
+			inventory.getManipulator(Strings.FILE_ACCEPTED)});
         getCommand(Strings.COMMAND_BANK).setExecutor(this);
 		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
         commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor(this));
         commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor(this));
 		commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor(this));
-		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));}
+		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));
+	}
  
     @Override
     public void onDisable() {
@@ -114,5 +114,10 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	@Override
 	public boolean isSaving(String id) {
 		return true;
+	}
+
+	@Override
+	public FileManipulator getManipulator(String id) {
+		return new ObjectFileManipulator(this, id);
 	}
 }

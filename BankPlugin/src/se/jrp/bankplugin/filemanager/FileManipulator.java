@@ -14,7 +14,8 @@ public abstract class FileManipulator {
 	}
 	
 	public void onSave(String path) {
-		if(subscriber.isSaving(file)) save(path + file + fileExtension, subscriber.onSave(file));
+		if(subscriber.isSaving(file))
+			save(path + file + fileExtension, subscriber.onSave(file));
 	}
 	
 	public void onLoad(String path) {

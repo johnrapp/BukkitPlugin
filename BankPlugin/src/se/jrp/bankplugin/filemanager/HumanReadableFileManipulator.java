@@ -8,15 +8,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-public class EditableStringFileManipulator extends FileManipulator {
+public class HumanReadableFileManipulator extends FileManipulator {
 	
 	final static Charset ENCODING = StandardCharsets.UTF_8;
 	
 
-	public EditableStringFileManipulator(FileSubscriber subscriber, String file) {
+	public HumanReadableFileManipulator(FileSubscriber subscriber, String file) {
 		super(subscriber, file, ".txt");
 	}
 
