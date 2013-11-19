@@ -12,7 +12,7 @@ public class ObjectFileManipulator extends FileManipulator {
 	}
 
 	@Override
-	public void save(String path, Object object) {
+	public void onSave(String path, Object object) {
 		try {
 			FileOutputStream fos = new FileOutputStream(path);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -25,7 +25,7 @@ public class ObjectFileManipulator extends FileManipulator {
 	}
 
 	@Override
-	public Object load(String path) {
+	public Object onLoad(String path) {
 		try {
 			FileInputStream fis = new FileInputStream(path);
 			ObjectInputStream ois = new ObjectInputStream(fis);

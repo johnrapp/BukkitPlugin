@@ -13,18 +13,17 @@ public abstract class FileManipulator {
 		this.fileExtension = fileExtension;
 	}
 	
-	public void onSave(String path) {
-		if(subscriber.isSaving(file))
-			save(path + file + fileExtension, subscriber.onSave(file));
+	public void autoSave(String path) {
+		if(subscriber.isSaving(file)) onSave(path + file + fileExtension, subscriber.onSave(file));
 	}
 	
-	public void onLoad(String path) {
+	public void load(String path) {
 		String completePath = path + file + fileExtension;
 		Object load;
 		File f = new File(completePath);
 		File dir = new File(path);
 		if (f.exists()) {
-			load = load(completePath);
+			load = onLoad(completePath);
 		} else {
 			load = subscriber.getDefault(file);
 			if(!dir.exists()) dir.mkdir();
@@ -36,7 +35,7 @@ public abstract class FileManipulator {
 		subscriber.onLoad(file, load);
 	}
 	
-	public abstract void save(String path, Object object);
-	public abstract Object load(String path);
+	public abstract void onSave(String path, Object object);
+	public abstract Object onLoad(String path);
 
 }

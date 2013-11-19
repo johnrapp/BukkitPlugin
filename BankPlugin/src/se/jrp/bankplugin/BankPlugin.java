@@ -18,7 +18,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import se.jrp.bankplugin.filemanager.HumanReadableFileManipulator;
 import se.jrp.bankplugin.filemanager.FileManager;
 import se.jrp.bankplugin.filemanager.FileManipulator;
 import se.jrp.bankplugin.filemanager.FileSubscriber;
@@ -39,8 +38,7 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
     public void onEnable() {
         Values.init();
         FileManager.onEnable(getDataFolder() + File.separator, new FileManipulator[] {
-				//getManipulator(Strings.FILE_BANK), :))) <-- rolig smily
-			inventory.getManipulator(Strings.FILE_ACCEPTED)});
+			getManipulator(Strings.FILE_BANK), inventory.getManipulator(Strings.FILE_ACCEPTED)});
         getCommand(Strings.COMMAND_BANK).setExecutor(this);
 		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
         commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor(this));

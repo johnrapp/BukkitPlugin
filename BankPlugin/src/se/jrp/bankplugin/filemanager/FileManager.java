@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FileManager {
@@ -17,13 +16,13 @@ public class FileManager {
 		FileManager.path = path;
 		FileManager.manipulators = manipulators;
 		for(FileManipulator manipulator : manipulators) {
-			manipulator.onLoad(path);
+			manipulator.load(path);
 		}
 	}
 
 	public static void onDisable() {
 		for(FileManipulator manipulator : manipulators) {
-			manipulator.onSave(path);
+			manipulator.autoSave(path);
 		}
 	}
 

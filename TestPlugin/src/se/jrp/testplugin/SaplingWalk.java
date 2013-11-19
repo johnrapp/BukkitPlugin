@@ -14,8 +14,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import se.jrp.testplugin.Resources.FileSubscriber;
 import se.jrp.testplugin.Resources.Strings;
+import se.jrp.testplugin.filemanager.FileManipulator;
+import se.jrp.testplugin.filemanager.FileSubscriber;
+import se.jrp.testplugin.filemanager.ObjectFileManipulator;
 
 public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
 	private HashMap<String, Boolean> toggles;
@@ -23,16 +25,6 @@ public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
 	public SaplingWalk() {
 		TestPlugin.instance.addEventListener(this);
 		TestPlugin.instance.addCommandExecutor(this, Strings.COMMAND_SAPLING_WALK);
-	}
-	
-	@Override
-	public void onLoad(String id, HashMap<? extends Object, ? extends Object> map) {
-		toggles = (HashMap<String, Boolean>) map;
-		
-	}
-	@Override
-	public HashMap<? extends Object, ? extends Object> onSave(String id) {
-		return toggles;
 	}
 	
 	@EventHandler
@@ -94,5 +86,30 @@ public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
 		}
 		
 		return false;
+	}
+
+	@Override
+	public void onLoad(String id, Object object) {
+		toggles = (HashMap<String, Boolean>) object;
+	}
+	
+	@Override
+	public Object onSave(String id) {
+		return toggles;
+	}
+
+	@Override
+	public Object getDefault(String id) {
+		return new HashMap<String, Boolean>();
+	}
+
+	@Override
+	public FileManipulator getManipulator(String id) {
+		return new ObjectFileManipulator(this, id);
+	}
+
+	@Override
+	public boolean isSaving(String id) {
+		return true;
 	}
 }

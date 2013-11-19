@@ -1,9 +1,6 @@
 package se.jrp.testplugin;
 
-import se.jrp.testplugin.Resources.FileSubscriber;
-import se.jrp.testplugin.Resources.FileManager;
 import java.io.File;
-import java.util.HashMap;
 
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.event.Listener;
@@ -11,6 +8,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import se.jrp.testplugin.Resources.Strings;
 import se.jrp.testplugin.Resources.Values;
+import se.jrp.testplugin.filemanager.FileManager;
+import se.jrp.testplugin.filemanager.FileManipulator;
  
 public final class TestPlugin extends JavaPlugin {
     public static TestPlugin instance;
@@ -25,9 +24,8 @@ public final class TestPlugin extends JavaPlugin {
     public void onEnable() {
 		instance = this;
         Values.init();
-        HashMap<String, FileSubscriber> map = new HashMap<>();
-        map.put(Strings.FILE_SAPLING_WALK, new SaplingWalk());
-        FileManager.onEnable(getDataFolder() + File.separator, map);
+        FileManager.onEnable(getDataFolder() + File.separator, new FileManipulator[]
+			{(new SaplingWalk()).getManipulator(Strings.FILE_SAPLING_WALK)});
     	listener = new LogBlockBreakListener();
     	commandExecutor = new TestPluginCommandExecutor();
     }

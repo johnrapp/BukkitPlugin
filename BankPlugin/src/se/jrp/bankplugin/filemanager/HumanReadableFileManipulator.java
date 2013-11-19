@@ -19,25 +19,25 @@ public class HumanReadableFileManipulator extends FileManipulator {
 	}
 
 	@Override
-	public void save(String path, Object object) {
-		try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(path), ENCODING)){
-			for(String line : (ArrayList<String>)object){
+	public void onSave(String path, Object object) {
+		try(BufferedWriter writer = Files.newBufferedWriter(Paths.get(path), ENCODING)){
+			for(String line : (ArrayList<String>) object){
 				writer.write(line);
 				writer.newLine();
 			}
-	  }	catch (IOException ex) {
+		} catch(IOException ex) {
 		}
 	}
 
 	@Override
-	public Object load(String path) {
-		try (Scanner scanner =  new Scanner(Paths.get(path), ENCODING.name())){
+	public Object onLoad(String path) {
+		try(Scanner scanner =  new Scanner(Paths.get(path), ENCODING.name())){
 			ArrayList<String> lines = new ArrayList<>();
-			while (scanner.hasNextLine()){
+			while(scanner.hasNextLine()){
 				lines.add(scanner.nextLine());
 			}
 			return lines;
-		} catch (IOException ex) {
+		} catch(IOException ex) {
 			return subscriber.getDefault(file);
 		}
 	}

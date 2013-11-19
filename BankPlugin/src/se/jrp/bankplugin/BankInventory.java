@@ -116,7 +116,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	}
 	
 	public static boolean accepted(Material mat) {
-		return acceptedItems.contains(mat);
+		return true;
 	}
 	
 	@Override
@@ -139,7 +139,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	
 	@Override
 	public boolean isSaving(String id) {
-		return false;
+		return save;
 	}
 
 	@Override
