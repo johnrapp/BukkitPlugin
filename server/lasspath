@@ -1,5 +1,5 @@
 #Minecraft server properties
-#Tue Nov 19 13:52:16 CET 2013
+#Tue Nov 19 17:51:41 CET 2013
 generator-settings=
 allow-nether=true
 level-name=world
@@ -15,17 +15,17 @@ max-build-height=256
 spawn-npcs=true
 white-list=false
 spawn-animals=true
-hardcore=false
-snooper-enabled=true
 texture-pack=
+snooper-enabled=true
+hardcore=false
 online-mode=true
 pvp=true
 difficulty=1
-gamemode=0
 player-idle-timeout=0
+gamemode=0
 max-players=20
 spawn-monsters=true
-generate-structures=true
 view-distance=10
+generate-structures=true
 spawn-protection=16
 motd=A Minecraft Server

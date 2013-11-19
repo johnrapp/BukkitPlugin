@@ -1,6 +1,6 @@
 AIR:false
 STONE:false
-GRASS:true
+GRASS:false
 DIRT:false
 COBBLESTONE:false
 WOOD:false
