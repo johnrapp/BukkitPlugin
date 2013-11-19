@@ -3,6 +3,8 @@ package se.jrp.marketplugin.resources;
 import org.bukkit.ChatColor;
 
 public class Strings {
+	public final static String FILE_PRICES = "prices";
+
 	public final static String COMMAND_BUY = "buy";
 	public final static String COMMAND_SELL = "sell";
 	public final static String COMMAND_PRICE = "price";

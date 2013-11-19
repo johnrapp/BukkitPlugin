@@ -19,7 +19,7 @@ import se.jrp.bankplugin.resources.Values;
 public class BankInventory extends HashMap<String, ArrayList<ItemStack>> implements FileSubscriber {
 	public final static String DIVISION_SYMBOL = ":";
 	public static ArrayList<Material> acceptedItems = new ArrayList<>();
-	public boolean save = false;
+	public boolean saving = false;
 	
 	public ArrayList<ItemStack> all(String key, Material mat) {
 		ArrayList<ItemStack> result = new ArrayList<>();
@@ -128,7 +128,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 				acceptedItems.add(Material.getMaterial(parts[0]));
 		}
 		if(lines.size() < Material.values().length) {
-			save = true;
+			saving = true;
 		}
 	}
 
@@ -139,12 +139,12 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	
 	@Override
 	public boolean isSaving(String id) {
-		return save;
+		return saving;
 	}
 
 	@Override
 	public Object getDefault(String id) {
-		save = true;
+		saving = true;
 		return generateFile(Values.DEFAULT_ACCEPTED_ITEMS);
 	}
 	
