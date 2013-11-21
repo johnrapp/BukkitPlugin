@@ -1,4 +1,4 @@
-package se.jrp.testplugin.Resources;
+package se.jrp.testplugin.resources;
 
 import org.bukkit.ChatColor;
 

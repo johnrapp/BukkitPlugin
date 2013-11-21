@@ -1,4 +1,4 @@
-package se.jrp.testplugin.Resources;
+package se.jrp.testplugin.resources;
 
 import java.util.ArrayList;
 
@@ -8,9 +8,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.BookMeta;
 
-import se.jrp.testplugin.Resources.Functions;
-import se.jrp.testplugin.Resources.Strings;
-import se.jrp.testplugin.Resources.Values;
+import se.jrp.testplugin.resources.Functions;
+import se.jrp.testplugin.resources.Strings;
+import se.jrp.testplugin.resources.Values;
 
 public class Book extends ItemStack {
 	private String author;

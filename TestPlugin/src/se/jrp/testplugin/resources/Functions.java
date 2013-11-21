@@ -1,4 +1,4 @@
-package se.jrp.testplugin.Resources;
+package se.jrp.testplugin.resources;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;

@@ -14,7 +14,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import se.jrp.testplugin.Resources.Strings;
+import se.jrp.testplugin.resources.Strings;
 import se.jrp.testplugin.filemanager.FileManipulator;
 import se.jrp.testplugin.filemanager.FileSubscriber;
 import se.jrp.testplugin.filemanager.ObjectFileManipulator;

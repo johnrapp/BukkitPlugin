@@ -6,8 +6,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import se.jrp.testplugin.Resources.Strings;
-import se.jrp.testplugin.Resources.Values;
+import se.jrp.testplugin.resources.Strings;
+import se.jrp.testplugin.resources.Values;
 import se.jrp.testplugin.filemanager.FileManager;
 import se.jrp.testplugin.filemanager.FileManipulator;
  
