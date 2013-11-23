@@ -3,14 +3,16 @@ package se.jrp.bankplugin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import se.jrp.bankplugin.filemanager.HumanReadableFileManipulator;
 import se.jrp.bankplugin.filemanager.FileManipulator;
 import se.jrp.bankplugin.filemanager.FileSubscriber;
+import se.jrp.bankplugin.filemanager.LinkedProperties;
+import se.jrp.bankplugin.filemanager.PropertiesFileManipulator;
 
 import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.Strings;
@@ -121,13 +123,12 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	
 	@Override
 	public void onLoad(String id, Object object) {
-		ArrayList<String> lines = (ArrayList<String>) object;
-		for(String line : lines) {
-			String[] parts = line.split(DIVISION_SYMBOL);
-			if(Boolean.parseBoolean(parts[1]))
-				acceptedItems.add(Material.getMaterial(parts[0]));
+		LinkedProperties prop = (LinkedProperties) object;
+		for(String key : prop.stringPropertyNames()) {
+			if(Boolean.parseBoolean(prop.getProperty(key)))
+				acceptedItems.add(Material.getMaterial(key));
 		}
-		if(lines.size() < Material.values().length) {
+		if(prop.size() < Material.values().length) {
 			saving = true;
 		}
 	}
@@ -148,17 +149,17 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 		return generateFile(Values.DEFAULT_ACCEPTED_ITEMS);
 	}
 	
-	public ArrayList<String> generateFile(List<Material> accepted) {
-		ArrayList<String> lines = new ArrayList<>();
+	public LinkedProperties generateFile(List<Material> accepted) {
+		LinkedProperties prop = new LinkedProperties();
 		for(Material material : Material.values()) {
-			lines.add(material.name() + DIVISION_SYMBOL + accepted.contains(material));
+			prop.put(material.name(), accepted.contains(material));
 		}
-		return lines;
+		return prop;
 	}
 
 	@Override
 	public FileManipulator getManipulator(String id) {
-		return new HumanReadableFileManipulator(this, id);
+		return new PropertiesFileManipulator(this, id);
 	}
 }
 /*public void notifyChanges(String player) {

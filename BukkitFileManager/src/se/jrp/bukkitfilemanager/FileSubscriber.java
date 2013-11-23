@@ -1,4 +1,4 @@
-package se.jrp.bankplugin.filemanager;
+package se.jrp.bukkitfilemanager;
 
 public interface FileSubscriber {
 	void onLoad(String id, Object object);

@@ -1,4 +1,4 @@
-package se.jrp.bankplugin.filemanager;
+package se.jrp.bukkitfilemanager;
 
 import java.io.File;
 

@@ -1,28 +1,26 @@
 package se.jrp.marketplugin;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Properties;
 import org.bukkit.Material;
 import se.jrp.marketplugin.filemanager.FileManipulator;
 import se.jrp.marketplugin.filemanager.FileSubscriber;
-import se.jrp.marketplugin.filemanager.HumanReadableFileManipulator;
+import se.jrp.marketplugin.filemanager.LinkedProperties;
+import se.jrp.marketplugin.filemanager.PropertiesFileManipulator;
 import se.jrp.marketplugin.resources.Values;
 
 public class MarketPrices extends HashMap<Material, Integer[]> implements FileSubscriber {
-	public final static String TYPE_DIVISION_SYMBOL = ":";
-	public final static String PRICE_DIVISION_SYMBOL = ",";
+	public final static String DIVISION_SYMBOL = ",";
 	public boolean saving = false;
 	
 	@Override
 	public void onLoad(String id, Object object) {
-		ArrayList<String> lines = (ArrayList<String>) object;
-		for(String line : lines) {
-			String[] types = line.split(TYPE_DIVISION_SYMBOL);
-			String[] prices = types[1].split(PRICE_DIVISION_SYMBOL);
-			put(Material.getMaterial(types[0]),
-					new Integer[] {Integer.parseInt(prices[0]), Integer.parseInt(prices[1])});
+		LinkedProperties prop = (LinkedProperties) object;
+		for(String key : prop.stringPropertyNames()) {
+			String[] prices = prop.getProperty(key).split(DIVISION_SYMBOL);
+			put(Material.getMaterial(key), new Integer[] {Integer.parseInt(prices[0]), Integer.parseInt(prices[1])});
 		}
-		if(lines.size() < Material.values().length) {
+		if(prop.size() < Material.values().length) {
 			saving = true;
 		}
 	}
@@ -40,7 +38,7 @@ public class MarketPrices extends HashMap<Material, Integer[]> implements FileSu
 
 	@Override
 	public FileManipulator getManipulator(String id) {
-		return new HumanReadableFileManipulator(this, id);
+		return new PropertiesFileManipulator(this, id);
 	}
 
 	@Override
@@ -48,29 +46,35 @@ public class MarketPrices extends HashMap<Material, Integer[]> implements FileSu
 		return saving;
 	}
 	
-	public ArrayList<String> generateFile(HashMap<Material, Integer[]> prices) {
-		ArrayList<String> lines = new ArrayList<>();
+	public Properties generateFile(HashMap<Material, Integer[]> prices) {
+		LinkedProperties prop = new LinkedProperties();
 		for(Material material : Material.values()) {
-			lines.add(material.name() + TYPE_DIVISION_SYMBOL + getBuyPrice(material, prices)
-					+ PRICE_DIVISION_SYMBOL + getSellPrice(material, prices));
+			prop.put(material.name(), getBuyPrice(material, prices)
+				+ DIVISION_SYMBOL + getSellPrice(material, prices));
 		}
-		return lines;
+		return prop;
 	}
 	
 	//buyPrice first then sellPrice
-	public int getBuyPrice(Material material, HashMap<Material, Integer[]> prices) {
-		return prices.containsKey(material) ? prices.get(material)[0] : -1;
+	
+	public static boolean isForSale(Material material, HashMap<Material, Integer[]> prices) {
+		return getBuyPrice(material, prices) > 0;
 	}
-	public int getBuyPrice(Material material) {
-		return getBuyPrice(material, this);
+	public static boolean isForSale(Material material) {
+		return isForSale(material, MarketPlugin.prices);
+	}
+	public static int getBuyPrice(Material material, HashMap<Material, Integer[]> prices) {
+		return prices.containsKey(material) ? prices.get(material)[0] : 0;
+	}
+	public static int getBuyPrice(Material material) {
+		return getBuyPrice(material, MarketPlugin.prices);
 	}
 	
-	public int getSellPrice(Material material, HashMap<Material, Integer[]> prices) {
+	public static int getSellPrice(Material material, HashMap<Material, Integer[]> prices) {
 		return prices.containsKey(material) ? prices.get(material)[1] : 0;
 	}
-	public int getSellPrice(Material material) {
-		return getSellPrice(material, this);
+	public static int getSellPrice(Material material) {
+		return getSellPrice(material, MarketPlugin.prices);
 	}
-	
 	
 }
