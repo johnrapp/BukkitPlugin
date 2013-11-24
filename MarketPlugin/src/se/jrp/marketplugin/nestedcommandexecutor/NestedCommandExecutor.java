@@ -17,10 +17,9 @@ public abstract class NestedCommandExecutor {
 		
     public void onCommand(Player player, String[] args) {
 		boolean success = args.length >= min && (args.length <= max || max == -1);
-        if(success) {
-        } else {
+        if(!success || !execute(player, args)) {
 			player.sendMessage(Strings.ERROR_INCORRECT_USAGE + usage);
 		}
 	}
-	public abstract void execute(Player player, String[] args);
+	public abstract boolean execute(Player player, String[] args);
 }

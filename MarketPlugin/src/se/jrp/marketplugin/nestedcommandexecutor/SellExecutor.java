@@ -13,7 +13,7 @@ public class SellExecutor extends NestedCommandExecutor {
 	}
 
 	@Override
-	public void execute(Player player, String[] args) {
+	public boolean execute(Player player, String[] args) {
 		ItemStack item = player.getItemInHand();
 		if(MarketPrices.isForSale(item.getType())) {
 			MarketPlugin.economy.depositPlayer(player.getName(), MarketPrices.getSellPrice(item.getType()) * item.getAmount());
@@ -21,6 +21,7 @@ public class SellExecutor extends NestedCommandExecutor {
 		} else {
 			player.sendMessage(Strings.ERROR_NOT_FOR_SALE);
 		}
+		return false;
 	}
 
 }

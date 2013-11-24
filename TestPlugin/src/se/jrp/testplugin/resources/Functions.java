@@ -35,9 +35,8 @@ public class Functions {
 	}
 	
 	public static boolean isInteger(String s) {
-	    try { Integer.parseInt(s); }
+	    try { Integer.parseInt(s); return true; }
 	    catch(NumberFormatException e) { return false; }
-	    return true;
 	}
 	
 	public static int usedSlots(PlayerInventory inventory) {

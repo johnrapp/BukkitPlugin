@@ -2,8 +2,8 @@ name: MarketPlugin
 main: se.jrp.marketplugin.MarketPlugin
 version: 1
 commands:
-   marketbuy:
-      description: 
-      usage:
+   market:
+      description: View the price of, sell or buy an item on the Market.
+      usage: /market <sell:buy:price> <material>
       permission:
       permission-message:
