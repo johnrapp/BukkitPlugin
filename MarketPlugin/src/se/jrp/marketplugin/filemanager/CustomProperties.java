@@ -1,14 +1,25 @@
 package se.jrp.marketplugin.filemanager;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.LinkedHashSet;
 import java.util.Properties;
 
-public class LinkedProperties extends Properties {
-
+public class CustomProperties extends Properties {
     private final LinkedHashSet<Object> keys = new LinkedHashSet<>();
+	private String comment = null;
 
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	@Override
+	public void store(OutputStream out, String string) throws IOException {
+		super.store(out, comment);
+	}
+	
 	@Override
     public Enumeration<Object> keys() {
         return Collections.<Object>enumeration(keys);
@@ -19,4 +30,6 @@ public class LinkedProperties extends Properties {
         keys.add(key);
         return super.put(key, value);
     }
+	
+	
 }

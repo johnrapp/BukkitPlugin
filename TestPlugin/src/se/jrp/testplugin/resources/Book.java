@@ -1,16 +1,14 @@
 package se.jrp.testplugin.resources;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.BookMeta;
-
-import se.jrp.testplugin.resources.Functions;
-import se.jrp.testplugin.resources.Strings;
-import se.jrp.testplugin.resources.Values;
 
 public class Book extends ItemStack {
 	private String author;

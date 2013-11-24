@@ -3,27 +3,29 @@ package se.jrp.marketplugin;
 import net.milkbowl.vault.economy.Economy;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.HashMap;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import se.jrp.marketplugin.filemanager.FileManager;
 import se.jrp.marketplugin.filemanager.FileManipulator;
 import se.jrp.marketplugin.nestedcommandexecutor.BuyExecutor;
 import se.jrp.marketplugin.nestedcommandexecutor.NestedCommandExecutor;
+import se.jrp.marketplugin.nestedcommandexecutor.PriceExecutor;
 import se.jrp.marketplugin.nestedcommandexecutor.SellExecutor;
+import se.jrp.marketplugin.nestedcommandexecutor.TEST;
 import se.jrp.marketplugin.resources.Strings;
 
 public class MarketPlugin extends JavaPlugin implements CommandExecutor {
 	public static MarketPlugin instance;
 	public static MarketPrices prices = new MarketPrices();
 	public static Economy economy = null;
+	public static String directory;
+	public static String pluginName;
 	public HashMap<String, NestedCommandExecutor> commandExecutors = new HashMap<>();
 
     public static void main(String[] args) {
@@ -31,14 +33,19 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
     @Override
     public void onEnable() {
 		instance = this;
-//		if (!setupEconomy() ) {
-//            getLogger().severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
-//            getServer().getPluginManager().disablePlugin(this);
-//            return;
-//        }
+		directory = getDataFolder() + File.separator;
+		pluginName = getDescription().getName();
+		if (!setupEconomy() ) {
+            getLogger().severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
 		commandExecutors.put(Strings.COMMAND_BUY, new BuyExecutor());
 		commandExecutors.put(Strings.COMMAND_SELL, new SellExecutor());
-		FileManager.onEnable(getDataFolder() + File.separator, new FileManipulator[] {
+		commandExecutors.put(Strings.COMMAND_PRICE, new PriceExecutor());
+		commandExecutors.put("test", new TEST());
+
+		FileManager.onEnable(new FileManipulator[] {
 			prices.getManipulator(Strings.FILE_PRICES)});
     }
  
@@ -63,13 +70,16 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(!(sender instanceof Player)) {
 			sender.sendMessage(Strings.ERROR_NON_PLAYER);
-			return true;
+		} else if(args.length > 0 && commandExecutors.containsKey(args[0])) {
+			commandExecutors.get(args[0]).onCommand((Player) sender, Arrays.copyOfRange(args, 1, args.length));
+		} else {
+			return false;		
 		}
-		return true;		
-    }
+		return true;
+	}
 	
-	public static boolean isInteger(String s) {
-	    try { Integer.parseInt(s); return true; }
-	    catch(NumberFormatException e) { return false; }
+	public static Integer getInteger(String s, Integer defaultValue) {
+	    try { return Integer.parseInt(s); }
+	    catch(NumberFormatException e) { return defaultValue; }
 	}
 }

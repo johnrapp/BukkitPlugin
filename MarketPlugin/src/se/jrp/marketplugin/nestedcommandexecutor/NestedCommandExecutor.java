@@ -4,10 +4,10 @@ import org.bukkit.entity.Player;
 import se.jrp.marketplugin.resources.Strings;
 
 public abstract class NestedCommandExecutor {
-    String usage;
-    String help;
-    int min;
-    int max;
+    public String usage;
+    public String help;
+    public int min;
+    public int max;
 
 	public NestedCommandExecutor(String usage, String help, int min, int max) {
 		this.usage = usage;
@@ -21,5 +21,5 @@ public abstract class NestedCommandExecutor {
 			player.sendMessage(Strings.ERROR_INCORRECT_USAGE + usage);
 		}
 	}
-	public abstract boolean execute(Player player, String[] args);
+	protected abstract boolean execute(Player player, String[] args);
 }

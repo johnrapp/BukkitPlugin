@@ -117,8 +117,9 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 		return false;
 	}
 	
-	public static boolean accepted(Material mat) {
-		return true;
+	public static boolean accepted(Material material) {
+		for(Material mat : acceptedItems) if(mat == material) return true;
+		return false;
 	}
 	
 	@Override
@@ -152,7 +153,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	public LinkedProperties generateFile(List<Material> accepted) {
 		LinkedProperties prop = new LinkedProperties();
 		for(Material material : Material.values()) {
-			prop.put(material.name(), accepted.contains(material));
+			prop.put(material.name(), Boolean.toString(accepted.contains(material)));
 		}
 		return prop;
 	}

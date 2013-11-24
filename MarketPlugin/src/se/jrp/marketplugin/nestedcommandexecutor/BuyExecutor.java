@@ -1,6 +1,5 @@
 package se.jrp.marketplugin.nestedcommandexecutor;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -20,11 +19,11 @@ public class BuyExecutor extends NestedCommandExecutor {
 	public boolean execute(Player player, String[] args) {
 		for(int i = 0; i < args.length; i += 2) {
 			Material material = MaterialParser.instance().getMaterial(args[i]);
-			if(material != null) {
-				double price = MarketPrices.getBuyPrice(material);
+			double price = MarketPrices.getBuyPrice(material);
+			if(price > 0) {
 				if(MarketPlugin.economy.has(player.getName(), price)) {
-					if(MarketPlugin.isInteger(args[i + 1])) {
-						int amount = Integer.parseInt(args[i + 1]);
+					Integer amount = MarketPlugin.getInteger(args[i + 1], null);
+					if(amount != null) {
 						double added = Math.min(MarketPlugin.economy.getBalance(player.getName()) / price,
 								Math.min(amount, PlayerInventoryAnalyzer.spaceFor(player.getInventory(), material)));
 						player.getInventory().addItem(new ItemStack(material, (int) added));
@@ -32,16 +31,10 @@ public class BuyExecutor extends NestedCommandExecutor {
 						if(added < amount) {
 							player.sendMessage(Strings.INFO_NOT_EVERYTHING_ADDED);
 						}
-					} else {
-						return false;
-					}
-				} else {
-					player.sendMessage(Strings.ERROR_TOO_POOR);
-					return true;
-				}
-			} else {
-				player.sendMessage(ChatColor.RED + args[i] + Strings.ERROR_NON_MATERIAL);
-			}
+						player.sendMessage(String.format(Strings.INFO_BALANCE, MarketPlugin.economy.getBalance(player.getName())));
+					} else return false;
+				} else player.sendMessage(Strings.ERROR_TOO_POOR);
+			} else player.sendMessage(String.format(Strings.ERROR_NOT_FOR_SALE, args[i]));
 		}
 		return true;
 	}

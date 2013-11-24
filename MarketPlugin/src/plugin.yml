@@ -4,6 +4,6 @@ version: 1
 commands:
    market:
       description: View the price of, sell or buy an item on the Market.
-      usage: /market <sell:buy:price> <material>
+      usage: /market <sell:buy:price>
       permission:
       permission-message:

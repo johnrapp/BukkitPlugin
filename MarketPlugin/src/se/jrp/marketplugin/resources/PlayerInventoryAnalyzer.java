@@ -18,6 +18,14 @@ public class PlayerInventoryAnalyzer {
 		return inventory.getSize() - usedSlots(inventory);
 	}
 	
+	public static boolean full(PlayerInventory inventory) {
+		return emptySlots(inventory) <= 0;
+	}
+	
+	public static boolean full(PlayerInventory inventory, Material material) {
+		return spaceFor(inventory, material) <= 0;
+	}
+	
 	public static int spaceFor(PlayerInventory inventory, Material material) {
 		int space = 0;
 		for(ItemStack is : inventory.all(material).values()) {

@@ -1,5 +1,5 @@
 #Minecraft server properties
-#Tue Nov 19 17:51:41 CET 2013
+#Sun Nov 24 22:29:56 CET 2013
 generator-settings=
 allow-nether=true
 level-name=world
@@ -15,12 +15,14 @@ max-build-height=256
 spawn-npcs=true
 white-list=false
 spawn-animals=true
-texture-pack=
-snooper-enabled=true
 hardcore=false
+snooper-enabled=true
+texture-pack=
 online-mode=true
 pvp=true
 difficulty=1
+enable-command-block=false
+server-name=Unknown Server
 player-idle-timeout=0
 gamemode=0
 max-players=20

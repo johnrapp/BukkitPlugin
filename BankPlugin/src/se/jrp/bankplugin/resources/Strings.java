@@ -30,7 +30,7 @@ public class Strings {
 			+ "If you want to know more, type \"/bank help\"";
 	public final static String ERROR_BANK_GET_NOT_ENOUGH1 = ChatColor.RED + "You didn't have all the ";
 	public final static String ERROR_BANK_GET_NOT_ENOUGH2 = " you asked for.";
-	public final static String ERROR_BANK_STORE = ChatColor.RED + "You can only store what's in your hand. Just type \"/bank store\"";
+	public final static String ERROR_BANK_STORE = ChatColor.RED + "You can only store what's in your hand. Simply type \"/bank store\"";
 	public final static String ERROR_BANK_STORE_NOT_EVERYTHING = ChatColor.RED + "Your Bank is too full to store everything.";
 	public final static String ERROR_BANK_NOTHING_STORED = ChatColor.RED + "You don't have anything in the Bank.";
 	public final static String ERROR_BANK_NOTHING_IN_HAND = ChatColor.RED + "You have nothing in your hand to store.";

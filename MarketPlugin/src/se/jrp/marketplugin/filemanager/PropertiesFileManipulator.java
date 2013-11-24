@@ -3,20 +3,18 @@ package se.jrp.marketplugin.filemanager;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Properties;
 
 public class PropertiesFileManipulator extends FileManipulator {
 
-	public PropertiesFileManipulator(FileSubscriber subscriber, String file) {
-		super(subscriber, file, ".properties");
+	public PropertiesFileManipulator(FileSubscriber subscriber, String directory, String file) {
+		super(subscriber, directory, file, ".properties");
 	}
 
 	@Override
 	public void onSave(String path, Object object) {
 		try {
 			FileOutputStream fos = new FileOutputStream(path);
-			((Properties) object).store(fos, null);
-			fos.flush();
+			((CustomProperties) object).store(fos, null);
 			fos.close();
 		} catch (IOException ex) {
 		}
@@ -24,7 +22,7 @@ public class PropertiesFileManipulator extends FileManipulator {
 
 	@Override
 	public Object onLoad(String path) {
-		LinkedProperties properties = new LinkedProperties();
+		CustomProperties properties = new CustomProperties();
 		try {
 			FileInputStream fis = new FileInputStream(path);
 			properties.load(fis);
