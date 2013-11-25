@@ -27,6 +27,7 @@ import se.jrp.bankplugin.resources.Strings;
 import se.jrp.bankplugin.resources.Values;
 
 public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubscriber {
+	public static String directory;
 	public BankInventory inventory = new BankInventory();
 	public HashMap<String, BankCommandExecutor> commandExecutors = new HashMap<>();
 	public HashMap<String, HashMap<Material, Integer>> defaultObject = new HashMap<>();
@@ -37,7 +38,8 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	@Override
     public void onEnable() {
         Values.init();
-        FileManager.onEnable(getDataFolder() + File.separator, new FileManipulator[] {
+		directory = getDataFolder() + File.separator;
+        FileManager.onEnable(new FileManipulator[] {
 			getManipulator(Strings.FILE_BANK), inventory.getManipulator(Strings.FILE_ACCEPTED)});
         getCommand(Strings.COMMAND_BANK).setExecutor(this);
 		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
@@ -110,12 +112,12 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	}
 
 	@Override
-	public boolean isSaving(String id) {
+	public boolean isAutoSaving(String id) {
 		return true;
 	}
 
 	@Override
 	public FileManipulator getManipulator(String id) {
-		return new ObjectFileManipulator(this, id);
+		return new ObjectFileManipulator(this, directory, id);
 	}
 }

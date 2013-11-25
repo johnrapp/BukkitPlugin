@@ -11,12 +11,14 @@ public class CustomProperties extends Properties {
     private final LinkedHashSet<Object> keys = new LinkedHashSet<>();
 	private String comment = null;
 
-	public void setComment(String comment) {
+	public CustomProperties() {
+	}
+	
+	public CustomProperties(String comment) {
 		this.comment = comment;
 	}
-
-	@Override
-	public void store(OutputStream out, String string) throws IOException {
+	
+	public void store(OutputStream out) throws IOException {
 		super.store(out, comment);
 	}
 	

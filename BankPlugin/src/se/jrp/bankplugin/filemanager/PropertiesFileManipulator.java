@@ -3,28 +3,26 @@ package se.jrp.bankplugin.filemanager;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Properties;
 
 public class PropertiesFileManipulator extends FileManipulator {
 
-	public PropertiesFileManipulator(FileSubscriber subscriber, String file) {
-		super(subscriber, file, ".properties");
+	public PropertiesFileManipulator(FileSubscriber subscriber, String directory, String file) {
+		super(subscriber, directory, file, ".properties");
 	}
 
 	@Override
 	public void onSave(String path, Object object) {
 		try {
+			CustomProperties prop = (CustomProperties) object;
 			FileOutputStream fos = new FileOutputStream(path);
-			((Properties) object).store(fos, null);
-			fos.flush();
+			prop.store(fos);
 			fos.close();
-		} catch (IOException ex) {
-		}
+		} catch (IOException ex) { }
 	}
 
 	@Override
 	public Object onLoad(String path) {
-		LinkedProperties properties = new LinkedProperties();
+		CustomProperties properties = new CustomProperties();
 		try {
 			FileInputStream fis = new FileInputStream(path);
 			properties.load(fis);

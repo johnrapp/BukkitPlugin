@@ -45,7 +45,7 @@ public class Book extends ItemStack {
 	
 	public static void giveBook(Player player, Book book) {
 		PlayerInventory inventory = player.getInventory();
-		if(!Functions.full(inventory)) {
+		if(!PlayerInventoryAnalyzer.full(inventory, Material.WRITTEN_BOOK)) {
 			inventory.addItem(book);
 			player.sendMessage(Strings.BOOK_ADDED);
 		} else {

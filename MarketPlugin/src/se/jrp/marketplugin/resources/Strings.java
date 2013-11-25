@@ -10,6 +10,7 @@ public class Strings {
 	public final static String COMMAND_PRICE = "price";
 	public final static String COMMAND_PRICES = "prices";
 	public final static String COMMAND_HELP = "help";
+	public final static String COMMAND_TEST = "test";
 	
 	public final static String COMMENT_PRICES = "The first value is the buy price and the second the sell price.";
 	

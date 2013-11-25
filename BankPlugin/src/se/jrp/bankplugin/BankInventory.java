@@ -3,25 +3,25 @@ package se.jrp.bankplugin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import se.jrp.bankplugin.filemanager.CustomProperties;
 import se.jrp.bankplugin.filemanager.FileManipulator;
 import se.jrp.bankplugin.filemanager.FileSubscriber;
-import se.jrp.bankplugin.filemanager.LinkedProperties;
 import se.jrp.bankplugin.filemanager.PropertiesFileManipulator;
 
-import se.jrp.bankplugin.resources.Functions;
+import se.jrp.bankplugin.resources.MaterialParser;
+import se.jrp.bankplugin.resources.PlayerInventoryAnalyzer;
 import se.jrp.bankplugin.resources.Strings;
 import se.jrp.bankplugin.resources.Values;
 
 public class BankInventory extends HashMap<String, ArrayList<ItemStack>> implements FileSubscriber {
 	public final static String DIVISION_SYMBOL = ":";
 	public static ArrayList<Material> acceptedItems = new ArrayList<>();
-	public boolean saving = false;
+	private PropertiesFileManipulator manipulator;
 	
 	public ArrayList<ItemStack> all(String key, Material mat) {
 		ArrayList<ItemStack> result = new ArrayList<>();
@@ -71,15 +71,16 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	
 	public void getItem(Player player, ItemStack item) {
 		Material mat = item.getType();
+		String name = MaterialParser.instance().getParsedName(mat);
 		PlayerInventory inventory = player.getInventory();
 		ArrayList<ItemStack> depositBox = get(player.getName());
 		ArrayList<ItemStack> all = all(player.getName(), mat);
 		if(all.size() < 1) {
-			player.sendMessage(Strings.ERROR_BANK_NONE_OF_MATERIAL1 + Functions.parseMaterial(mat)
+			player.sendMessage(Strings.ERROR_BANK_NONE_OF_MATERIAL1 + name
 				+ Strings.ERROR_BANK_NONE_OF_MATERIAL2);
 		}
 		while(all.size() > 0) {
-			if(!Functions.full(inventory)) {
+			if(!PlayerInventoryAnalyzer.full(inventory, mat)) {
 				ItemStack least = all.get(0);
 				for(int i = 1; i < all.size(); i++) {
 					ItemStack is = all.get(i);
@@ -104,7 +105,7 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 			}
 		}
 		
-		player.sendMessage(Strings.ERROR_BANK_GET_NOT_ENOUGH1 + Functions.parseMaterial(mat)
+		player.sendMessage(Strings.ERROR_BANK_GET_NOT_ENOUGH1 + name
 				+ Strings.ERROR_BANK_GET_NOT_ENOUGH2);
 	}
 	
@@ -124,43 +125,45 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	
 	@Override
 	public void onLoad(String id, Object object) {
-		LinkedProperties prop = (LinkedProperties) object;
+		CustomProperties prop = (CustomProperties) object;
 		for(String key : prop.stringPropertyNames()) {
 			if(Boolean.parseBoolean(prop.getProperty(key)))
-				acceptedItems.add(Material.getMaterial(key));
+				acceptedItems.add(MaterialParser.instance().getMaterial(key));
 		}
 		if(prop.size() < Material.values().length) {
-			saving = true;
+			manipulator.save(acceptedItems);
 		}
 	}
 
 	@Override
 	public Object onSave(String id) {
-		return generateFile(acceptedItems);
+		return null;
 	}
 	
 	@Override
-	public boolean isSaving(String id) {
-		return saving;
+	public boolean isAutoSaving(String id) {
+		return false;
 	}
 
 	@Override
 	public Object getDefault(String id) {
-		saving = true;
-		return generateFile(Values.DEFAULT_ACCEPTED_ITEMS);
+		CustomProperties prop = generateFile(Values.DEFAULT_ACCEPTED_ITEMS);
+		manipulator.save(prop);
+		return prop;
 	}
 	
-	public LinkedProperties generateFile(List<Material> accepted) {
-		LinkedProperties prop = new LinkedProperties();
+	public CustomProperties generateFile(List<Material> accepted) {
+		CustomProperties prop = new CustomProperties();
 		for(Material material : Material.values()) {
-			prop.put(material.name(), Boolean.toString(accepted.contains(material)));
+			prop.put(MaterialParser.instance().getName(material), Boolean.toString(accepted.contains(material)));
 		}
 		return prop;
 	}
 
 	@Override
 	public FileManipulator getManipulator(String id) {
-		return new PropertiesFileManipulator(this, id);
+		if(manipulator == null) manipulator = new PropertiesFileManipulator(this, BankPlugin.directory, id);
+		return manipulator;
 	}
 }
 /*public void notifyChanges(String player) {

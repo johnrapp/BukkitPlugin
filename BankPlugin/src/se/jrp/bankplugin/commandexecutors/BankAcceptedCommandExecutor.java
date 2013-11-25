@@ -9,6 +9,7 @@ import se.jrp.bankplugin.BankPlugin;
 
 import se.jrp.bankplugin.resources.Book;
 import se.jrp.bankplugin.resources.Functions;
+import se.jrp.bankplugin.resources.MaterialParser;
 import se.jrp.bankplugin.resources.Strings;
 import se.jrp.bankplugin.resources.Values;
 
@@ -23,7 +24,7 @@ public class BankAcceptedCommandExecutor extends BankCommandExecutor {
 		rows.add(Strings.BANK_ACCEPTED_ITEMS);
 		rows.add("");
 		for(Material mat : BankInventory.acceptedItems) {
-			rows.add(Functions.parseMaterial(mat));
+			rows.add(MaterialParser.instance().getParsedName(mat));
 		}
 		ArrayList<String> pages = Book.fitToBook(rows);
 		pages.add(0, Strings.BANK_ACCEPTED_GUIDLINES);

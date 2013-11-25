@@ -64,8 +64,7 @@ public class MarketPrices extends HashMap<Material, Double[]> implements FileSub
 	}
 	
 	public CustomProperties generateFile(HashMap<Material, Double[]> prices) {
-		CustomProperties prop = new CustomProperties();
-		prop.setComment(Strings.COMMENT_PRICES);
+		CustomProperties prop = new CustomProperties(Strings.COMMENT_PRICES);
 		for(Material material : Material.values()) {
 			prop.put(MaterialParser.instance().getName(material), getBuyPrice(material, prices)
 				+ DIVISION_SYMBOL + getSellPrice(material, prices));

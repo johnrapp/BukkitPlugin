@@ -7,8 +7,8 @@ import java.io.ObjectOutputStream;
 
 public class ObjectFileManipulator extends FileManipulator {
 
-	public ObjectFileManipulator(FileSubscriber subscriber, String file) {
-		super(subscriber, file, ".bin");
+	public ObjectFileManipulator(FileSubscriber subscriber, String directory, String file) {
+		super(subscriber, directory, file, ".bin");
 	}
 
 	@Override
@@ -17,7 +17,6 @@ public class ObjectFileManipulator extends FileManipulator {
 			FileOutputStream fos = new FileOutputStream(path);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(object);
-			oos.flush();
 			oos.close();
 		}
 		catch(Exception e) {

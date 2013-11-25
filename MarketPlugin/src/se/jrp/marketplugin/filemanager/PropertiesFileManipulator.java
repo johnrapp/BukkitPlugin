@@ -13,11 +13,11 @@ public class PropertiesFileManipulator extends FileManipulator {
 	@Override
 	public void onSave(String path, Object object) {
 		try {
+			CustomProperties prop = (CustomProperties) object;
 			FileOutputStream fos = new FileOutputStream(path);
-			((CustomProperties) object).store(fos, null);
+			prop.store(fos);
 			fos.close();
-		} catch (IOException ex) {
-		}
+		} catch (IOException ex) { }
 	}
 
 	@Override

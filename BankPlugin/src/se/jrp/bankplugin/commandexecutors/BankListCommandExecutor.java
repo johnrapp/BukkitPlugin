@@ -10,6 +10,7 @@ import se.jrp.bankplugin.BankPlugin;
 
 import se.jrp.bankplugin.resources.Book;
 import se.jrp.bankplugin.resources.Functions;
+import se.jrp.bankplugin.resources.MaterialParser;
 import se.jrp.bankplugin.resources.Strings;
 
 public class BankListCommandExecutor extends BankCommandExecutor {
@@ -28,7 +29,7 @@ public class BankListCommandExecutor extends BankCommandExecutor {
 		if(args.length > 0) {
 			ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
 			for(String arg : args) {
-				Material mat = Functions.getMaterialFromName(arg);
+				Material mat = MaterialParser.instance().getMaterial(arg);
 				if(mat != null && bank.inventory.contains(player.getName(), mat)) {
 					int amount = 0;
 					for(ItemStack is : depositBox) {
@@ -37,7 +38,7 @@ public class BankListCommandExecutor extends BankCommandExecutor {
 						}
 					}
 					player.sendMessage(Strings.BANK_LIST_MATERIAL1 + amount + " "
-					+ (amount > 1 ? Functions.parseMaterialPlural(mat) : Functions.parseMaterial(mat)) + Strings.BANK_LIST_MATERIAL2);
+					+ MaterialParser.instance().getParsedName(new ItemStack(mat, amount)) + Strings.BANK_LIST_MATERIAL2);
 				} else {
 					player.sendMessage(ChatColor.RED + arg + Strings.ERROR_BANK_NON_ITEM);
 				}
@@ -50,7 +51,7 @@ public class BankListCommandExecutor extends BankCommandExecutor {
 			rows.add("");
 			for(int i = 0; i < inventory.size(); i++) {
 				ItemStack item = inventory.get(i);
-				rows.add(i + ". " + Functions.parseMaterial(item.getType()) + " " + item.getAmount());
+				rows.add(i + ". " + MaterialParser.instance().getParsedName(item) + " " + item.getAmount());
 			}
 			Book.giveBook(player, new Book(player.getName() + Strings.BANK_PLAYER_ACCOUNT,
 					Book.fitToBook(rows), timestamp));

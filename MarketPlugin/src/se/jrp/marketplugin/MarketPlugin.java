@@ -17,7 +17,7 @@ import se.jrp.marketplugin.nestedcommandexecutor.BuyExecutor;
 import se.jrp.marketplugin.nestedcommandexecutor.NestedCommandExecutor;
 import se.jrp.marketplugin.nestedcommandexecutor.PriceExecutor;
 import se.jrp.marketplugin.nestedcommandexecutor.SellExecutor;
-import se.jrp.marketplugin.nestedcommandexecutor.TEST;
+import se.jrp.marketplugin.nestedcommandexecutor.TestExecutor;
 import se.jrp.marketplugin.resources.Strings;
 
 public class MarketPlugin extends JavaPlugin implements CommandExecutor {
@@ -36,14 +36,14 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
 		directory = getDataFolder() + File.separator;
 		pluginName = getDescription().getName();
 		if (!setupEconomy() ) {
-            getLogger().severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
+            getLogger().severe("Disabled due to no Vault dependency found!");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
 		commandExecutors.put(Strings.COMMAND_BUY, new BuyExecutor());
 		commandExecutors.put(Strings.COMMAND_SELL, new SellExecutor());
 		commandExecutors.put(Strings.COMMAND_PRICE, new PriceExecutor());
-		commandExecutors.put("test", new TEST());
+		commandExecutors.put(Strings.COMMAND_TEST, new TestExecutor());
 
 		FileManager.onEnable(new FileManipulator[] {
 			prices.getManipulator(Strings.FILE_PRICES)});
@@ -51,7 +51,8 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
  
     @Override
     public void onDisable() {
-    	FileManager.onDisable();
+		if(economy != null)
+			FileManager.onDisable();
     }
 	
 	private boolean setupEconomy() {

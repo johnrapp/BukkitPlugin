@@ -5,5 +5,5 @@ public interface FileSubscriber {
 	Object onSave(String id);
 	Object getDefault(String id);
 	FileManipulator getManipulator(String id);
-	boolean isSaving(String id);
+	boolean isAutoSaving(String id);
 }

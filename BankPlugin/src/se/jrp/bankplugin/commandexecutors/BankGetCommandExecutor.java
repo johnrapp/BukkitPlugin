@@ -11,6 +11,8 @@ import org.bukkit.inventory.PlayerInventory;
 import se.jrp.bankplugin.BankPlugin;
 
 import se.jrp.bankplugin.resources.Functions;
+import se.jrp.bankplugin.resources.MaterialParser;
+import se.jrp.bankplugin.resources.PlayerInventoryAnalyzer;
 import se.jrp.bankplugin.resources.Strings;
 
 public class BankGetCommandExecutor extends BankCommandExecutor {
@@ -18,15 +20,16 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 	public BankGetCommandExecutor(BankPlugin bank) {
 		super(bank);
 	}
+	@Override
 	public void onCommand(Player player, String[] args) {
 		PlayerInventory inventory = player.getInventory();
 		ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
 		if(args.length < 1) {
 			player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
-		} else if(Functions.full(inventory)) {
+		} else if(PlayerInventoryAnalyzer.full(inventory)) {
 			player.sendMessage(Strings.ERROR_INVENTORY_FULL);
 			return;
-		} else if(Functions.isInteger(args[0])) {
+		} else if(Functions.getInteger(args[0], null) != null) {
 			getByIndex(player, depositBox, args);
 		} else {
 			getByName(player, depositBox, args);
@@ -35,11 +38,11 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 	
 	public void getByIndex(Player player, ArrayList<ItemStack> depositBox, String [] args) {
 		PlayerInventory inventory = player.getInventory();
-		ArrayList<Integer> remove = new ArrayList<Integer>();
+		ArrayList<Integer> remove = new ArrayList<>();
 		for(int i = 0; i < args.length; i++) {
-			if(Functions.isInteger(args[i])) {
+			if(Functions.getInteger(args[i], null) != null) {
 				int index = Integer.parseInt(args[i]);
-				if(Functions.usedSlots(inventory) < inventory.getSize()){
+				if(PlayerInventoryAnalyzer.usedSlots(inventory) < inventory.getSize()){
 					if(depositBox.size() > index) {
 						inventory.addItem(depositBox.get(index));
 						remove.add(index);
@@ -62,11 +65,11 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 	public void getByName(Player player, ArrayList<ItemStack> depositBox, String [] args) {
 		PlayerInventory inventory = player.getInventory();
 		for(int i = 0; i < args.length; i += 2) {
-			if(!Functions.full(inventory)) {
-				Material mat = Functions.getMaterialFromName(args[i]);
+			if(!PlayerInventoryAnalyzer.full(inventory)) {
+				Material mat = MaterialParser.instance().getMaterial(args[i]);
 				if(mat != null && bank.inventory.contains(player.getName(), mat)) {
 					String amount = args[i + 1];
-					if(Functions.isInteger(amount)) {
+					if(Functions.getInteger(amount, null) != null) {
 						bank.inventory.getItem(player, new ItemStack(mat, Integer.parseInt(amount)));
 					} else {
 						player.sendMessage(ChatColor.RED + amount + Strings.ERROR_NON_NUMBER);
