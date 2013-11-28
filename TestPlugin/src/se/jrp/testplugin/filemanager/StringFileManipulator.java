@@ -14,8 +14,8 @@ public class StringFileManipulator extends FileManipulator {
 	final static Charset ENCODING = StandardCharsets.UTF_8;
 	
 
-	public StringFileManipulator(FileSubscriber subscriber, String file) {
-		super(subscriber, file, ".txt");
+	public StringFileManipulator(FileSubscriber subscriber, String directory, String file) {
+		super(subscriber, directory, file, ".txt");
 	}
 
 	@Override

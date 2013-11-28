@@ -3955,3 +3955,1552 @@ Caused by: java.lang.ClassNotFoundException: se.jrp.marketplugin.resources.Playe
 2013-11-24 22:32:46 [INFO] Saving chunks for level 'world_nether'/Nether
 2013-11-24 22:32:46 [INFO] Saving chunks for level 'world_the_end'/The End
 2013-11-24 22:32:46 [INFO] Stopping server
+2013-11-25 22:36:41 [INFO] Starting minecraft server version 1.6.4
+2013-11-25 22:36:41 [INFO] Loading properties
+2013-11-25 22:36:41 [INFO] Default game type: SURVIVAL
+2013-11-25 22:36:41 [INFO] Generating keypair
+2013-11-25 22:36:41 [INFO] Starting Minecraft server on *:25565
+2013-11-25 22:36:42 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-25 22:36:42 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-25 22:36:42 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:36:42 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:36:42 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:36:42 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:36:42 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-25 22:36:42 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-25 22:36:42 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-25 22:36:42 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-25 22:36:42 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-25 22:36:42 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-25 22:36:42 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-25 22:36:42 [INFO] Preparing level "world"
+2013-11-25 22:36:42 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-25 22:36:43 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-25 22:36:43 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-25 22:36:43 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:36:43 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:36:44 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-25 22:36:44 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:36:44 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-25 22:36:44 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:36:44 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:36:44 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:36:44 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:36:44 [INFO] Done (1.795s)! For help, type "help" or "?"
+2013-11-25 22:37:08 [INFO] johnrapp[/127.0.0.1:54807] logged in with entity id 175 at ([world] 276.3124612361847, 64.69884634508084, 3.3578318698497487)
+2013-11-25 22:37:15 [INFO] johnrapp issued server command: /bank store
+2013-11-25 22:37:25 [INFO] johnrapp issued server command: /bank store
+2013-11-25 22:37:28 [INFO] johnrapp issued server command: /bank list
+2013-11-25 22:37:35 [INFO] johnrapp issued server command: /bank get 0
+2013-11-25 22:37:41 [INFO] johnrapp issued server command: /market sell
+2013-11-25 22:38:01 [INFO] johnrapp issued server command: /market sell
+2013-11-25 22:38:36 [INFO] johnrapp issued server command: /saplingwalk disable
+2013-11-25 22:38:51 [INFO] johnrapp issued server command: /saplingwalk enable
+2013-11-25 22:39:08 [INFO] johnrapp issued server command: /market sell
+2013-11-25 22:39:11 [INFO] johnrapp issued server command: /market sell
+2013-11-25 22:39:16 [INFO] johnrapp issued server command: /market sell
+2013-11-25 22:39:25 [INFO] johnrapp issued server command: /stop
+2013-11-25 22:39:25 [INFO] johnrapp: Stopping the server..[m
+2013-11-25 22:39:25 [INFO] Stopping server
+2013-11-25 22:39:25 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:39:25 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:39:25 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:39:25 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-25 22:39:25 [INFO] [iConomy] Closing general data...
+2013-11-25 22:39:25 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:39:25 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:39:25 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-25 22:39:25 [INFO] Saving players
+2013-11-25 22:39:25 [WARNING] DSCT: socket closed
+2013-11-25 22:39:25 [INFO] Closing listening thread
+2013-11-25 22:39:25 [INFO] §ejohnrapp left the game.
+2013-11-25 22:39:25 [INFO] Saving worlds
+2013-11-25 22:39:25 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-25 22:39:26 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-25 22:39:26 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-25 22:39:26 [INFO] Stopping server
+2013-11-25 22:39:34 [INFO] Starting minecraft server version 1.6.4
+2013-11-25 22:39:34 [INFO] Loading properties
+2013-11-25 22:39:34 [INFO] Default game type: SURVIVAL
+2013-11-25 22:39:34 [INFO] Generating keypair
+2013-11-25 22:39:34 [INFO] Starting Minecraft server on *:25565
+2013-11-25 22:39:34 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-25 22:39:34 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:39:34 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:39:34 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:39:34 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:39:34 [INFO] Preparing level "world"
+2013-11-25 22:39:34 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-25 22:39:35 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-25 22:39:36 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-25 22:39:36 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:39:36 [SEVERE] [MarketPlugin] [MarketPlugin] - Disabled due to no Vault dependency found!
+2013-11-25 22:39:36 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:39:36 [SEVERE] Error occurred while disabling MarketPlugin v1 (Is it up to date?)
+java.lang.NullPointerException
+	at se.jrp.marketplugin.filemanager.FileManager.onDisable(FileManager.java:15)
+	at se.jrp.marketplugin.MarketPlugin.onDisable(MarketPlugin.java:54)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:219)
+	at org.bukkit.plugin.java.JavaPluginLoader.disablePlugin(JavaPluginLoader.java:481)
+	at org.bukkit.plugin.SimplePluginManager.disablePlugin(SimplePluginManager.java:400)
+	at se.jrp.marketplugin.MarketPlugin.onEnable(MarketPlugin.java:40)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-25 22:39:36 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:39:36 [INFO] [iConomy - April Fools] Enabled (19 ms)
+2013-11-25 22:39:36 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:39:36 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:39:36 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:39:36 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:39:36 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:39:36 [INFO] Done (1.953s)! For help, type "help" or "?"
+2013-11-25 22:40:38 [INFO] Unknown command. Type "help" for help.[m
+2013-11-25 22:40:39 [INFO] CONSOLE: Stopping the server..[m
+2013-11-25 22:40:39 [INFO] Stopping server
+2013-11-25 22:40:39 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:40:39 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:40:39 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:40:39 [INFO] [iConomy] Closing general data...
+2013-11-25 22:40:39 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:40:39 [INFO] Saving players
+2013-11-25 22:40:39 [WARNING] DSCT: socket closed
+2013-11-25 22:40:39 [INFO] Closing listening thread
+2013-11-25 22:40:39 [INFO] Saving worlds
+2013-11-25 22:40:39 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-25 22:40:39 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-25 22:40:39 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-25 22:40:39 [INFO] Stopping server
+2013-11-25 22:41:11 [INFO] Starting minecraft server version 1.6.4
+2013-11-25 22:41:11 [INFO] Loading properties
+2013-11-25 22:41:11 [INFO] Default game type: SURVIVAL
+2013-11-25 22:41:11 [INFO] Generating keypair
+2013-11-25 22:41:11 [INFO] Starting Minecraft server on *:25565
+2013-11-25 22:41:11 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-25 22:41:11 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:41:11 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:41:11 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:41:11 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:41:11 [INFO] Preparing level "world"
+2013-11-25 22:41:12 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-25 22:41:12 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-25 22:41:13 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-25 22:41:13 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:41:13 [SEVERE] [MarketPlugin] [MarketPlugin] - Disabled due to no Vault dependency found!
+2013-11-25 22:41:13 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:41:13 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:41:13 [INFO] [iConomy - April Fools] Enabled (19 ms)
+2013-11-25 22:41:13 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:41:13 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:41:13 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:41:13 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:41:13 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:41:13 [INFO] Done (1.939s)! For help, type "help" or "?"
+2013-11-25 22:41:20 [INFO] johnrapp[/127.0.0.1:54853] logged in with entity id 203 at ([world] 257.4015635846574, 76.0, 174.21918168012698)
+2013-11-25 22:41:23 [INFO] johnrapp issued server command: /market
+2013-11-25 22:41:28 [INFO] johnrapp issued server command: /market sell
+2013-11-25 22:41:32 [INFO] johnrapp issued server command: /help
+2013-11-25 22:41:39 [INFO] johnrapp issued server command: /help marketplugin
+2013-11-25 22:41:44 [INFO] johnrapp issued server command: /plugins
+2013-11-25 22:41:49 [INFO] johnrapp issued server command: /reload
+2013-11-25 22:41:49 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:41:49 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:41:49 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:41:49 [INFO] [iConomy] Closing general data...
+2013-11-25 22:41:49 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:41:49 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:41:49 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:41:49 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:41:49 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:41:49 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:41:49 [SEVERE] [MarketPlugin] [MarketPlugin] - Disabled due to no Vault dependency found!
+2013-11-25 22:41:49 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:41:49 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:41:49 [INFO] [iConomy - April Fools] Enabled (14 ms)
+2013-11-25 22:41:49 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:41:49 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:41:49 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:41:49 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:41:49 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:41:49 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-25 22:41:51 [INFO] johnrapp issued server command: /plugins
+2013-11-25 22:42:26 [INFO] johnrapp issued server command: /reload
+2013-11-25 22:42:26 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:42:26 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:42:26 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:42:26 [INFO] [iConomy] Closing general data...
+2013-11-25 22:42:26 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:42:26 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:42:26 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:42:26 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:42:26 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:42:26 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:42:26 [SEVERE] [MarketPlugin] Disabled due to no Vault dependency found!
+2013-11-25 22:42:26 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:42:26 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:42:26 [INFO] [iConomy - April Fools] Enabled (13 ms)
+2013-11-25 22:42:26 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:42:26 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:42:26 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:42:26 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:42:26 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:42:26 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-25 22:42:37 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:42:37 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:42:37 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:42:37 [INFO] [iConomy] Closing general data...
+2013-11-25 22:42:37 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:42:37 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:42:37 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:42:37 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:42:37 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:42:37 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:42:37 [SEVERE] [MarketPlugin] Disabled due to no Vault dependency found!
+2013-11-25 22:42:37 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:42:37 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:42:37 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-25 22:42:37 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:42:37 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:42:37 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:42:37 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:42:37 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:42:37 [INFO] CONSOLE: [0;32;1mReload complete.[m
+2013-11-25 22:42:55 [INFO] johnrapp issued server command: /money
+2013-11-25 22:43:15 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:43:15 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:43:15 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:43:15 [INFO] [iConomy] Closing general data...
+2013-11-25 22:43:15 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:43:15 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-25 22:43:15 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:43:15 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:43:15 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:43:15 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:43:15 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-25 22:43:15 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-25 22:43:15 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-25 22:43:15 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-25 22:43:15 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-25 22:43:15 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-25 22:43:15 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-25 22:43:15 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:43:15 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:43:15 [INFO] [iConomy - April Fools] Enabled (13 ms)
+2013-11-25 22:43:15 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:43:15 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-25 22:43:15 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:43:15 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:43:15 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:43:15 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:43:15 [INFO] CONSOLE: [0;32;1mReload complete.[m
+2013-11-25 22:43:21 [INFO] johnrapp issued server command: /market sell
+2013-11-25 22:44:23 [INFO] johnrapp issued server command: /reload
+2013-11-25 22:44:23 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:44:23 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:44:23 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:44:23 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-25 22:44:23 [INFO] [iConomy] Closing general data...
+2013-11-25 22:44:23 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:44:23 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:44:23 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-25 22:44:23 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-25 22:44:23 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:44:23 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-25 22:44:23 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:44:23 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:44:23 [INFO] [Essentials] Loading Essentials v2.12.1
+2013-11-25 22:44:23 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-25 22:44:23 [INFO] [Vault][Economy] Essentials Economy found: Waiting
+2013-11-25 22:44:23 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-25 22:44:23 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-25 22:44:23 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-25 22:44:23 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-25 22:44:23 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-25 22:44:23 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-25 22:44:23 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:44:23 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-25 22:44:23 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-25 22:44:23 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-25 22:44:23 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-25 22:44:23 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:44:23 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-25 22:44:23 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:44:23 [INFO] [Essentials] Enabling Essentials v2.12.1
+2013-11-25 22:44:23 [INFO] Creating config from template: C:\Users\John\Documents\GitHub\BukkitPlugin\server\plugins\Essentials\config.yml
+2013-11-25 22:44:23 [INFO] Creating empty config: C:\Users\John\Documents\GitHub\BukkitPlugin\server\plugins\Essentials\upgrades-done.yml
+2013-11-25 22:44:24 [INFO] Creating config from template: C:\Users\John\Documents\GitHub\BukkitPlugin\server\plugins\Essentials\worth.yml
+2013-11-25 22:44:24 [INFO] [Essentials] This plugin collects minimal statistic data and sends it to http://metrics.essentials3.net.
+2013-11-25 22:44:24 [INFO] [Essentials] You can opt out by running /essentials opt-out
+2013-11-25 22:44:24 [INFO] [Essentials] This will start 5 minutes after the first admin/op joins.
+2013-11-25 22:44:24 [INFO] [Vault][Economy] Essentials Economy hooked.
+2013-11-25 22:44:24 [INFO] Essentials: Using config file enhanced permissions.
+2013-11-25 22:44:24 [INFO] Permissions listed in as player-commands will be given to all users.
+2013-11-25 22:44:24 [INFO] [Essentials] Payment method found (Vault - Economy: iConomy 7 version: 1.2.27-b349)
+2013-11-25 22:44:24 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:44:24 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-25 22:44:27 [INFO] johnrapp issued server command: /essentials
+2013-11-25 22:44:37 [INFO] johnrapp issued server command: /help essentials
+2013-11-25 22:44:44 [INFO] johnrapp issued server command: /help essentials 2
+2013-11-25 22:44:47 [INFO] johnrapp issued server command: /help essentials 3
+2013-11-25 22:44:51 [INFO] johnrapp issued server command: /help essentials 4
+2013-11-25 22:44:55 [INFO] johnrapp issued server command: /help essentials 5
+2013-11-25 22:44:58 [INFO] johnrapp issued server command: /help essentials 6
+2013-11-25 22:45:06 [INFO] johnrapp issued server command: /kittycannon
+2013-11-25 22:45:08 [INFO] johnrapp issued server command: /kittycannon
+2013-11-25 22:45:22 [INFO] johnrapp issued server command: /help essentials 7
+2013-11-25 22:45:27 [INFO] johnrapp issued server command: /money
+2013-11-25 22:45:40 [INFO] CONSOLE: Stopping the server..[m
+2013-11-25 22:45:40 [INFO] Stopping server
+2013-11-25 22:45:40 [INFO] [Essentials] Disabling Essentials v2.12.1
+2013-11-25 22:45:40 [INFO] [Vault][Economy] Essentials Economy unhooked.
+2013-11-25 22:45:40 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:45:40 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:45:40 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-25 22:45:40 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-25 22:45:40 [INFO] [iConomy] Closing general data...
+2013-11-25 22:45:40 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-25 22:45:40 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:45:40 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-25 22:45:40 [INFO] Saving players
+2013-11-25 22:45:40 [WARNING] DSCT: socket closed
+2013-11-25 22:45:40 [INFO] Closing listening thread
+2013-11-25 22:45:40 [INFO] §ejohnrapp left the game.
+2013-11-25 22:45:40 [INFO] Saving worlds
+2013-11-25 22:45:40 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-25 22:45:41 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-25 22:45:41 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-25 22:45:49 [INFO] Starting minecraft server version 1.6.4
+2013-11-25 22:45:49 [INFO] Loading properties
+2013-11-25 22:45:49 [INFO] Default game type: SURVIVAL
+2013-11-25 22:45:49 [INFO] Generating keypair
+2013-11-25 22:45:49 [INFO] Starting Minecraft server on *:25565
+2013-11-25 22:45:49 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-25 22:45:49 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-25 22:45:49 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-25 22:45:49 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-25 22:45:49 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-25 22:45:49 [INFO] [Essentials] Loading Essentials v2.12.1
+2013-11-25 22:45:49 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-25 22:45:49 [INFO] [Vault][Economy] Essentials Economy found: Waiting
+2013-11-25 22:45:49 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-25 22:45:49 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-25 22:45:49 [INFO] Preparing level "world"
+2013-11-25 22:45:49 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-25 22:45:50 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-25 22:45:51 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-25 22:45:51 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-25 22:45:51 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-25 22:45:51 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-25 22:45:51 [INFO] [Essentials] Enabling Essentials v2.12.1
+2013-11-25 22:45:51 [INFO] [Vault][Economy] Essentials Economy hooked.
+2013-11-25 22:45:51 [INFO] Essentials: Using config file enhanced permissions.
+2013-11-25 22:45:51 [INFO] Permissions listed in as player-commands will be given to all users.
+2013-11-25 22:45:51 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-25 22:45:52 [INFO] Done (2,192s)! For help, type "help" or "?"
+2013-11-25 22:45:57 [INFO] johnrapp[/127.0.0.1:54956] logged in with entity id 180 at ([world] 460.169380555898, 70.04539642841353, 316.5947318751572)
+2013-11-25 22:45:57 [INFO] Creating empty config: C:\Users\John\Documents\GitHub\BukkitPlugin\server\plugins\Essentials\userdata\johnrapp.yml
+2013-11-25 22:45:57 [WARNING] File motd.txt does not exist. Creating one for you.
+2013-11-25 22:46:00 [INFO] johnrapp issued server command: /money
+2013-11-25 22:46:09 [INFO] johnrapp issued server command: /money pay
+2013-11-25 22:46:16 [INFO] johnrapp issued server command: /money pay johnrapp
+2013-11-25 22:46:23 [INFO] johnrapp issued server command: /money pay johnrapp 25
+2013-11-25 22:46:28 [INFO] johnrapp issued server command: /money johnrapp
+2013-11-25 22:46:43 [INFO] johnrapp issued server command: /stop
+2013-11-25 22:46:43 [INFO] johnrapp: Stopping the server..[m
+2013-11-25 22:46:43 [INFO] Stopping server
+2013-11-25 22:46:43 [INFO] [Essentials] Disabling Essentials v2.12.1
+2013-11-25 22:46:43 [INFO] [Vault][Economy] Essentials Economy unhooked.
+2013-11-25 22:46:43 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-25 22:46:43 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-25 22:46:43 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-25 22:46:43 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-25 22:46:43 [INFO] Saving players
+2013-11-25 22:46:43 [WARNING] DSCT: socket closed
+2013-11-25 22:46:43 [INFO] Closing listening thread
+2013-11-25 22:46:43 [INFO] §ejohnrapp left the game.
+2013-11-25 22:46:43 [INFO] Saving worlds
+2013-11-25 22:46:43 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-25 22:46:44 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-25 22:46:44 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-25 22:46:44 [INFO] Stopping server
+2013-11-26 15:17:26 [INFO] Starting minecraft server version 1.6.4
+2013-11-26 15:17:26 [INFO] Loading properties
+2013-11-26 15:17:26 [INFO] Default game type: SURVIVAL
+2013-11-26 15:17:26 [INFO] Generating keypair
+2013-11-26 15:17:27 [INFO] Starting Minecraft server on *:25565
+2013-11-26 15:17:27 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-26 15:17:27 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 15:17:27 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 15:17:27 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 15:17:27 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 15:17:27 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 15:17:27 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 15:17:27 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 15:17:27 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 15:17:27 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 15:17:27 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 15:17:27 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 15:17:27 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 15:17:27 [INFO] Preparing level "world"
+2013-11-26 15:17:27 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-26 15:17:28 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-26 15:17:28 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-26 15:17:29 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 15:17:29 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 15:17:29 [INFO] [iConomy - April Fools] Enabled (25 ms)
+2013-11-26 15:17:29 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 15:17:29 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 15:17:29 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 15:17:29 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 15:17:29 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 15:17:29 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 15:17:29 [INFO] Done (1.729s)! For help, type "help" or "?"
+2013-11-26 15:17:37 [INFO] johnrapp[/127.0.0.1:50827] logged in with entity id 180 at ([world] 458.0963467337763, 62.0, 330.6186432976414)
+2013-11-26 15:17:48 [INFO] johnrapp issued server command: /market test 2 carrot
+2013-11-26 15:17:56 [INFO] johnrapp issued server command: /market test 2 carrot_item
+2013-11-26 15:19:33 [INFO] johnrapp issued server command: /gamemode 0
+2013-11-26 15:19:33 [INFO] johnrapp: Set own game mode to SURVIVAL mode
+2013-11-26 15:20:15 [INFO] johnrapp issued server command: /gamemode 1
+2013-11-26 15:20:15 [INFO] johnrapp: Set own game mode to CREATIVE mode
+2013-11-26 18:37:13 [INFO] johnrapp issued server command: /timeset 0
+2013-11-26 18:37:16 [INFO] johnrapp issued server command: /time set 0
+2013-11-26 18:37:16 [INFO] johnrapp: Set time to 0
+2013-11-26 18:37:24 [INFO] johnrapp issued server command: /bank list
+2013-11-26 18:37:31 [INFO] johnrapp issued server command: /bank store
+2013-11-26 18:37:34 [INFO] johnrapp issued server command: /bank list
+2013-11-26 18:37:40 [INFO] johnrapp issued server command: /bank get 0
+2013-11-26 18:37:43 [INFO] johnrapp issued server command: /bank store
+2013-11-26 18:37:48 [INFO] johnrapp issued server command: /bank get diamond 23
+2013-11-26 18:37:51 [INFO] johnrapp issued server command: /bank lisrt
+2013-11-26 18:37:53 [INFO] johnrapp issued server command: /bank list
+2013-11-26 18:38:02 [INFO] johnrapp issued server command: /bank accepted
+2013-11-26 18:38:38 [INFO] johnrapp issued server command: /reload
+2013-11-26 18:38:38 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-26 18:38:38 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-26 18:38:38 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-26 18:38:38 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-26 18:38:38 [INFO] [iConomy] Closing general data...
+2013-11-26 18:38:38 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-26 18:38:38 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-26 18:38:38 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-26 18:38:38 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 18:38:38 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 18:38:38 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 18:38:38 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 18:38:38 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 18:38:38 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 18:38:38 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 18:38:38 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 18:38:38 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 18:38:38 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 18:38:38 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 18:38:38 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 18:38:38 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 18:38:38 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 18:38:38 [INFO] [iConomy - April Fools] Enabled (20 ms)
+2013-11-26 18:38:38 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 18:38:38 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 18:38:38 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 18:38:38 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 18:38:38 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 18:38:38 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 18:38:38 [INFO] johnrapp: Reload complete.
+2013-11-26 18:38:45 [INFO] johnrapp issued server command: /bank store
+2013-11-26 18:38:49 [INFO] johnrapp issued server command: /bank accepted
+2013-11-26 18:39:07 [INFO] johnrapp issued server command: /market sell
+2013-11-26 18:39:12 [INFO] johnrapp issued server command: /money
+2013-11-26 18:39:18 [INFO] johnrapp issued server command: /market buy diamond 1
+2013-11-26 18:39:26 [INFO] johnrapp issued server command: /market price diamond
+2013-11-26 18:41:47 [INFO] johnrapp issued server command: /market price diamond
+2013-11-26 18:42:51 [INFO] johnrapp issued server command: /stop
+2013-11-26 18:42:51 [INFO] johnrapp: Stopping the server..
+2013-11-26 18:42:51 [INFO] Stopping server
+2013-11-26 18:42:51 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-26 18:42:51 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-26 18:42:51 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-26 18:42:51 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-26 18:42:51 [INFO] [iConomy] Closing general data...
+2013-11-26 18:42:51 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-26 18:42:51 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-26 18:42:51 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-26 18:42:51 [WARNING] DSCT: socket closed
+2013-11-26 18:42:51 [INFO] Closing listening thread
+2013-11-26 18:42:51 [INFO] Saving players
+2013-11-26 18:42:51 [INFO] Â§ejohnrapp left the game.
+2013-11-26 18:42:51 [INFO] Saving worlds
+2013-11-26 18:42:51 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-26 18:42:51 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-26 18:42:51 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-26 18:42:51 [INFO] Stopping server
+2013-11-26 18:42:57 [INFO] Starting minecraft server version 1.6.4
+2013-11-26 18:42:57 [INFO] Loading properties
+2013-11-26 18:42:57 [INFO] Default game type: SURVIVAL
+2013-11-26 18:42:57 [INFO] Generating keypair
+2013-11-26 18:42:57 [INFO] Starting Minecraft server on *:25565
+2013-11-26 18:42:57 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-26 18:42:58 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 18:42:58 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 18:42:58 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 18:42:58 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 18:42:58 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 18:42:58 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 18:42:58 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 18:42:58 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 18:42:58 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 18:42:58 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 18:42:58 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 18:42:58 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 18:42:58 [INFO] Preparing level "world"
+2013-11-26 18:42:58 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-26 18:42:59 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-26 18:42:59 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-26 18:43:00 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 18:43:00 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 18:43:00 [INFO] [iConomy - April Fools] Enabled (26 ms)
+2013-11-26 18:43:00 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 18:43:00 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 18:43:00 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 18:43:00 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 18:43:00 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 18:43:00 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 18:43:00 [INFO] Done (2.017s)! For help, type "help" or "?"
+2013-11-26 18:43:03 [INFO] johnrapp[/127.0.0.1:52386] logged in with entity id 275 at ([world] 170.48553742141348, 70.0, 269.3513563991014)
+2013-11-26 18:43:12 [INFO] johnrapp issued server command: /bank store
+2013-11-26 18:43:13 [INFO] johnrapp issued server command: /reload
+2013-11-26 18:43:13 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-26 18:43:13 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-26 18:43:13 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-26 18:43:13 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-26 18:43:13 [INFO] [iConomy] Closing general data...
+2013-11-26 18:43:13 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-26 18:43:13 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-26 18:43:13 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-26 18:43:14 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 18:43:14 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 18:43:14 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 18:43:14 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 18:43:14 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 18:43:14 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 18:43:14 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 18:43:14 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 18:43:14 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 18:43:14 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 18:43:14 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 18:43:14 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 18:43:14 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 18:43:14 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 18:43:14 [INFO] [iConomy - April Fools] Enabled (23 ms)
+2013-11-26 18:43:14 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 18:43:14 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 18:43:14 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 18:43:14 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 18:43:14 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 18:43:14 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 18:43:14 [INFO] johnrapp: Reload complete.
+2013-11-26 18:43:32 [INFO] johnrapp issued server command: /reload
+2013-11-26 18:43:32 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-26 18:43:32 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-26 18:43:32 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-26 18:43:32 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-26 18:43:32 [INFO] [iConomy] Closing general data...
+2013-11-26 18:43:32 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-26 18:43:32 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-26 18:43:32 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-26 18:43:32 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 18:43:32 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 18:43:32 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 18:43:32 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 18:43:32 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 18:43:32 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 18:43:32 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 18:43:32 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 18:43:32 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 18:43:32 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 18:43:32 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 18:43:32 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 18:43:32 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 18:43:32 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 18:43:32 [INFO] [iConomy - April Fools] Enabled (19 ms)
+2013-11-26 18:43:32 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 18:43:32 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 18:43:32 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 18:43:32 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 18:43:32 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 18:43:32 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 18:43:32 [INFO] johnrapp: Reload complete.
+2013-11-26 18:43:33 [INFO] johnrapp issued server command: /reload
+2013-11-26 18:43:33 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-26 18:43:33 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-26 18:43:33 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-26 18:43:33 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-26 18:43:33 [INFO] [iConomy] Closing general data...
+2013-11-26 18:43:33 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-26 18:43:33 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-26 18:43:33 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-26 18:43:33 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 18:43:33 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 18:43:33 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 18:43:33 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 18:43:33 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 18:43:33 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 18:43:33 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 18:43:33 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 18:43:33 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 18:43:33 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 18:43:33 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 18:43:33 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 18:43:33 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 18:43:33 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 18:43:33 [INFO] [iConomy - April Fools] Enabled (23 ms)
+2013-11-26 18:43:33 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 18:43:33 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 18:43:33 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 18:43:33 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 18:43:33 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 18:43:33 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 18:43:34 [INFO] johnrapp: Reload complete.
+2013-11-26 18:43:34 [INFO] johnrapp issued server command: /reload
+2013-11-26 18:43:34 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-26 18:43:34 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-26 18:43:34 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-26 18:43:34 [INFO] [iConomy] Closing general data...
+2013-11-26 18:43:34 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-26 18:43:34 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-26 18:43:34 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-26 18:43:34 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 18:43:34 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 18:43:34 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 18:43:34 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 18:43:34 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 18:43:34 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 18:43:34 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 18:43:34 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 18:43:34 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 18:43:34 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 18:43:34 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 18:43:34 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 18:43:34 [INFO] [iConomy - April Fools] Enabled (19 ms)
+2013-11-26 18:43:34 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 18:43:34 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 18:43:34 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 18:43:34 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 18:43:34 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 18:43:34 [INFO] johnrapp: Reload complete.
+2013-11-26 18:43:34 [INFO] johnrapp issued server command: /reload
+2013-11-26 18:43:34 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-26 18:43:34 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-26 18:43:34 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-26 18:43:34 [INFO] [iConomy] Closing general data...
+2013-11-26 18:43:34 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-26 18:43:34 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-26 18:43:34 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-26 18:43:34 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-26 18:43:34 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-26 18:43:34 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-26 18:43:34 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-26 18:43:34 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-26 18:43:34 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-26 18:43:34 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-26 18:43:34 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-26 18:43:34 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-26 18:43:34 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-26 18:43:34 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-26 18:43:34 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-26 18:43:34 [INFO] [iConomy - April Fools] Enabled (21 ms)
+2013-11-26 18:43:34 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-26 18:43:34 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-26 18:43:34 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-26 18:43:34 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-26 18:43:34 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-26 18:43:34 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-26 18:43:34 [INFO] johnrapp: Reload complete.
+2013-11-27 22:53:41 [INFO] Starting minecraft server version 1.6.4
+2013-11-27 22:53:41 [INFO] Loading properties
+2013-11-27 22:53:41 [INFO] Default game type: SURVIVAL
+2013-11-27 22:53:41 [INFO] Generating keypair
+2013-11-27 22:53:42 [INFO] Starting Minecraft server on *:25565
+2013-11-27 22:53:42 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-27 22:53:55 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-27 22:53:55 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-27 22:53:55 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-27 22:53:55 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-27 22:53:55 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-27 22:53:55 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-27 22:53:55 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-27 22:53:55 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-27 22:53:55 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-27 22:53:55 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-27 22:53:55 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-27 22:53:55 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-27 22:53:55 [INFO] Preparing level "world"
+2013-11-27 22:53:55 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-27 22:53:56 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-27 22:53:56 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-27 22:53:56 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-27 22:53:56 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-27 22:53:56 [INFO] [iConomy - April Fools] Enabled (27 ms)
+2013-11-27 22:53:56 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-27 22:53:56 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-27 22:53:56 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-27 22:53:56 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-27 22:53:56 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-27 22:53:56 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-27 22:53:56 [INFO] Done (1.819s)! For help, type "help" or "?"
+2013-11-27 22:54:00 [INFO] johnrapp[/127.0.0.1:52198] logged in with entity id 276 at ([world] 170.48553742141348, 70.0, 269.3513563991014)
+2013-11-27 22:54:08 [INFO] johnrapp issued server command: /balance
+2013-11-27 22:54:12 [INFO] johnrapp issued server command: /money
+2013-11-27 22:54:20 [INFO] johnrapp issued server command: /buy diamond 250
+2013-11-27 22:54:25 [INFO] johnrapp issued server command: /market buy diamond 250
+2013-11-27 22:56:14 [INFO] Starting minecraft server version 1.6.4
+2013-11-27 22:56:14 [INFO] Loading properties
+2013-11-27 22:56:14 [INFO] Default game type: SURVIVAL
+2013-11-27 22:56:14 [INFO] Generating keypair
+2013-11-27 22:56:14 [INFO] Starting Minecraft server on *:25565
+2013-11-27 22:56:14 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-27 22:56:14 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-27 22:56:14 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-27 22:56:14 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-27 22:56:14 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-27 22:56:14 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-27 22:56:14 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-27 22:56:14 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-27 22:56:14 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-27 22:56:14 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-27 22:56:15 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-27 22:56:15 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-27 22:56:15 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-27 22:56:15 [INFO] Preparing level "world"
+2013-11-27 22:56:15 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-27 22:56:16 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-27 22:56:16 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-27 22:56:16 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-27 22:56:16 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-27 22:56:16 [INFO] [iConomy - April Fools] Enabled (24 ms)
+2013-11-27 22:56:16 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-27 22:56:16 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-27 22:56:16 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-27 22:56:16 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-27 22:56:16 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-27 22:56:16 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-27 22:56:16 [INFO] Done (1.894s)! For help, type "help" or "?"
+2013-11-27 22:57:18 [INFO] johnrapp[/127.0.0.1:52264] logged in with entity id 277 at ([world] 170.48553742141348, 70.0, 269.3513563991014)
+2013-11-27 22:57:23 [INFO] johnrapp issued server command: /market buy diamond 250
+2013-11-27 22:57:30 [INFO] johnrapp issued server command: /money
+2013-11-27 22:57:43 [INFO] johnrapp issued server command: /market sell
+2013-11-27 22:58:15 [INFO] johnrapp issued server command: /weather clear
+2013-11-27 22:58:15 [INFO] johnrapp: Changed weather to clear for 616 seconds.
+2013-11-27 22:58:52 [INFO] johnrapp issued server command: /stop
+2013-11-27 22:58:52 [INFO] johnrapp: Stopping the server..
+2013-11-27 22:58:52 [INFO] Stopping server
+2013-11-27 22:58:52 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-27 22:58:52 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-27 22:58:52 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-27 22:58:52 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-27 22:58:52 [INFO] [iConomy] Closing general data...
+2013-11-27 22:58:52 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-27 22:58:52 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-27 22:58:52 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-27 22:58:52 [INFO] Saving players
+2013-11-27 22:58:52 [WARNING] DSCT: socket closed
+2013-11-27 22:58:52 [INFO] Closing listening thread
+2013-11-27 22:58:52 [INFO] Â§ejohnrapp left the game.
+2013-11-27 22:58:52 [INFO] Saving worlds
+2013-11-27 22:58:52 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-27 22:58:53 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-27 22:58:53 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-27 22:58:53 [INFO] Stopping server
+2013-11-27 22:58:53 [INFO] Saving players
+2013-11-28 13:52:33 [INFO] Starting minecraft server version 1.6.4
+2013-11-28 13:52:33 [INFO] Loading properties
+2013-11-28 13:52:33 [INFO] Default game type: SURVIVAL
+2013-11-28 13:52:33 [INFO] Generating keypair
+2013-11-28 13:52:33 [INFO] Starting Minecraft server on *:25565
+2013-11-28 13:52:33 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-28 13:52:34 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 13:52:34 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 13:52:34 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 13:52:34 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 13:52:34 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 13:52:34 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 13:52:34 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 13:52:34 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 13:52:34 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 13:52:34 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 13:52:34 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 13:52:34 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 13:52:34 [INFO] Preparing level "world"
+2013-11-28 13:52:34 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-28 13:52:35 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-28 13:52:35 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-28 13:52:35 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 13:52:35 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 13:52:35 [INFO] [iConomy - April Fools] Enabled (21 ms)
+2013-11-28 13:52:35 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 13:52:35 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 13:52:35 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 13:52:35 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 13:52:35 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 13:52:35 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 13:52:35 [INFO] Done (1.802s)! For help, type "help" or "?"
+2013-11-28 14:50:35 [INFO] johnrapp[/127.0.0.1:52279] logged in with entity id 299 at ([world] 48.99624943804861, 63.63998136516297, 209.8772961994679)
+2013-11-28 14:50:39 [INFO] johnrapp issued server command: /money
+2013-11-28 14:50:48 [INFO] johnrapp issued server command: /market price diamond
+2013-11-28 14:50:55 [INFO] johnrapp issued server command: /market sell
+2013-11-28 14:51:38 [INFO] johnrapp issued server command: /market sell
+2013-11-28 14:51:46 [INFO] johnrapp issued server command: /market buy diamond 2
+2013-11-28 14:52:05 [INFO] johnrapp issued server command: /market buy diamond 2
+2013-11-28 14:53:07 [INFO] johnrapp issued server command: /market sell
+2013-11-28 14:53:12 [INFO] johnrapp issued server command: /money
+2013-11-28 15:29:33 [INFO] Disconnecting Cotfsm [/192.168.0.19:62029]: Outdated client!
+2013-11-28 15:29:42 [INFO] Cotfsm [/192.168.0.19:62037] lost connection
+2013-11-28 15:29:51 [INFO] Cotfsm [/192.168.0.19:62050] lost connection
+2013-11-28 15:29:57 [INFO] Cotfsm [/82.182.93.100:62055] lost connection
+2013-11-28 15:30:08 [INFO] Cotfsm [/192.168.0.19:62060] lost connection
+2013-11-28 15:30:12 [INFO] johnrapp issued server command: /stop
+2013-11-28 15:30:12 [INFO] johnrapp: Stopping the server..
+2013-11-28 15:30:12 [INFO] Stopping server
+2013-11-28 15:30:12 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 15:30:12 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 15:30:12 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 15:30:12 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 15:30:12 [INFO] [iConomy] Closing general data...
+2013-11-28 15:30:12 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 15:30:12 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 15:30:12 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 15:30:12 [WARNING] DSCT: socket closed
+2013-11-28 15:30:12 [INFO] Closing listening thread
+2013-11-28 15:30:12 [INFO] Saving players
+2013-11-28 15:30:12 [INFO] Â§ejohnrapp left the game.
+2013-11-28 15:30:12 [INFO] Saving worlds
+2013-11-28 15:30:12 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-28 15:30:13 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-28 15:30:13 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-28 15:30:21 [INFO] Starting minecraft server version 1.6.4
+2013-11-28 15:30:21 [INFO] Loading properties
+2013-11-28 15:30:21 [INFO] Default game type: SURVIVAL
+2013-11-28 15:30:21 [INFO] Generating keypair
+2013-11-28 15:30:22 [INFO] Starting Minecraft server on *:25565
+2013-11-28 15:30:22 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-28 15:30:22 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 15:30:22 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 15:30:22 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 15:30:22 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 15:30:22 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 15:30:22 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 15:30:22 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 15:30:22 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 15:30:22 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 15:30:22 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 15:30:22 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 15:30:22 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 15:30:22 [INFO] Preparing level "world"
+2013-11-28 15:30:22 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-28 15:30:23 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-28 15:30:24 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-28 15:30:24 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 15:30:24 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 15:30:24 [INFO] [iConomy - April Fools] Enabled (18 ms)
+2013-11-28 15:30:24 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 15:30:24 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 15:30:24 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 15:30:24 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 15:30:24 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 15:30:24 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 15:30:24 [INFO] Done (2.112s)! For help, type "help" or "?"
+2013-11-28 15:30:34 [INFO] Cotfsm [/192.168.0.19:62079] lost connection
+2013-11-28 15:30:36 [INFO] /127.0.0.1:52625 lost connection
+2013-11-28 15:30:39 [INFO] johnrapp[/127.0.0.1:52627] logged in with entity id 188 at ([world] 97.00035769245162, 61.98594416508524, -51.99988245019811)
+2013-11-28 15:30:42 [INFO] johnrapp lost connection: disconnect.quitting
+2013-11-28 15:30:42 [INFO] Connection reset
+2013-11-28 15:30:42 [INFO] §ejohnrapp left the game.
+2013-11-28 15:30:42 [INFO] Cotfsm [/192.168.0.19:62090] lost connection
+2013-11-28 15:30:59 [INFO] johnrapp[/192.168.0.213:52636] logged in with entity id 416 at ([world] 99.11120481229487, 68.2764964039339, -52.9753372435347)
+2013-11-28 15:31:02 [INFO] Cotfsm [/192.168.0.19:62096] lost connection
+2013-11-28 15:32:04 [INFO] Disconnecting Cotfsm [/192.168.0.19:62119]: Outdated client!
+2013-11-28 15:32:09 [INFO] Disconnecting Cotfsm [/192.168.0.19:62121]: Outdated client!
+2013-11-28 15:32:23 [INFO] Cotfsm [/192.168.0.19:62132] lost connection
+2013-11-28 15:32:30 [INFO] Cotfsm[/127.0.0.1:52676] logged in with entity id 2841 at ([world] 188.1986962041944, 65.53584062504456, -144.1689393003503)
+2013-11-28 15:32:37 [INFO] Cotfsm [/82.182.93.100:62144] lost connection
+2013-11-28 15:32:47 [INFO] Cotfsm [/82.182.93.100:62153] lost connection
+2013-11-28 15:33:22 [INFO] Cotfsm [/192.168.0.19:62195] lost connection
+2013-11-28 15:34:15 [INFO] Cotfsm issued server command: /tp johnrapp
+2013-11-28 15:34:15 [INFO] Cotfsm: Teleported Cotfsm to johnrapp[m
+2013-11-28 15:35:31 [INFO] Cotfsm [/82.182.93.100:62250] lost connection
+2013-11-28 15:36:09 [INFO] johnrapp issued server command: /gamemode cotfsm 1
+2013-11-28 15:36:16 [INFO] johnrapp issued server command: /gamemode 1 cotfsm
+2013-11-28 15:36:16 [INFO] johnrapp: Set Cotfsm's game mode to CREATIVE mode[m
+2013-11-28 15:36:22 [INFO] johnrapp issued server command: /time set 0
+2013-11-28 15:36:22 [INFO] johnrapp: Set time to 0[m
+2013-11-28 15:36:23 [INFO] §eCotfsm left the game.
+2013-11-28 15:36:23 [INFO] Cotfsm[/192.168.0.19:62271] logged in with entity id 8483 at ([world] 98.71981679312476, 64.0, -28.94728995980723)
+2013-11-28 15:36:27 [INFO] johnrapp issued server command: /tp cotfsm johnrapp
+2013-11-28 15:36:27 [INFO] johnrapp: Teleported Cotfsm to johnrapp[m
+2013-11-28 15:37:34 [INFO] johnrapp issued server command: /money
+2013-11-28 15:39:58 [INFO] Cotfsm issued server command: /Saplingwalk disable
+2013-11-28 15:54:51 [INFO] johnrapp issued server command: /reload
+2013-11-28 15:54:51 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 15:54:51 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 15:54:51 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 15:54:51 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 15:54:51 [INFO] [iConomy] Closing general data...
+2013-11-28 15:54:51 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 15:54:51 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 15:54:51 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 15:54:51 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 15:54:51 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 15:54:51 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 15:54:51 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 15:54:51 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 15:54:51 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 15:54:51 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 15:54:51 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 15:54:51 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 15:54:51 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 15:54:51 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 15:54:51 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 15:54:51 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 15:54:51 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 15:54:51 [INFO] [iConomy - April Fools] Enabled (15 ms)
+2013-11-28 15:54:51 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 15:54:51 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 15:54:51 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 15:54:51 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 15:54:51 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 15:54:51 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 15:54:51 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 15:54:58 [INFO] johnrapp issued server command: /market sell
+2013-11-28 15:56:02 [INFO] Cotfsm issued server command: /Saplingwalk disable
+2013-11-28 15:58:52 [INFO] johnrapp issued server command: /reload
+2013-11-28 15:58:52 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 15:58:52 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 15:58:52 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 15:58:52 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 15:58:52 [INFO] [iConomy] Closing general data...
+2013-11-28 15:58:52 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 15:58:52 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 15:58:52 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 15:58:52 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 15:58:52 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 15:58:52 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 15:58:52 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 15:58:52 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 15:58:52 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 15:58:52 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 15:58:52 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 15:58:52 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 15:58:52 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 15:58:52 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 15:58:52 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 15:58:52 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 15:58:52 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 15:58:52 [INFO] [iConomy - April Fools] Enabled (15 ms)
+2013-11-28 15:58:52 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 15:58:52 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 15:58:52 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 15:58:52 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 15:58:52 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 15:58:52 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 15:58:52 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 15:58:54 [INFO] johnrapp issued server command: /market sell
+2013-11-28 15:59:04 [INFO] Cotfsm issued server command: /Saplingwalk disable
+2013-11-28 15:59:11 [INFO] johnrapp issued server command: /reload
+2013-11-28 15:59:11 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 15:59:11 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 15:59:11 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 15:59:11 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 15:59:11 [INFO] [iConomy] Closing general data...
+2013-11-28 15:59:11 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 15:59:11 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 15:59:11 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 15:59:11 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 15:59:11 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 15:59:11 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 15:59:11 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 15:59:11 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 15:59:11 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 15:59:11 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 15:59:11 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 15:59:11 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 15:59:11 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 15:59:11 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 15:59:11 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 15:59:11 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 15:59:11 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 15:59:11 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-28 15:59:11 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 15:59:11 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 15:59:11 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 15:59:11 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 15:59:11 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 15:59:11 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 15:59:11 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 15:59:16 [INFO] Cotfsm issued server command: /Saplingwalk disable
+2013-11-28 15:59:23 [INFO] johnrapp issued server command: /reload
+2013-11-28 15:59:23 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 15:59:23 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 15:59:23 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 15:59:23 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 15:59:23 [INFO] [iConomy] Closing general data...
+2013-11-28 15:59:23 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 15:59:23 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 15:59:23 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 15:59:23 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 15:59:23 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 15:59:23 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 15:59:23 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 15:59:23 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 15:59:23 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 15:59:23 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 15:59:23 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 15:59:23 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 15:59:23 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 15:59:23 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 15:59:23 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 15:59:23 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 15:59:23 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 15:59:23 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-28 15:59:23 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 15:59:23 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 15:59:23 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 15:59:23 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 15:59:23 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 15:59:23 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 15:59:23 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 15:59:31 [INFO] johnrapp issued server command: /bank store
+2013-11-28 15:59:53 [INFO] johnrapp issued server command: /bank slit
+2013-11-28 15:59:55 [INFO] johnrapp issued server command: /bank list
+2013-11-28 15:59:59 [INFO] johnrapp issued server command: /reload
+2013-11-28 15:59:59 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 15:59:59 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 15:59:59 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 15:59:59 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 15:59:59 [INFO] [iConomy] Closing general data...
+2013-11-28 15:59:59 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 15:59:59 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 15:59:59 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 15:59:59 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 15:59:59 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 15:59:59 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 15:59:59 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 15:59:59 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 15:59:59 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 15:59:59 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 15:59:59 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 15:59:59 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 15:59:59 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 15:59:59 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 15:59:59 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 15:59:59 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 15:59:59 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 15:59:59 [INFO] [iConomy - April Fools] Enabled (13 ms)
+2013-11-28 15:59:59 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 15:59:59 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 15:59:59 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 15:59:59 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 15:59:59 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 15:59:59 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 15:59:59 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:00:00 [INFO] johnrapp issued server command: /bank list
+2013-11-28 16:00:36 [INFO] johnrapp issued server command: /market sell
+2013-11-28 16:00:42 [INFO] johnrapp issued server command: /market sell
+2013-11-28 16:03:34 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:03:34 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:03:34 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:03:34 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:03:34 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:03:34 [INFO] [iConomy] Closing general data...
+2013-11-28 16:03:34 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:03:34 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:03:34 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:03:34 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:03:34 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:03:34 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:03:34 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:03:34 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:03:34 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:03:34 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:03:34 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:03:34 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:03:34 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:03:34 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:03:34 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:03:34 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:03:34 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:03:34 [INFO] [iConomy - April Fools] Enabled (16 ms)
+2013-11-28 16:03:34 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:03:34 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:03:34 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:03:34 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:03:34 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:03:34 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:03:35 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:03:36 [INFO] johnrapp issued server command: /market sell
+2013-11-28 16:03:50 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:03:50 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:03:50 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:03:50 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:03:50 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:03:50 [INFO] [iConomy] Closing general data...
+2013-11-28 16:03:50 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:03:50 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:03:50 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:03:50 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:03:50 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:03:50 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:03:50 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:03:50 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:03:50 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:03:50 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:03:50 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:03:50 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:03:50 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:03:50 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:03:50 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:03:50 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:03:50 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:03:50 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-28 16:03:50 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:03:50 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:03:50 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:03:50 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:03:50 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:03:50 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:03:50 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:03:54 [INFO] johnrapp issued server command: /market sell
+2013-11-28 16:04:01 [INFO] johnrapp issued server command: /market sell
+2013-11-28 16:04:16 [INFO] johnrapp issued server command: /money
+2013-11-28 16:04:26 [INFO] johnrapp issued server command: /market buy diamond 4
+2013-11-28 16:04:38 [INFO] johnrapp issued server command: /market buy diamonde 1
+2013-11-28 16:04:40 [INFO] johnrapp issued server command: /market buy diamonde 1
+2013-11-28 16:04:44 [INFO] johnrapp issued server command: /market buy diamond 1
+2013-11-28 16:04:53 [INFO] johnrapp issued server command: /money
+2013-11-28 16:05:03 [INFO] johnrapp issued server command: /market sell
+2013-11-28 16:05:26 [INFO] johnrapp issued server command: /market buy diamond 2
+2013-11-28 16:05:30 [INFO] johnrapp issued server command: /money
+2013-11-28 16:05:40 [INFO] johnrapp issued server command: /market sell
+2013-11-28 16:05:46 [INFO] johnrapp issued server command: /market buy diamond 2
+2013-11-28 16:06:28 [INFO] johnrapp issued server command: /weather clear
+2013-11-28 16:06:28 [INFO] johnrapp: Changed weather to clear for 730 seconds.[m
+2013-11-28 16:06:33 [INFO] johnrapp issued server command: /weather clear 12312032103
+2013-11-28 16:06:33 [INFO] johnrapp: Changed weather to clear for 1 seconds.[m
+2013-11-28 16:06:37 [INFO] johnrapp issued server command: /weather clear 999999
+2013-11-28 16:06:37 [INFO] johnrapp: Changed weather to clear for 999999 seconds.[m
+2013-11-28 16:07:05 [INFO] johnrapp issued server command: /timeset 0
+2013-11-28 16:07:09 [INFO] johnrapp issued server command: /time set 0
+2013-11-28 16:07:09 [INFO] johnrapp: Set time to 0[m
+2013-11-28 16:15:13 [INFO] [0;35;1m[Server[0;35;1m] cotfsm du „r den s”taste i v„rlden[m
+2013-11-28 16:15:31 [INFO] [0;35;1m[Server[0;35;1m] cotfsm jag alskar dig[m
+2013-11-28 16:15:43 [INFO] <Cotfsm> Jag är så jävla kåt på dej console[m
+2013-11-28 16:16:50 [INFO] [CONSOLE->Cotfsm] jag aelskar dig[m
+2013-11-28 16:17:05 [INFO] [CONSOLE->Cotfsm] jag vill knulla dig[m
+2013-11-28 16:17:21 [INFO] [CONSOLE->Cotfsm] that he wants to fuck your brains out[m
+2013-11-28 16:17:52 [INFO] [CONSOLE->Cotfsm] your a phagget[m
+2013-11-28 16:18:07 [INFO] [CONSOLE->Cotfsm] that you are ugly[m
+2013-11-28 16:19:15 [INFO] johnrapp issued server command: /tell cotfsm that your a dirty slut
+2013-11-28 16:19:25 [INFO] johnrapp issued server command: /tell cotfsm that you're a dirty slut
+2013-11-28 16:19:55 [INFO] johnrapp issued server command: /tell cotfsm that you should test our plugins
+2013-11-28 16:22:13 [INFO] Cotfsm issued server command: /time set 0
+2013-11-28 16:22:13 [INFO] Cotfsm: Set time to 0[m
+2013-11-28 16:26:32 [INFO] Cotfsm issued server command: /market buy diamond_block 34
+2013-11-28 16:26:40 [INFO] Cotfsm issued server command: /market buy diamond 34
+2013-11-28 16:27:02 [INFO] Cotfsm issued server command: /market sell
+2013-11-28 16:27:07 [INFO] Cotfsm issued server command: /market sell
+2013-11-28 16:27:18 [INFO] Cotfsm issued server command: /money
+2013-11-28 16:32:20 [INFO] johnrapp issued server command: /test
+2013-11-28 16:32:23 [INFO] johnrapp issued server command: /market test
+2013-11-28 16:32:23 [SEVERE] null
+org.bukkit.command.CommandException: Unhandled exception executing command 'market' in plugin MarketPlugin v1
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46)
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:192)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.dispatchCommand(CraftServer.java:528)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.handleCommand(PlayerConnection.java:968)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.chat(PlayerConnection.java:886)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.a(PlayerConnection.java:837)
+	at net.minecraft.server.v1_6_R3.Packet3Chat.handle(SourceFile:49)
+	at net.minecraft.server.v1_6_R3.NetworkManager.b(NetworkManager.java:296)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.e(PlayerConnection.java:116)
+	at net.minecraft.server.v1_6_R3.ServerConnection.b(SourceFile:37)
+	at net.minecraft.server.v1_6_R3.DedicatedServerConnection.b(SourceFile:30)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.t(MinecraftServer.java:592)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.t(DedicatedServer.java:227)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.s(MinecraftServer.java:488)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:421)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at se.jrp.marketplugin.nestedcommandexecutor.TestExecutor.execute(TestExecutor.java:16)
+	at se.jrp.marketplugin.nestedcommandexecutor.NestedCommandExecutor.onCommand(NestedCommandExecutor.java:20)
+	at se.jrp.marketplugin.MarketPlugin.onCommand(MarketPlugin.java:75)
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44)
+	... 15 more
+2013-11-28 16:32:28 [INFO] Cotfsm issued server command: /market buy iron_door
+2013-11-28 16:32:39 [INFO] Cotfsm issued server command: /market buy iron_door 1
+2013-11-28 16:33:15 [INFO] johnrapp issued server command: /market test
+2013-11-28 16:33:15 [SEVERE] null
+org.bukkit.command.CommandException: Unhandled exception executing command 'market' in plugin MarketPlugin v1
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46)
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:192)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.dispatchCommand(CraftServer.java:528)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.handleCommand(PlayerConnection.java:968)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.chat(PlayerConnection.java:886)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.a(PlayerConnection.java:837)
+	at net.minecraft.server.v1_6_R3.Packet3Chat.handle(SourceFile:49)
+	at net.minecraft.server.v1_6_R3.NetworkManager.b(NetworkManager.java:296)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.e(PlayerConnection.java:116)
+	at net.minecraft.server.v1_6_R3.ServerConnection.b(SourceFile:37)
+	at net.minecraft.server.v1_6_R3.DedicatedServerConnection.b(SourceFile:30)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.t(MinecraftServer.java:592)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.t(DedicatedServer.java:227)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.s(MinecraftServer.java:488)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:421)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at se.jrp.marketplugin.nestedcommandexecutor.TestExecutor.execute(TestExecutor.java:16)
+	at se.jrp.marketplugin.nestedcommandexecutor.NestedCommandExecutor.onCommand(NestedCommandExecutor.java:20)
+	at se.jrp.marketplugin.MarketPlugin.onCommand(MarketPlugin.java:75)
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44)
+	... 15 more
+2013-11-28 16:33:28 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:33:28 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:33:28 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:33:28 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:33:28 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:33:28 [INFO] [iConomy] Closing general data...
+2013-11-28 16:33:28 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:33:28 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:33:28 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:33:28 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:33:28 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:33:28 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:33:28 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:33:28 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:33:28 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:33:28 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:33:28 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:33:28 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:33:28 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:33:28 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:33:28 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:33:28 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:33:28 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:33:28 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-28 16:33:28 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:33:28 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:33:28 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:33:28 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:33:28 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:33:28 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:33:28 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:33:29 [INFO] johnrapp issued server command: /market test
+2013-11-28 16:33:29 [SEVERE] null
+org.bukkit.command.CommandException: Unhandled exception executing command 'market' in plugin MarketPlugin v1
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46)
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:192)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.dispatchCommand(CraftServer.java:528)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.handleCommand(PlayerConnection.java:968)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.chat(PlayerConnection.java:886)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.a(PlayerConnection.java:837)
+	at net.minecraft.server.v1_6_R3.Packet3Chat.handle(SourceFile:49)
+	at net.minecraft.server.v1_6_R3.NetworkManager.b(NetworkManager.java:296)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.e(PlayerConnection.java:116)
+	at net.minecraft.server.v1_6_R3.ServerConnection.b(SourceFile:37)
+	at net.minecraft.server.v1_6_R3.DedicatedServerConnection.b(SourceFile:30)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.t(MinecraftServer.java:592)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.t(DedicatedServer.java:227)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.s(MinecraftServer.java:488)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:421)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at se.jrp.marketplugin.nestedcommandexecutor.TestExecutor.execute(TestExecutor.java:23)
+	at se.jrp.marketplugin.nestedcommandexecutor.NestedCommandExecutor.onCommand(NestedCommandExecutor.java:20)
+	at se.jrp.marketplugin.MarketPlugin.onCommand(MarketPlugin.java:77)
+	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44)
+	... 15 more
+2013-11-28 16:33:50 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:33:50 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:33:50 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:33:50 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:33:50 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:33:50 [INFO] [iConomy] Closing general data...
+2013-11-28 16:33:50 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:33:50 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:33:50 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:33:50 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:33:50 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:33:50 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:33:50 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:33:50 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:33:50 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:33:50 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:33:50 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:33:50 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:33:50 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:33:50 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:33:50 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:33:50 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:33:50 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:33:50 [INFO] [iConomy - April Fools] Enabled (13 ms)
+2013-11-28 16:33:50 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:33:50 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:33:50 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:33:50 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:33:50 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:33:50 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:33:50 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:33:51 [INFO] johnrapp issued server command: /market test
+2013-11-28 16:34:04 [INFO] johnrapp issued server command: /market test iwannatest
+2013-11-28 16:34:09 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:34:23 [INFO] Cotfsm issued server command: /Market test iwannatest
+2013-11-28 16:34:28 [INFO] johnrapp issued server command: /market testers
+2013-11-28 16:34:31 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:34:52 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:34:52 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:34:52 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:34:52 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:34:52 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:34:52 [INFO] [iConomy] Closing general data...
+2013-11-28 16:34:52 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:34:52 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:34:52 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:34:52 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:34:52 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:34:52 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:34:52 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:34:52 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:34:52 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:34:52 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:34:52 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:34:52 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:34:52 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:34:52 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:34:52 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:34:52 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:34:52 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:34:52 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-28 16:34:52 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:34:52 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:34:52 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:34:52 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:34:52 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:34:52 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:34:52 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:34:57 [INFO] johnrapp issued server command: /market test idontwannatest
+2013-11-28 16:34:59 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:35:48 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:35:48 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:35:48 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:35:48 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:35:48 [INFO] [iConomy] Closing general data...
+2013-11-28 16:35:48 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:35:48 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:35:48 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:35:48 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:35:48 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:35:48 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:35:48 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:35:48 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:35:48 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:35:48 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:35:48 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:35:48 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:35:48 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:35:48 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:35:48 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:35:48 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:35:48 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:35:48 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-28 16:35:48 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:35:48 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:35:48 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:35:48 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:35:48 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:35:48 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:35:48 [INFO] CONSOLE: [0;32;1mReload complete.[m
+2013-11-28 16:35:58 [INFO] johnrapp issued server command: /market test idontwannatest
+2013-11-28 16:35:59 [INFO] Cotfsm issued server command: /Saplingwalk disable
+2013-11-28 16:36:02 [INFO] Cotfsm issued server command: /Market test iwannatest
+2013-11-28 16:36:03 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:36:05 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:36:05 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:36:05 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:36:05 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:36:05 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:36:05 [INFO] [iConomy] Closing general data...
+2013-11-28 16:36:05 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:36:05 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:36:05 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:36:05 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:36:05 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:36:05 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:36:05 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:36:05 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:36:05 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:36:05 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:36:05 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:36:05 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:36:05 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:36:05 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:36:05 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:36:05 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:36:05 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:36:05 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-28 16:36:05 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:36:05 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:36:05 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:36:05 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:36:05 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:36:05 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:36:05 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:36:08 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:36:10 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:37:10 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:37:10 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:37:10 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:37:10 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:37:10 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:37:10 [INFO] [iConomy] Closing general data...
+2013-11-28 16:37:10 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:37:10 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:37:10 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:37:10 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:37:10 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:37:10 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:37:10 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:37:10 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:37:10 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:37:10 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:37:10 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:37:10 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:37:10 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:37:10 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:37:10 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:37:10 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:37:10 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:37:10 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-28 16:37:10 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:37:10 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:37:10 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:37:10 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:37:10 [SEVERE] Error occurred while enabling BankPlugin v1 (Is it up to date?)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to se.jrp.bankplugin.filemanager.CustomProperties
+	at se.jrp.bankplugin.filemanager.PropertiesFileManipulator.onSave(PropertiesFileManipulator.java:16)
+	at se.jrp.bankplugin.filemanager.FileManipulator.save(FileManipulator.java:21)
+	at se.jrp.bankplugin.BankInventory.onLoad(BankInventory.java:134)
+	at se.jrp.bankplugin.filemanager.FileManipulator.autoLoad(FileManipulator.java:42)
+	at se.jrp.bankplugin.filemanager.FileManager.onEnable(FileManager.java:10)
+	at se.jrp.bankplugin.BankPlugin.onEnable(BankPlugin.java:42)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.reload(CraftServer.java:615)
+	at org.bukkit.Bukkit.reload(Bukkit.java:277)
+	at org.bukkit.command.defaults.ReloadCommand.execute(ReloadCommand.java:23)
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:192)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.dispatchCommand(CraftServer.java:528)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.handleCommand(PlayerConnection.java:968)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.chat(PlayerConnection.java:886)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.a(PlayerConnection.java:837)
+	at net.minecraft.server.v1_6_R3.Packet3Chat.handle(SourceFile:49)
+	at net.minecraft.server.v1_6_R3.NetworkManager.b(NetworkManager.java:296)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.e(PlayerConnection.java:116)
+	at net.minecraft.server.v1_6_R3.ServerConnection.b(SourceFile:37)
+	at net.minecraft.server.v1_6_R3.DedicatedServerConnection.b(SourceFile:30)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.t(MinecraftServer.java:592)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.t(DedicatedServer.java:227)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.s(MinecraftServer.java:488)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:421)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-28 16:37:10 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:37:10 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:37:10 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:37:14 [INFO] johnrapp issued server command: /market test idontwannatest
+2013-11-28 16:37:16 [INFO] Cotfsm issued server command: /Market test iwannatest
+2013-11-28 16:37:16 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:37:19 [INFO] johnrapp issued server command: /reload
+2013-11-28 16:37:19 [INFO] [TestPlugin] Disabling TestPlugin v1
+2013-11-28 16:37:19 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-28 16:37:19 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-28 16:37:19 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-28 16:37:19 [INFO] [iConomy] Closing general data...
+2013-11-28 16:37:19 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-28 16:37:19 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-28 16:37:19 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-28 16:37:19 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-28 16:37:19 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-28 16:37:19 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-28 16:37:19 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-28 16:37:19 [INFO] [TestPlugin] Loading TestPlugin v1
+2013-11-28 16:37:19 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-28 16:37:19 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-28 16:37:19 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-28 16:37:19 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-28 16:37:19 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-28 16:37:19 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-28 16:37:19 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-28 16:37:19 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-28 16:37:19 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-28 16:37:19 [INFO] [iConomy - April Fools] Enabled (12 ms)
+2013-11-28 16:37:19 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-28 16:37:19 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-28 16:37:19 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-28 16:37:19 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-28 16:37:19 [SEVERE] Error occurred while enabling BankPlugin v1 (Is it up to date?)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to se.jrp.bankplugin.filemanager.CustomProperties
+	at se.jrp.bankplugin.filemanager.PropertiesFileManipulator.onSave(PropertiesFileManipulator.java:16)
+	at se.jrp.bankplugin.filemanager.FileManipulator.save(FileManipulator.java:21)
+	at se.jrp.bankplugin.BankInventory.onLoad(BankInventory.java:134)
+	at se.jrp.bankplugin.filemanager.FileManipulator.autoLoad(FileManipulator.java:42)
+	at se.jrp.bankplugin.filemanager.FileManager.onEnable(FileManager.java:10)
+	at se.jrp.bankplugin.BankPlugin.onEnable(BankPlugin.java:42)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.reload(CraftServer.java:615)
+	at org.bukkit.Bukkit.reload(Bukkit.java:277)
+	at org.bukkit.command.defaults.ReloadCommand.execute(ReloadCommand.java:23)
+	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:192)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.dispatchCommand(CraftServer.java:528)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.handleCommand(PlayerConnection.java:968)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.chat(PlayerConnection.java:886)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.a(PlayerConnection.java:837)
+	at net.minecraft.server.v1_6_R3.Packet3Chat.handle(SourceFile:49)
+	at net.minecraft.server.v1_6_R3.NetworkManager.b(NetworkManager.java:296)
+	at net.minecraft.server.v1_6_R3.PlayerConnection.e(PlayerConnection.java:116)
+	at net.minecraft.server.v1_6_R3.ServerConnection.b(SourceFile:37)
+	at net.minecraft.server.v1_6_R3.DedicatedServerConnection.b(SourceFile:30)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.t(MinecraftServer.java:592)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.t(DedicatedServer.java:227)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.s(MinecraftServer.java:488)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:421)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-28 16:37:19 [INFO] [TestPlugin] Enabling TestPlugin v1
+2013-11-28 16:37:19 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-28 16:37:19 [INFO] johnrapp: [0;32;1mReload complete.[m
+2013-11-28 16:37:20 [INFO] johnrapp issued server command: /market test testers
+2013-11-28 16:37:34 [INFO] Cotfsm issued server command: /Market test testers
+2013-11-28 16:37:45 [INFO] johnrapp issued server command: /market test iwannatest
+2013-11-28 16:37:49 [INFO] Cotfsm issued server command: /Market test testers
+2013-11-28 16:38:15 [INFO] Cotfsm issued server command: /market test checktype
+2013-11-28 16:38:33 [INFO] Cotfsm issued server command: /market test get diamond 68
+2013-11-28 16:38:49 [INFO] johnrapp issued server command: /market test get piston_base
+2013-11-28 16:39:25 [INFO] Cotfsm issued server command: /market buy iron_door 4
+2013-11-28 17:07:27 [INFO] johnrapp issued server command: /tp cotfsm
+2013-11-28 17:07:27 [INFO] johnrapp: Teleported johnrapp to Cotfsm[m

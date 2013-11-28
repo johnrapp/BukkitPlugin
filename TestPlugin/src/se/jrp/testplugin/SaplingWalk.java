@@ -105,11 +105,11 @@ public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
 
 	@Override
 	public FileManipulator getManipulator(String id) {
-		return new ObjectFileManipulator(this, id);
+		return new ObjectFileManipulator(this, TestPlugin.directory, id);
 	}
 
 	@Override
-	public boolean isSaving(String id) {
+	public boolean isAutoSaving(String id) {
 		return true;
 	}
 }

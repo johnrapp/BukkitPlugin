@@ -12,10 +12,11 @@ import se.jrp.testplugin.filemanager.FileManager;
 import se.jrp.testplugin.filemanager.FileManipulator;
  
 public final class TestPlugin extends JavaPlugin {
+	public static String directory;
     public static TestPlugin instance;
-    LogBlockBreakListener listener;
-    SaplingWalk saplingWalk;
-    TestPluginCommandExecutor commandExecutor;
+    public LogBlockBreakListener listener;
+    public SaplingWalk saplingWalk;
+    public TestPluginCommandExecutor commandExecutor;
     
     public static void main(String[] args) {
     }
@@ -23,8 +24,9 @@ public final class TestPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
 		instance = this;
+		directory = getDataFolder() + File.separator;
         Values.init();
-        FileManager.onEnable(getDataFolder() + File.separator, new FileManipulator[]
+        FileManager.onEnable(new FileManipulator[]
 			{(new SaplingWalk()).getManipulator(Strings.FILE_SAPLING_WALK)});
     	listener = new LogBlockBreakListener();
     	commandExecutor = new TestPluginCommandExecutor();

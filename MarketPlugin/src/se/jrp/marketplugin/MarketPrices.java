@@ -25,6 +25,9 @@ public class MarketPrices extends HashMap<Material, Double[]> implements FileSub
 		DEFAULT_PRICES.put(Material.PAPER, new Double[] {3.0, 1.0});
 		DEFAULT_PRICES.put(Material.WATCH, new Double[] {42.0, 21.0});
 		DEFAULT_PRICES.put(Material.BOOKSHELF, new Double[] {33.0, 16.0});
+		DEFAULT_PRICES.put(Material.BED, new Double[] {35.0, 17.5});
+		DEFAULT_PRICES.put(Material.IRON_DOOR, new Double[] {100.0, 50.5});
+		DEFAULT_PRICES.put(Material.SAND, new Double[] {2.0, 0.5});
 		
 	}
 	
@@ -78,6 +81,12 @@ public class MarketPrices extends HashMap<Material, Double[]> implements FileSub
 	}
 	public static boolean isForSale(Material material) {
 		return isForSale(material, MarketPlugin.prices);
+	}
+	public static boolean isPurshasable(Material material, HashMap<Material, Double[]> prices) {
+		return getSellPrice(material, prices) > 0;
+	}
+	public static boolean isPurshasable(Material material) {
+		return isPurshasable(material, MarketPlugin.prices);
 	}
 	public static double getBuyPrice(Material material, HashMap<Material, Double[]> prices) {
 		return prices.containsKey(material) ? prices.get(material)[0] : 0.;

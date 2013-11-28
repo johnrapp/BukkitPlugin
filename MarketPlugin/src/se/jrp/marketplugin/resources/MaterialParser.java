@@ -42,6 +42,11 @@ public class MaterialParser {
 		return item.getAmount() > 1 ? addPlural(name) : name;
 	}
 	
+	public String getFullParsedName(ItemStack item) {
+		String name = getParsedName(item.getType());
+		return item.getAmount() + " " + (item.getAmount() > 1 ? addPlural(name) : name);
+	}
+	
 	private String addPlural(String name) {
 		return name.substring(name.length() - 1).equalsIgnoreCase("s") ? name : name + "s";
 	}

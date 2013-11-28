@@ -40,13 +40,15 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
+		TestExecutor test = new TestExecutor();
 		commandExecutors.put(Strings.COMMAND_BUY, new BuyExecutor());
 		commandExecutors.put(Strings.COMMAND_SELL, new SellExecutor());
 		commandExecutors.put(Strings.COMMAND_PRICE, new PriceExecutor());
-		commandExecutors.put(Strings.COMMAND_TEST, new TestExecutor());
+		commandExecutors.put(Strings.COMMAND_TEST, test);
 
 		FileManager.onEnable(new FileManipulator[] {
-			prices.getManipulator(Strings.FILE_PRICES)});
+			prices.getManipulator(Strings.FILE_PRICES),
+			test.getManipulator(Strings.FILE_TEST)});
     }
  
     @Override

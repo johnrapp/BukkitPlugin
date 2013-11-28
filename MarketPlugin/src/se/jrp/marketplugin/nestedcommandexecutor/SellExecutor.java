@@ -17,16 +17,13 @@ public class SellExecutor extends NestedCommandExecutor {
 	public boolean execute(Player player, String[] args) {
 		ItemStack item = player.getItemInHand();
 		if(item.getAmount() > 0) {
-			if(MarketPrices.isForSale(item.getType())) {
-				MarketPlugin.economy.depositPlayer(player.getName(), MarketPrices.getSellPrice(item.getType()) * item.getAmount());
+			if(MarketPrices.isPurshasable(item.getType())) {
+				double earned = MarketPrices.getSellPrice(item.getType()) * item.getAmount();
+				MarketPlugin.economy.depositPlayer(player.getName(), earned);
 				player.getInventory().setItemInHand(null);
-				player.sendMessage(String.format(Strings.INFO_BALANCE, MarketPlugin.economy.getBalance(player.getName())));
-			} else {
-				player.sendMessage(String.format(Strings.ERROR_NOT_SELLABLE, MaterialParser.instance().getParsedName(item.getType())));
-			}
-		} else {
-			player.sendMessage(Strings.ERROR_NOTHING_IN_HAND);
-		}
+				player.sendMessage(String.format(Strings.INFO_SOLD, MaterialParser.instance().getFullParsedName(item), earned));
+			} else player.sendMessage(String.format(Strings.ERROR_NOT_SELLABLE, MaterialParser.instance().getParsedName(item.getType())));
+		} else player.sendMessage(Strings.ERROR_NOTHING_IN_HAND);
 		return true;
 	}
 

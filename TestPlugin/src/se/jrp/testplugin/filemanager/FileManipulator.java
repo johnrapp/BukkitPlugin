@@ -4,26 +4,33 @@ import java.io.File;
 
 public abstract class FileManipulator {
 	FileSubscriber subscriber;
+	String directory;
 	String file;
 	String fileExtension;
+	String path;
 
-	public FileManipulator(FileSubscriber subscriber, String file, String fileExtension) {
+	public FileManipulator(FileSubscriber subscriber, String directory, String file, String fileExtension) {
 		this.subscriber = subscriber;
+		this.directory = directory;
 		this.file = file;
 		this.fileExtension = fileExtension;
+		this.path = directory + file + fileExtension;
 	}
 	
-	public void autoSave(String path) {
-		if(subscriber.isSaving(file)) onSave(path + file + fileExtension, subscriber.onSave(file));
+	public void save(Object object) {
+		onSave(path, object);
 	}
 	
-	public void load(String path) {
-		String completePath = path + file + fileExtension;
+	public void autoSave() {
+		if(subscriber.isAutoSaving(file)) onSave(path, subscriber.onSave(file));
+	}
+	
+	public void autoLoad() {
 		Object load;
-		File f = new File(completePath);
-		File dir = new File(path);
+		File f = new File(path);
+		File dir = new File(directory);
 		if (f.exists()) {
-			load = onLoad(completePath);
+			load = onLoad(path);
 		} else {
 			load = subscriber.getDefault(file);
 			if(!dir.exists()) dir.mkdir();

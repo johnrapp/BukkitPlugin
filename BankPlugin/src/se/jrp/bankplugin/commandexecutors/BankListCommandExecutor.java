@@ -37,8 +37,7 @@ public class BankListCommandExecutor extends BankCommandExecutor {
 							amount += is.getAmount();
 						}
 					}
-					player.sendMessage(Strings.BANK_LIST_MATERIAL1 + amount + " "
-					+ MaterialParser.instance().getParsedName(new ItemStack(mat, amount)) + Strings.BANK_LIST_MATERIAL2);
+					player.sendMessage(Strings.BANK_LIST_MATERIAL1 + MaterialParser.instance().getFullParsedName(new ItemStack(mat, amount)) + Strings.BANK_LIST_MATERIAL2);
 				} else {
 					player.sendMessage(ChatColor.RED + arg + Strings.ERROR_BANK_NON_ITEM);
 				}

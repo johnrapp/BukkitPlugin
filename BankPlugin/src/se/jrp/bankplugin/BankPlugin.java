@@ -24,7 +24,6 @@ import se.jrp.bankplugin.filemanager.FileSubscriber;
 import se.jrp.bankplugin.filemanager.ObjectFileManipulator;
 import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.Strings;
-import se.jrp.bankplugin.resources.Values;
 
 public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubscriber {
 	public static String directory;
@@ -37,7 +36,6 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 	
 	@Override
     public void onEnable() {
-        Values.init();
 		directory = getDataFolder() + File.separator;
         FileManager.onEnable(new FileManipulator[] {
 			getManipulator(Strings.FILE_BANK), inventory.getManipulator(Strings.FILE_ACCEPTED)});

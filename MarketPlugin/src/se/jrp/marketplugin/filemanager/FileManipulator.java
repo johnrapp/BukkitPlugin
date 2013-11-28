@@ -22,7 +22,7 @@ public abstract class FileManipulator {
 	}
 	
 	public void autoSave() {
-		if(subscriber.isAutoSaving(file)) onSave(path + file + fileExtension, subscriber.onSave(file));
+		if(subscriber.isAutoSaving(file)) onSave(path, subscriber.onSave(file));
 	}
 	
 	public void autoLoad() {
