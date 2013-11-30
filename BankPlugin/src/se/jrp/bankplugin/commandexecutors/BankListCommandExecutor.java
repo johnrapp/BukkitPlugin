@@ -13,24 +13,21 @@ import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.MaterialParser;
 import se.jrp.bankplugin.resources.Strings;
 
-public class BankListCommandExecutor extends BankCommandExecutor {
+public class BankListCommandExecutor implements BankCommandExecutor {
 
-	public BankListCommandExecutor(BankPlugin bank) {
-		super(bank);
-	}
 
 	@Override
 	public void onCommand(Player player, String[] args) {
 		ArrayList<ItemStack> inventory;
-		if(!bank.inventory.containsKey(player.getName()) || (inventory = bank.inventory.get(player.getName())).size() < 1) {
+		if(!BankPlugin.inventory.containsKey(player.getName()) || (inventory = BankPlugin.inventory.get(player.getName())).size() < 1) {
 			player.sendMessage(Strings.ERROR_BANK_NOTHING_STORED);
 			return;
 		}
 		if(args.length > 0) {
-			ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
+			ArrayList<ItemStack> depositBox = BankPlugin.inventory.get(player.getName());
 			for(String arg : args) {
 				Material mat = MaterialParser.instance().getMaterial(arg);
-				if(mat != null && bank.inventory.contains(player.getName(), mat)) {
+				if(mat != null && BankPlugin.inventory.contains(player.getName(), mat)) {
 					int amount = 0;
 					for(ItemStack is : depositBox) {
 						if(is.getType() == mat) {

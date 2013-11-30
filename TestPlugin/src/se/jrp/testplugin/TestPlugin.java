@@ -12,8 +12,8 @@ import se.jrp.testplugin.filemanager.FileManager;
 import se.jrp.testplugin.filemanager.FileManipulator;
  
 public final class TestPlugin extends JavaPlugin {
-	public static String directory;
     public static TestPlugin instance;
+	public static String directory;
     public LogBlockBreakListener listener;
     public SaplingWalk saplingWalk;
     public TestPluginCommandExecutor commandExecutor;

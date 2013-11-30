@@ -7,7 +7,7 @@ public class Strings {
 	
 	public final static String FILE_BANK = "bank";
 	public final static String FILE_ACCEPTED = "accepted";
-
+	public final static String FILE_CONFIG = "config";
 	
 	public final static String COMMAND_BANK = "bank";
 	public final static String COMMAND_BANK_GET = "get";
@@ -16,7 +16,12 @@ public class Strings {
 	public final static String COMMAND_BANK_LIST = "list";
 	public final static String COMMAND_BANK_ACCEPTED = "accepted";
 	public final static String COMMAND_BANK_HELP = "help";
+
+	public final static String COMMENT_CONFIG = "The first value is the buy price and the second the sell price.";
 	
+	public final static String PROPERTIES_MAX_SLOTS = "Bank_max_slots";
+	public final static String PROPERTIES_INVERT_ACCEPTED = "Invert_the_list_of_accepted_items";
+	public final static String PROPERTIES_EVERYTHING_ACCEPTED = "Accept_everything_in_the_bank";
 	
 	public final static String ERROR_NON_PLAYER = ChatColor.RED + "You must be a player to issue this command.";
 	public final static String ERROR_INVENTORY_FULL = ChatColor.RED + "Your inventory is full.";

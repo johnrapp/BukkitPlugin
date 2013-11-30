@@ -4,26 +4,21 @@ import java.util.ArrayList;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import se.jrp.bankplugin.BankInventory;
 import se.jrp.bankplugin.BankPlugin;
 
 import se.jrp.bankplugin.resources.Book;
 import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.MaterialParser;
 import se.jrp.bankplugin.resources.Strings;
-import se.jrp.bankplugin.resources.Values;
 
-public class BankAcceptedCommandExecutor extends BankCommandExecutor {
-	public BankAcceptedCommandExecutor(BankPlugin bank) {
-		super(bank);
-	}
-
+public class BankAcceptedCommandExecutor implements BankCommandExecutor {
+	
 	@Override
 	public void onCommand(Player player, String[] args) {
 		ArrayList<String> rows = new ArrayList<>();
 		rows.add(Strings.BANK_ACCEPTED_ITEMS);
 		rows.add("");
-		for(Material mat : BankInventory.acceptedItems) {
+		for(Material mat : BankPlugin.acceptedItems) {
 			rows.add(MaterialParser.instance().getParsedName(mat));
 		}
 		ArrayList<String> pages = Book.fitToBook(rows);

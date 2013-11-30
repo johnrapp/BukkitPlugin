@@ -2,26 +2,23 @@ package se.jrp.bankplugin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Map.Entry;
+
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import se.jrp.bankplugin.filemanager.CustomProperties;
 import se.jrp.bankplugin.filemanager.FileManipulator;
 import se.jrp.bankplugin.filemanager.FileSubscriber;
-import se.jrp.bankplugin.filemanager.PropertiesFileManipulator;
+import se.jrp.bankplugin.filemanager.ObjectFileManipulator;
 
 import se.jrp.bankplugin.resources.MaterialParser;
 import se.jrp.bankplugin.resources.PlayerInventoryAnalyzer;
 import se.jrp.bankplugin.resources.Strings;
-import se.jrp.bankplugin.resources.Values;
 
 public class BankInventory extends HashMap<String, ArrayList<ItemStack>> implements FileSubscriber {
-	public final static String DIVISION_SYMBOL = ":";
-	public static ArrayList<Material> acceptedItems = new ArrayList<>();
-	private PropertiesFileManipulator manipulator;
+	public HashMap<String, HashMap<Material, Integer>> defaultObject = new HashMap<>();
 	
 	public ArrayList<ItemStack> all(String key, Material mat) {
 		ArrayList<ItemStack> result = new ArrayList<>();
@@ -33,12 +30,12 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 	}
 	
 	public boolean full(String key) {
-		return get(key).size() >= Values.BANK_MAX_SLOTS;
+		return get(key).size() >= BankPlugin.config.getInteger(Strings.PROPERTIES_MAX_SLOTS);
 	}
 	
 	public boolean addItem(Player player, ItemStack item) {
 		//TODO kolla igenom och förbättra
-		//om man tar något ifrån en sack längre bort tas det från en tidigare
+		//om man tar något ifrån en stack längre bort tas det från en tidigare
 		Material mat = item.getType();
 		ArrayList<ItemStack> all = all(player.getName(), mat);
 		boolean remove = false;
@@ -118,52 +115,55 @@ public class BankInventory extends HashMap<String, ArrayList<ItemStack>> impleme
 		return false;
 	}
 	
-	public static boolean accepted(Material material) {
-		for(Material mat : acceptedItems) if(mat == material) return true;
-		return false;
-	}
-	
 	@Override
 	public void onLoad(String id, Object object) {
-		CustomProperties prop = (CustomProperties) object;
-		for(String key : prop.stringPropertyNames()) {
-			if(Boolean.parseBoolean(prop.getProperty(key)))
-				acceptedItems.add(MaterialParser.instance().getMaterial(key));
-		}
-		if(prop.size() < Material.values().length) {
-			manipulator.save(acceptedItems);
+		HashMap<String, HashMap<Material, Integer>> serializedMap = (HashMap<String, HashMap<Material, Integer>>) object;
+		for(Entry entry : serializedMap.entrySet()) {
+			put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
 		}
 	}
-
 	@Override
-	public Object onSave(String id) {
-		return null;
+	public HashMap onSave(String id) {
+		HashMap<String, ArrayList<HashMap<Material, Integer>>> serializedMap = new HashMap<>();
+		for(Entry<String, ArrayList<ItemStack>> entry : entrySet()) {
+			serializedMap.put(entry.getKey(), serialize(entry.getValue()));
+		}
+		return serializedMap;
 	}
 	
-	@Override
-	public boolean isAutoSaving(String id) {
-		return false;
+	public ArrayList<HashMap<Material, Integer>> serialize(ArrayList<ItemStack> items) {
+		ArrayList<HashMap<Material, Integer>> result = new ArrayList<>();
+		for(ItemStack item : items) {
+            HashMap<Material, Integer> map = new HashMap<>();
+            map.put(item.getType(), item.getAmount());
+            result.add(map);
+		}
+		return result;
 	}
-
+	
+	public ArrayList<ItemStack> deSerialize(ArrayList<HashMap<Material, Integer>> items) {
+		ArrayList<ItemStack> result = new ArrayList<>();
+		for(HashMap<Material, Integer> map : items) {
+			for(Entry<Material, Integer> entry : map.entrySet()) {
+				result.add(new ItemStack(entry.getKey(), entry.getValue()));
+			}
+		}
+		return result;
+	}
+	
 	@Override
 	public Object getDefault(String id) {
-		CustomProperties prop = generateFile(Values.DEFAULT_ACCEPTED_ITEMS);
-		manipulator.save(prop);
-		return prop;
+		return defaultObject;
 	}
-	
-	public CustomProperties generateFile(List<Material> accepted) {
-		CustomProperties prop = new CustomProperties();
-		for(Material material : Material.values()) {
-			prop.put(MaterialParser.instance().getName(material), Boolean.toString(accepted.contains(material)));
-		}
-		return prop;
+
+	@Override
+	public boolean isAutoSaving(String id) {
+		return true;
 	}
 
 	@Override
 	public FileManipulator getManipulator(String id) {
-		if(manipulator == null) manipulator = new PropertiesFileManipulator(this, BankPlugin.directory, id);
-		return manipulator;
+		return new ObjectFileManipulator(this, BankPlugin.directory, id);
 	}
 }
 /*public void notifyChanges(String player) {

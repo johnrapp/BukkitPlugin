@@ -15,6 +15,8 @@ public class MaterialParser {
 		exceptions.put(Material.WATCH, "CLOCK");
 		exceptions.put(Material.SULPHUR, "GUN_POWDER");
 		exceptions.put(Material.DIODE, "REDSTONE_REPEATER");
+		exceptions.put(Material.REDSTONE_TORCH_ON, "REDSTONE_TORCH");
+		exceptions.put(Material.REDSTONE_LAMP_OFF, "REDSTONE_LAMP");
 	}
 	
 	public String getName(Material material) {

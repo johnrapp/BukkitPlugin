@@ -24,18 +24,18 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
 	public static MarketPlugin instance;
 	public static MarketPrices prices = new MarketPrices();
 	public static Economy economy = null;
-	public static String directory;
 	public static String pluginName;
+	public static String directory;
 	public HashMap<String, NestedCommandExecutor> commandExecutors = new HashMap<>();
 
     public static void main(String[] args) {
     }
     @Override
     public void onEnable() {
-		instance = this;
+        instance = this;
 		directory = getDataFolder() + File.separator;
-		pluginName = getDescription().getName();
-		if (!setupEconomy() ) {
+        pluginName = getDescription().getName();
+        if (!setupEconomy() ) {
             getLogger().severe("Disabled due to no Vault dependency found!");
             getServer().getPluginManager().disablePlugin(this);
             return;
@@ -45,10 +45,13 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
 		commandExecutors.put(Strings.COMMAND_SELL, new SellExecutor());
 		commandExecutors.put(Strings.COMMAND_PRICE, new PriceExecutor());
 		commandExecutors.put(Strings.COMMAND_TEST, test);
+		
+		PriceSpreadSheetParser parser = new PriceSpreadSheetParser();
 
 		FileManager.onEnable(new FileManipulator[] {
 			prices.getManipulator(Strings.FILE_PRICES),
-			test.getManipulator(Strings.FILE_TEST)});
+			test.getManipulator(Strings.FILE_TEST),
+			parser.getManipulator("parsed shit")});
     }
  
     @Override
@@ -83,6 +86,11 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
 	
 	public static Integer getInteger(String s, Integer defaultValue) {
 	    try { return Integer.parseInt(s); }
+	    catch(NumberFormatException e) { return defaultValue; }
+	}
+	
+	public static Boolean getBoolean(String s, Boolean defaultValue) {
+	    try { return Boolean.parseBoolean(s); }
 	    catch(NumberFormatException e) { return defaultValue; }
 	}
 }

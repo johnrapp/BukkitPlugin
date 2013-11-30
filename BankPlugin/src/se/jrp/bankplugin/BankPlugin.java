@@ -7,29 +7,23 @@ import se.jrp.bankplugin.commandexecutors.BankAcceptedCommandExecutor;
 import se.jrp.bankplugin.commandexecutors.BankCommandExecutor;
 import se.jrp.bankplugin.commandexecutors.BankGetCommandExecutor;
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
-
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import se.jrp.bankplugin.filemanager.FileManager;
 import se.jrp.bankplugin.filemanager.FileManipulator;
-import se.jrp.bankplugin.filemanager.FileSubscriber;
-import se.jrp.bankplugin.filemanager.ObjectFileManipulator;
 import se.jrp.bankplugin.resources.Functions;
 import se.jrp.bankplugin.resources.Strings;
 
-public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubscriber {
+public class BankPlugin extends JavaPlugin implements CommandExecutor {
 	public static String directory;
-	public BankInventory inventory = new BankInventory();
+	public static BankInventory inventory = new BankInventory();
+	public static AcceptedItems acceptedItems = new AcceptedItems();
+	public static Config config = new Config();
 	public HashMap<String, BankCommandExecutor> commandExecutors = new HashMap<>();
-	public HashMap<String, HashMap<Material, Integer>> defaultObject = new HashMap<>();
 	
 	public static void main(String[] args) {
     }
@@ -38,55 +32,20 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
     public void onEnable() {
 		directory = getDataFolder() + File.separator;
         FileManager.onEnable(new FileManipulator[] {
-			getManipulator(Strings.FILE_BANK), inventory.getManipulator(Strings.FILE_ACCEPTED)});
+			config.getManipulator(Strings.FILE_CONFIG), acceptedItems.getManipulator(Strings.FILE_ACCEPTED),
+			inventory.getManipulator(Strings.FILE_BANK)});
         getCommand(Strings.COMMAND_BANK).setExecutor(this);
-		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor(this));
-        commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor(this));
-        commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor(this));
-		commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor(this));
-		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor(this));
+		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor());
+        commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor());
+        commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor());
+		commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor());
+		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor());
 	}
  
     @Override
     public void onDisable() {
     	FileManager.onDisable();
     }
-	
-	@Override
-	public void onLoad(String id, Object object) {
-		HashMap<String, HashMap<Material, Integer>> serializedMap = (HashMap<String, HashMap<Material, Integer>>) object;
-		for(Entry entry : serializedMap.entrySet()) {
-			inventory.put((String) entry.getKey(), deSerialize((ArrayList<HashMap<Material, Integer>>) entry.getValue()));
-		}
-	}
-	@Override
-	public HashMap onSave(String id) {
-		HashMap<String, ArrayList<HashMap<Material, Integer>>> serializedMap = new HashMap<>();
-		for(Entry<String, ArrayList<ItemStack>> entry : inventory.entrySet()) {
-			serializedMap.put(entry.getKey(), serialize(entry.getValue()));
-		}
-		return serializedMap;
-	}
-	
-	public ArrayList<HashMap<Material, Integer>> serialize(ArrayList<ItemStack> items) {
-		ArrayList<HashMap<Material, Integer>> result = new ArrayList<>();
-		for(ItemStack item : items) {
-            HashMap<Material, Integer> map = new HashMap<>();
-            map.put(item.getType(), item.getAmount());
-            result.add(map);
-		}
-		return result;
-	}
-	
-	public ArrayList<ItemStack> deSerialize(ArrayList<HashMap<Material, Integer>> items) {
-		ArrayList<ItemStack> result = new ArrayList<>();
-		for(HashMap<Material, Integer> map : items) {
-			for(Entry<Material, Integer> entry : map.entrySet()) {
-				result.add(new ItemStack(entry.getKey(), entry.getValue()));
-			}
-		}
-		return result;
-	}
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -102,20 +61,5 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor, FileSubsc
 		}
 		
 		return false;
-	}
-
-	@Override
-	public Object getDefault(String id) {
-		return defaultObject;
-	}
-
-	@Override
-	public boolean isAutoSaving(String id) {
-		return true;
-	}
-
-	@Override
-	public FileManipulator getManipulator(String id) {
-		return new ObjectFileManipulator(this, directory, id);
 	}
 }

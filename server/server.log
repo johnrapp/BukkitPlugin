@@ -5504,3 +5504,820 @@ java.lang.ClassCastException: java.util.ArrayList cannot be cast to se.jrp.bankp
 2013-11-28 16:39:25 [INFO] Cotfsm issued server command: /market buy iron_door 4
 2013-11-28 17:07:27 [INFO] johnrapp issued server command: /tp cotfsm
 2013-11-28 17:07:27 [INFO] johnrapp: Teleported johnrapp to Cotfsm[m
+2013-11-30 02:18:22 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:18:22 [INFO] Loading properties
+2013-11-30 02:18:22 [INFO] Default game type: SURVIVAL
+2013-11-30 02:18:22 [INFO] Generating keypair
+2013-11-30 02:18:22 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:18:22 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:18:22 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:18:22 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:18:22 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:18:22 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:18:22 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:18:22 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:18:22 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:18:22 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:18:22 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:18:22 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:18:22 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:18:22 [INFO] Preparing level "world"
+2013-11-30 02:18:22 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:18:23 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:18:24 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:18:24 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:18:24 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:18:24 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-30 02:18:24 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:18:24 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:18:24 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:18:24 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:18:24 [SEVERE] Error occurred while enabling BankPlugin v1 (Is it up to date?)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to se.jrp.bankplugin.filemanager.CustomProperties
+	at se.jrp.bankplugin.filemanager.PropertiesFileManipulator.onSave(PropertiesFileManipulator.java:16)
+	at se.jrp.bankplugin.filemanager.FileManipulator.save(FileManipulator.java:21)
+	at se.jrp.bankplugin.BankInventory.onLoad(BankInventory.java:134)
+	at se.jrp.bankplugin.filemanager.FileManipulator.autoLoad(FileManipulator.java:42)
+	at se.jrp.bankplugin.filemanager.FileManager.onEnable(FileManager.java:10)
+	at se.jrp.bankplugin.BankPlugin.onEnable(BankPlugin.java:40)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:18:24 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:18:24 [INFO] Done (2.063s)! For help, type "help" or "?"
+2013-11-30 02:20:12 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:20:12 [INFO] Loading properties
+2013-11-30 02:20:12 [INFO] Default game type: SURVIVAL
+2013-11-30 02:20:12 [INFO] Generating keypair
+2013-11-30 02:20:13 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:20:13 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:20:13 [SEVERE] Could not load 'plugins\BankPlugin.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidPluginException: java.lang.ExceptionInInitializerError
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:184)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:305)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:230)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugins(CraftServer.java:241)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.<init>(CraftServer.java:219)
+	at net.minecraft.server.v1_6_R3.PlayerList.<init>(PlayerList.java:56)
+	at net.minecraft.server.v1_6_R3.DedicatedPlayerList.<init>(SourceFile:11)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:107)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ExceptionInInitializerError
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:173)
+	... 9 more
+Caused by: java.lang.NullPointerException
+	at se.jrp.bankplugin.Config.<init>(Config.java:19)
+	at se.jrp.bankplugin.BankPlugin.<clinit>(BankPlugin.java:24)
+	... 12 more
+2013-11-30 02:20:13 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:20:13 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:20:13 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:20:13 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:20:13 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:20:13 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:20:13 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:20:13 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:20:13 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:20:13 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:20:13 [INFO] Preparing level "world"
+2013-11-30 02:20:13 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:20:14 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:20:15 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:20:15 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:20:15 [SEVERE] Error occurred while enabling MarketPlugin v1 (Is it up to date?)
+java.lang.NullPointerException
+	at java.io.File.<init>(Unknown Source)
+	at se.jrp.marketplugin.filemanager.FileManipulator.autoLoad(FileManipulator.java:31)
+	at se.jrp.marketplugin.filemanager.FileManager.onEnable(FileManager.java:11)
+	at se.jrp.marketplugin.MarketPlugin.onEnable(MarketPlugin.java:49)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:20:15 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:20:15 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-30 02:20:15 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:20:15 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:20:15 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:20:15 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:20:15 [INFO] Done (1.900s)! For help, type "help" or "?"
+2013-11-30 02:20:42 [INFO] CONSOLE: Stopping the server..[m
+2013-11-30 02:20:42 [INFO] Stopping server
+2013-11-30 02:20:42 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-30 02:20:42 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-30 02:20:42 [INFO] [iConomy] Closing general data...
+2013-11-30 02:20:42 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-30 02:20:42 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-30 02:20:42 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-30 02:20:42 [INFO] Saving players
+2013-11-30 02:20:42 [WARNING] DSCT: socket closed
+2013-11-30 02:20:42 [INFO] Closing listening thread
+2013-11-30 02:20:42 [INFO] Saving worlds
+2013-11-30 02:20:42 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-30 02:20:43 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-30 02:20:43 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-30 02:21:36 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:21:36 [INFO] Loading properties
+2013-11-30 02:21:36 [INFO] Default game type: SURVIVAL
+2013-11-30 02:21:36 [INFO] Generating keypair
+2013-11-30 02:21:36 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:21:36 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:21:37 [SEVERE] Could not load 'plugins\BankPlugin.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidPluginException: java.lang.ExceptionInInitializerError
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:184)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:305)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:230)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugins(CraftServer.java:241)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.<init>(CraftServer.java:219)
+	at net.minecraft.server.v1_6_R3.PlayerList.<init>(PlayerList.java:56)
+	at net.minecraft.server.v1_6_R3.DedicatedPlayerList.<init>(SourceFile:11)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:107)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ExceptionInInitializerError
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:173)
+	... 9 more
+Caused by: java.lang.NullPointerException
+	at se.jrp.bankplugin.Config.<init>(Config.java:19)
+	at se.jrp.bankplugin.BankPlugin.<clinit>(BankPlugin.java:24)
+	... 12 more
+2013-11-30 02:21:37 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:21:37 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:21:37 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:21:37 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:21:37 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:21:37 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:21:37 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:21:37 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:21:37 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:21:37 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:21:37 [INFO] Preparing level "world"
+2013-11-30 02:21:37 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:21:38 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:21:38 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:21:38 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:22:11 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:22:11 [INFO] Loading properties
+2013-11-30 02:22:11 [INFO] Default game type: SURVIVAL
+2013-11-30 02:22:11 [INFO] Generating keypair
+2013-11-30 02:22:11 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:22:11 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:22:12 [SEVERE] Could not load 'plugins\BankPlugin.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidPluginException: java.lang.ExceptionInInitializerError
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:184)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:305)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:230)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugins(CraftServer.java:241)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.<init>(CraftServer.java:219)
+	at net.minecraft.server.v1_6_R3.PlayerList.<init>(PlayerList.java:56)
+	at net.minecraft.server.v1_6_R3.DedicatedPlayerList.<init>(SourceFile:11)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:107)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ExceptionInInitializerError
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:173)
+	... 9 more
+Caused by: java.lang.NullPointerException
+	at se.jrp.bankplugin.Config.<init>(Config.java:19)
+	at se.jrp.bankplugin.BankPlugin.<clinit>(BankPlugin.java:24)
+	... 12 more
+2013-11-30 02:22:12 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:22:12 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:22:12 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:22:12 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:22:12 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:22:12 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:22:12 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:22:12 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:22:12 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:22:12 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:22:12 [INFO] Preparing level "world"
+2013-11-30 02:22:12 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:22:13 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:22:13 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:22:13 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:23:05 [SEVERE] Error occurred while enabling MarketPlugin v1 (Is it up to date?)
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at se.jrp.marketplugin.filemanager.FileManipulator.autoLoad(FileManipulator.java:31)
+	at se.jrp.marketplugin.filemanager.FileManager.onEnable(FileManager.java:11)
+	at se.jrp.marketplugin.MarketPlugin.onEnable(MarketPlugin.java:49)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:23:05 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:23:05 [INFO] [iConomy - April Fools] Enabled (196 ms)
+2013-11-30 02:23:05 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:23:05 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:23:05 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:23:05 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:23:07 [INFO] Done (55.099s)! For help, type "help" or "?"
+2013-11-30 02:23:14 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-11-30 02:23:44 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:23:44 [INFO] Loading properties
+2013-11-30 02:23:44 [INFO] Default game type: SURVIVAL
+2013-11-30 02:23:44 [INFO] Generating keypair
+2013-11-30 02:23:45 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:23:45 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:23:45 [SEVERE] Could not load 'plugins\BankPlugin.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidPluginException: java.lang.ExceptionInInitializerError
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:184)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:305)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:230)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugins(CraftServer.java:241)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.<init>(CraftServer.java:219)
+	at net.minecraft.server.v1_6_R3.PlayerList.<init>(PlayerList.java:56)
+	at net.minecraft.server.v1_6_R3.DedicatedPlayerList.<init>(SourceFile:11)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:107)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ExceptionInInitializerError
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:173)
+	... 9 more
+Caused by: java.lang.NullPointerException
+	at se.jrp.bankplugin.Config.<init>(Config.java:19)
+	at se.jrp.bankplugin.BankPlugin.<clinit>(BankPlugin.java:24)
+	... 12 more
+2013-11-30 02:23:45 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:23:45 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:23:45 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:23:45 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:23:45 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:23:45 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:23:45 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:23:45 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:23:45 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:23:45 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:23:45 [INFO] Preparing level "world"
+2013-11-30 02:23:45 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:23:46 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:23:47 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:23:47 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:29:49 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:29:49 [INFO] Loading properties
+2013-11-30 02:29:49 [INFO] Default game type: SURVIVAL
+2013-11-30 02:29:49 [INFO] Generating keypair
+2013-11-30 02:29:50 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:29:50 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:29:50 [SEVERE] Could not load 'plugins\BankPlugin.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidPluginException: java.lang.ExceptionInInitializerError
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:184)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:305)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:230)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugins(CraftServer.java:241)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.<init>(CraftServer.java:219)
+	at net.minecraft.server.v1_6_R3.PlayerList.<init>(PlayerList.java:56)
+	at net.minecraft.server.v1_6_R3.DedicatedPlayerList.<init>(SourceFile:11)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:107)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+Caused by: java.lang.ExceptionInInitializerError
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:173)
+	... 9 more
+Caused by: java.lang.NullPointerException
+	at se.jrp.bankplugin.Config.<init>(Config.java:18)
+	at se.jrp.bankplugin.BankPlugin.<clinit>(BankPlugin.java:25)
+	... 12 more
+2013-11-30 02:29:50 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:29:50 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:29:50 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:29:50 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:29:50 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:29:50 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:29:50 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:29:50 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:29:50 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:29:50 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:29:50 [INFO] Preparing level "world"
+2013-11-30 02:29:50 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:29:51 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:29:51 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:29:52 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:29:52 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:29:52 [INFO] [iConomy - April Fools] Enabled (16 ms)
+2013-11-30 02:29:52 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:29:52 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:29:52 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:29:52 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:29:52 [INFO] Done (1.891s)! For help, type "help" or "?"
+2013-11-30 02:31:13 [INFO] CONSOLE: Stopping the server..[m
+2013-11-30 02:31:13 [INFO] Stopping server
+2013-11-30 02:31:13 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-30 02:31:13 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-30 02:31:13 [INFO] [iConomy] Closing general data...
+2013-11-30 02:31:13 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-30 02:31:13 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-30 02:31:13 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-30 02:31:13 [INFO] Saving players
+2013-11-30 02:31:13 [WARNING] DSCT: socket closed
+2013-11-30 02:31:13 [INFO] Saving worlds
+2013-11-30 02:31:13 [INFO] Closing listening thread
+2013-11-30 02:31:13 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-30 02:31:13 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-30 02:31:13 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-30 02:31:19 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:31:19 [INFO] Loading properties
+2013-11-30 02:31:19 [INFO] Default game type: SURVIVAL
+2013-11-30 02:31:19 [INFO] Generating keypair
+2013-11-30 02:31:20 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:31:20 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:31:20 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:31:20 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:31:20 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:31:20 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:31:20 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:31:20 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:31:20 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:31:20 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:31:20 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:31:20 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:31:20 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:31:20 [INFO] Preparing level "world"
+2013-11-30 02:31:20 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:31:21 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:31:22 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:31:22 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:31:22 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:31:22 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-30 02:31:22 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:31:22 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:31:22 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:31:22 [SEVERE] Error occurred while enabling BankPlugin v1 (Is it up to date?)
+java.lang.NullPointerException
+	at se.jrp.bankplugin.Config.init(Config.java:18)
+	at se.jrp.bankplugin.BankPlugin.onEnable(BankPlugin.java:34)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:31:22 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:31:22 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:31:22 [INFO] Done (1.903s)! For help, type "help" or "?"
+2013-11-30 02:31:33 [INFO] CONSOLE: Stopping the server..[m
+2013-11-30 02:31:33 [INFO] Stopping server
+2013-11-30 02:31:33 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-30 02:31:33 [SEVERE] Error occurred while disabling BankPlugin v1 (Is it up to date?)
+java.lang.NullPointerException
+	at se.jrp.bankplugin.filemanager.FileManager.onDisable(FileManager.java:14)
+	at se.jrp.bankplugin.BankPlugin.onDisable(BankPlugin.java:48)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:219)
+	at org.bukkit.plugin.java.JavaPluginLoader.disablePlugin(JavaPluginLoader.java:481)
+	at org.bukkit.plugin.SimplePluginManager.disablePlugin(SimplePluginManager.java:400)
+	at org.bukkit.plugin.SimplePluginManager.disablePlugins(SimplePluginManager.java:393)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.disablePlugins(CraftServer.java:279)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.stop(MinecraftServer.java:345)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:452)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:31:33 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-30 02:31:33 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-30 02:31:33 [INFO] [iConomy] Closing general data...
+2013-11-30 02:31:33 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-30 02:31:33 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-30 02:31:33 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-30 02:31:33 [INFO] Saving players
+2013-11-30 02:31:33 [WARNING] DSCT: socket closed
+2013-11-30 02:31:33 [INFO] Saving worlds
+2013-11-30 02:31:33 [INFO] Closing listening thread
+2013-11-30 02:31:33 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-30 02:31:35 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-30 02:31:35 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-30 02:31:35 [INFO] Stopping server
+2013-11-30 02:31:38 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:31:38 [INFO] Loading properties
+2013-11-30 02:31:38 [INFO] Default game type: SURVIVAL
+2013-11-30 02:31:38 [INFO] Generating keypair
+2013-11-30 02:31:39 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:31:39 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:31:39 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:31:39 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:31:39 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:31:39 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:31:39 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:31:39 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:31:39 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:31:39 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:31:39 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:31:39 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:31:39 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:31:39 [INFO] Preparing level "world"
+2013-11-30 02:31:39 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:31:40 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:31:41 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:31:41 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:31:48 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:31:48 [INFO] [iConomy - April Fools] Enabled (24 ms)
+2013-11-30 02:31:48 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:31:48 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:31:48 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:31:48 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:31:57 [SEVERE] Error occurred while enabling BankPlugin v1 (Is it up to date?)
+java.lang.NullPointerException
+	at se.jrp.bankplugin.Config.init(Config.java:18)
+	at se.jrp.bankplugin.BankPlugin.onEnable(BankPlugin.java:34)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:31:57 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:31:58 [INFO] Done (19.386s)! For help, type "help" or "?"
+2013-11-30 02:32:02 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-11-30 02:34:26 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:34:26 [INFO] Loading properties
+2013-11-30 02:34:26 [INFO] Default game type: SURVIVAL
+2013-11-30 02:34:26 [INFO] Generating keypair
+2013-11-30 02:34:26 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:34:26 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:34:47 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:34:47 [INFO] Loading properties
+2013-11-30 02:34:47 [INFO] Default game type: SURVIVAL
+2013-11-30 02:34:47 [INFO] Generating keypair
+2013-11-30 02:34:48 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:34:48 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:34:48 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:34:48 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:34:48 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:34:48 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:34:48 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:34:48 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:34:48 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:34:48 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:34:48 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:34:48 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:34:48 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:34:48 [INFO] Preparing level "world"
+2013-11-30 02:34:48 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:34:49 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:34:49 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:34:50 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:34:50 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:34:50 [INFO] [iConomy - April Fools] Enabled (16 ms)
+2013-11-30 02:34:50 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:34:50 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:34:50 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:34:50 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:34:50 [SEVERE] Error occurred while enabling BankPlugin v1 (Is it up to date?)
+java.lang.ClassCastException: java.lang.Boolean cannot be cast to java.lang.String
+	at java.util.Properties.store0(Unknown Source)
+	at java.util.Properties.store(Unknown Source)
+	at se.jrp.bankplugin.filemanager.CustomProperties.store(CustomProperties.java:22)
+	at se.jrp.bankplugin.filemanager.PropertiesFileManipulator.onSave(PropertiesFileManipulator.java:18)
+	at se.jrp.bankplugin.filemanager.FileManipulator.save(FileManipulator.java:21)
+	at se.jrp.bankplugin.Config.getDefault(Config.java:40)
+	at se.jrp.bankplugin.filemanager.FileManipulator.autoLoad(FileManipulator.java:35)
+	at se.jrp.bankplugin.filemanager.FileManager.onEnable(FileManager.java:9)
+	at se.jrp.bankplugin.BankPlugin.onEnable(BankPlugin.java:34)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:34:50 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:34:50 [INFO] Done (1.892s)! For help, type "help" or "?"
+2013-11-30 02:38:10 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-30 02:38:10 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-30 02:38:10 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-30 02:38:10 [INFO] [iConomy] Closing general data...
+2013-11-30 02:38:10 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-30 02:38:10 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-30 02:38:10 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-30 02:38:10 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:38:10 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:38:10 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:38:10 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:38:10 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:38:10 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:38:10 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:38:10 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:38:10 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:38:10 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:38:10 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:38:10 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:38:10 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:38:10 [INFO] [iConomy - April Fools] Enabled (14 ms)
+2013-11-30 02:38:10 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:38:10 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:38:10 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:38:10 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:38:10 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:38:10 [INFO] CONSOLE: [0;32;1mReload complete.[m
+2013-11-30 02:39:23 [INFO] CONSOLE: Stopping the server..[m
+2013-11-30 02:39:23 [INFO] Stopping server
+2013-11-30 02:39:23 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-30 02:39:23 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-30 02:39:23 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-30 02:39:23 [INFO] [iConomy] Closing general data...
+2013-11-30 02:39:23 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-30 02:39:23 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-30 02:39:23 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-30 02:39:23 [INFO] Saving players
+2013-11-30 02:39:23 [INFO] Saving worlds
+2013-11-30 02:39:23 [WARNING] DSCT: socket closed
+2013-11-30 02:39:23 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-30 02:39:23 [INFO] Closing listening thread
+2013-11-30 02:39:23 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-30 02:39:23 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-30 02:39:23 [INFO] Stopping server
+2013-11-30 02:39:31 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:39:31 [INFO] Loading properties
+2013-11-30 02:39:31 [INFO] Default game type: SURVIVAL
+2013-11-30 02:39:31 [INFO] Generating keypair
+2013-11-30 02:39:31 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:39:32 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:39:32 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:39:32 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:39:32 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:39:32 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:39:32 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:39:32 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:39:32 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:39:32 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:39:32 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:39:32 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:39:32 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:39:32 [INFO] Preparing level "world"
+2013-11-30 02:39:32 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:39:33 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:39:33 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:39:34 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:39:34 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:39:34 [INFO] [iConomy - April Fools] Enabled (17 ms)
+2013-11-30 02:39:34 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:39:34 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:39:34 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:39:34 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:39:34 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:39:34 [INFO] Done (1.903s)! For help, type "help" or "?"
+2013-11-30 02:39:54 [INFO] CONSOLE: Stopping the server..[m
+2013-11-30 02:39:54 [INFO] Stopping server
+2013-11-30 02:39:54 [INFO] [BankPlugin] Disabling BankPlugin v1
+2013-11-30 02:39:54 [INFO] [iConomy] Disabling iConomy v7.0
+2013-11-30 02:39:54 [INFO] [Vault][Economy] iConomy 7 unhooked.
+2013-11-30 02:39:54 [INFO] [iConomy] Closing general data...
+2013-11-30 02:39:54 [INFO] [iConomy] Disabled. (0 ms)
+2013-11-30 02:39:54 [INFO] [MarketPlugin] Disabling MarketPlugin v1
+2013-11-30 02:39:54 [INFO] [Vault] Disabling Vault v1.2.27-b349
+2013-11-30 02:39:54 [INFO] Saving players
+2013-11-30 02:39:54 [WARNING] DSCT: socket closed
+2013-11-30 02:39:54 [INFO] Saving worlds
+2013-11-30 02:39:54 [INFO] Closing listening thread
+2013-11-30 02:39:54 [INFO] Saving chunks for level 'world'/Overworld
+2013-11-30 02:39:55 [INFO] Saving chunks for level 'world_nether'/Nether
+2013-11-30 02:39:55 [INFO] Saving chunks for level 'world_the_end'/The End
+2013-11-30 02:39:55 [INFO] Stopping server
+2013-11-30 02:39:59 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:39:59 [INFO] Loading properties
+2013-11-30 02:39:59 [INFO] Default game type: SURVIVAL
+2013-11-30 02:39:59 [INFO] Generating keypair
+2013-11-30 02:39:59 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:39:59 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:40:00 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:40:00 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:40:00 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:40:00 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:40:00 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:40:00 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:40:00 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:40:00 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:40:00 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:40:00 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:40:00 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:40:00 [INFO] Preparing level "world"
+2013-11-30 02:40:00 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:40:01 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:40:01 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:40:01 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:40:01 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:40:01 [INFO] [iConomy - April Fools] Enabled (27 ms)
+2013-11-30 02:40:01 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:40:01 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:40:01 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:40:01 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:40:01 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:40:01 [INFO] Done (1.829s)! For help, type "help" or "?"
+2013-11-30 02:40:12 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:40:12 [INFO] Loading properties
+2013-11-30 02:40:12 [INFO] Default game type: SURVIVAL
+2013-11-30 02:40:12 [INFO] Generating keypair
+2013-11-30 02:40:12 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:40:12 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:40:12 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:40:12 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:40:12 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:40:12 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:40:12 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:40:12 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:40:12 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:40:12 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:40:12 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:40:12 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:40:12 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:40:12 [INFO] Preparing level "world"
+2013-11-30 02:40:13 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:40:13 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:40:14 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:40:14 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:40:14 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:40:14 [INFO] [iConomy - April Fools] Enabled (26 ms)
+2013-11-30 02:40:14 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:40:14 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:40:14 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:40:14 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:41:01 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:41:01 [INFO] Loading properties
+2013-11-30 02:41:01 [INFO] Default game type: SURVIVAL
+2013-11-30 02:41:01 [INFO] Generating keypair
+2013-11-30 02:41:02 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:41:02 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:41:02 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:41:02 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:41:02 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:41:02 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:41:02 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:41:02 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:41:02 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:41:02 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:41:02 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:41:02 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:41:02 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:41:02 [INFO] Preparing level "world"
+2013-11-30 02:41:02 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:41:03 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:41:04 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:41:04 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:41:04 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:41:04 [INFO] [iConomy - April Fools] Enabled (26 ms)
+2013-11-30 02:41:04 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:41:04 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:41:04 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:41:04 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:41:34 [SEVERE] Error occurred while enabling BankPlugin v1 (Is it up to date?)
+java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
+	at java.util.Properties.store0(Properties.java:828)
+	at java.util.Properties.store(Properties.java:812)
+	at se.jrp.bankplugin.filemanager.CustomProperties.store(CustomProperties.java:22)
+	at se.jrp.bankplugin.filemanager.PropertiesFileManipulator.onSave(PropertiesFileManipulator.java:18)
+	at se.jrp.bankplugin.filemanager.FileManipulator.save(FileManipulator.java:21)
+	at se.jrp.bankplugin.Config.getDefault(Config.java:40)
+	at se.jrp.bankplugin.filemanager.FileManipulator.autoLoad(FileManipulator.java:35)
+	at se.jrp.bankplugin.filemanager.FileManager.onEnable(FileManager.java:9)
+	at se.jrp.bankplugin.BankPlugin.onEnable(BankPlugin.java:34)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:217)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:457)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:381)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.loadPlugin(CraftServer.java:284)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftServer.enablePlugins(CraftServer.java:266)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.l(MinecraftServer.java:315)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.f(MinecraftServer.java:292)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.a(MinecraftServer.java:252)
+	at net.minecraft.server.v1_6_R3.DedicatedServer.init(DedicatedServer.java:152)
+	at net.minecraft.server.v1_6_R3.MinecraftServer.run(MinecraftServer.java:393)
+	at net.minecraft.server.v1_6_R3.ThreadServerApplication.run(SourceFile:583)
+2013-11-30 02:41:34 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:41:35 [INFO] Done (33.196s)! For help, type "help" or "?"
+2013-11-30 02:41:39 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-11-30 02:42:04 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:42:04 [INFO] Loading properties
+2013-11-30 02:42:04 [INFO] Default game type: SURVIVAL
+2013-11-30 02:42:04 [INFO] Generating keypair
+2013-11-30 02:42:04 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:42:04 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:42:04 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:42:04 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:42:04 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:42:04 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:42:04 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:42:04 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:42:04 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:42:04 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:42:04 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:42:04 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:42:04 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:42:04 [INFO] Preparing level "world"
+2013-11-30 02:42:05 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:42:05 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:42:06 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:42:06 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:42:06 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:42:06 [INFO] [iConomy - April Fools] Enabled (23 ms)
+2013-11-30 02:42:06 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:42:06 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:42:06 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:42:06 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:42:06 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:42:06 [INFO] Done (1.752s)! For help, type "help" or "?"
+2013-11-30 02:43:02 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:43:02 [INFO] Loading properties
+2013-11-30 02:43:02 [INFO] Default game type: SURVIVAL
+2013-11-30 02:43:02 [INFO] Generating keypair
+2013-11-30 02:43:02 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:43:02 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:43:02 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:43:02 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:43:02 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:43:02 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:43:02 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:43:02 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:43:02 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:43:02 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:43:02 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:43:02 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:43:02 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:43:02 [INFO] Preparing level "world"
+2013-11-30 02:43:02 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:43:03 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:43:04 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:43:04 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:43:04 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:43:04 [INFO] [iConomy - April Fools] Enabled (23 ms)
+2013-11-30 02:43:04 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:43:04 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:43:04 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:43:04 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:43:04 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:43:04 [INFO] Done (1.724s)! For help, type "help" or "?"
+2013-11-30 02:44:55 [INFO] Starting minecraft server version 1.6.4
+2013-11-30 02:44:55 [INFO] Loading properties
+2013-11-30 02:44:55 [INFO] Default game type: SURVIVAL
+2013-11-30 02:44:55 [INFO] Generating keypair
+2013-11-30 02:44:56 [INFO] Starting Minecraft server on *:25565
+2013-11-30 02:44:56 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2013-11-30 02:44:56 [INFO] [Vault] Loading Vault v1.2.27-b349
+2013-11-30 02:44:56 [INFO] [MarketPlugin] Loading MarketPlugin v1
+2013-11-30 02:44:56 [INFO] [iConomy] Loading iConomy v7.0
+2013-11-30 02:44:56 [INFO] [BankPlugin] Loading BankPlugin v1
+2013-11-30 02:44:56 [INFO] [Vault] Enabling Vault v1.2.27-b349
+2013-11-30 02:44:56 [WARNING] iConomy - If you are using Flatfile storage be aware that versions 6, 7 and 8 have a CRITICAL bug which can wipe ALL iconomy data.
+2013-11-30 02:44:56 [WARNING] if you're using Votifier, or any other plugin which handles economy data in a threaded manner your server is at risk!
+2013-11-30 02:44:56 [WARNING] it is highly suggested to use SQL with iCo6 or to use an alternative economy plugin!
+2013-11-30 02:44:56 [INFO] [Vault][Economy] iConomy 6 found: Waiting
+2013-11-30 02:44:56 [INFO] [Vault][Permission] SuperPermissions loaded as backup permission system.
+2013-11-30 02:44:56 [INFO] [Vault] Enabled Version 1.2.27-b349
+2013-11-30 02:44:56 [INFO] Preparing level "world"
+2013-11-30 02:44:56 [INFO] Preparing start region for level 0 (Seed: -8652370655938373429)
+2013-11-30 02:44:57 [INFO] Preparing start region for level 1 (Seed: -8652370655938373429)
+2013-11-30 02:44:58 [INFO] Preparing start region for level 2 (Seed: -8652370655938373429)
+2013-11-30 02:44:58 [INFO] [MarketPlugin] Enabling MarketPlugin v1
+2013-11-30 02:44:58 [INFO] [iConomy] Enabling iConomy v7.0
+2013-11-30 02:44:58 [INFO] [iConomy - April Fools] Enabled (25 ms)
+2013-11-30 02:44:58 [INFO] [iConomy] Hello, I'm Nijikokun. Yes, this is an April Fools joke, but '/money top' was fixed! Enjoy :) - Rare Version!
+2013-11-30 02:44:58 [INFO] [Vault][Economy] iConomy 7 hooked.
+2013-11-30 02:44:58 [INFO] [BankPlugin] Enabling BankPlugin v1
+2013-11-30 02:44:58 [INFO] [iConomy - April Fools] Purged accounts with default balance.
+2013-11-30 02:44:58 [INFO] Server permissions file permissions.yml is empty, ignoring it
+2013-11-30 02:44:58 [INFO] Done (1.813s)! For help, type "help" or "?"
+2013-11-30 02:45:27 [INFO] Cotfsm[/127.0.0.1:51307] logged in with entity id 173 at ([world] 337.66474753848485, 64.0, -15.947681370004116)
+2013-11-30 02:45:31 [INFO] Cotfsm issued server command: /bank store

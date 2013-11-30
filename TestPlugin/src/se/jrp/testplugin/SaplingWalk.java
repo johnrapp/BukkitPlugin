@@ -14,6 +14,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import se.jrp.testplugin.filemanager.FileManager;
 import se.jrp.testplugin.resources.Strings;
 import se.jrp.testplugin.filemanager.FileManipulator;
 import se.jrp.testplugin.filemanager.FileSubscriber;
@@ -100,7 +101,7 @@ public class SaplingWalk implements Listener, CommandExecutor, FileSubscriber {
 
 	@Override
 	public Object getDefault(String id) {
-		return new HashMap<String, Boolean>();
+		return new HashMap<>();
 	}
 
 	@Override

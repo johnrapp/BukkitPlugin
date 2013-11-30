@@ -1,13 +1,12 @@
 package se.jrp.marketplugin.filemanager;
 
 public class FileManager {
-    public final static String FILE_EXTENSION = ".bin";
     public static FileManipulator[] manipulators;
 
     public static void onEnable(FileManipulator[] manipulators) {
         FileManager.manipulators = manipulators;
         for(FileManipulator manipulator : manipulators) {
-			manipulator.autoLoad();
+            manipulator.autoLoad();
         }
     }
 

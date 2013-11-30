@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import se.jrp.marketplugin.filemanager.FileManipulator;
 import se.jrp.marketplugin.filemanager.FileSubscriber;
 import se.jrp.marketplugin.filemanager.CustomProperties;
+import se.jrp.marketplugin.filemanager.FileManager;
 import se.jrp.marketplugin.filemanager.PropertiesFileManipulator;
 import se.jrp.marketplugin.resources.MaterialParser;
 import se.jrp.marketplugin.resources.Strings;

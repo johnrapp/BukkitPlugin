@@ -15,15 +15,12 @@ import se.jrp.bankplugin.resources.MaterialParser;
 import se.jrp.bankplugin.resources.PlayerInventoryAnalyzer;
 import se.jrp.bankplugin.resources.Strings;
 
-public class BankGetCommandExecutor extends BankCommandExecutor {
-
-	public BankGetCommandExecutor(BankPlugin bank) {
-		super(bank);
-	}
+public class BankGetCommandExecutor implements BankCommandExecutor {
+	
 	@Override
 	public void onCommand(Player player, String[] args) {
 		PlayerInventory inventory = player.getInventory();
-		ArrayList<ItemStack> depositBox = bank.inventory.get(player.getName());
+		ArrayList<ItemStack> depositBox = BankPlugin.inventory.get(player.getName());
 		if(args.length < 1) {
 			player.sendMessage(Strings.ERROR_BANK_GET_NO_ARGUMENTS);
 		} else if(PlayerInventoryAnalyzer.full(inventory)) {
@@ -67,10 +64,10 @@ public class BankGetCommandExecutor extends BankCommandExecutor {
 		for(int i = 0; i < args.length; i += 2) {
 			if(!PlayerInventoryAnalyzer.full(inventory)) {
 				Material mat = MaterialParser.instance().getMaterial(args[i]);
-				if(mat != null && bank.inventory.contains(player.getName(), mat)) {
+				if(mat != null && BankPlugin.inventory.contains(player.getName(), mat)) {
 					String amount = args[i + 1];
 					if(Functions.getInteger(amount, null) != null) {
-						bank.inventory.getItem(player, new ItemStack(mat, Integer.parseInt(amount)));
+						BankPlugin.inventory.getItem(player, new ItemStack(mat, Integer.parseInt(amount)));
 					} else {
 						player.sendMessage(ChatColor.RED + amount + Strings.ERROR_NON_NUMBER);
 						break;

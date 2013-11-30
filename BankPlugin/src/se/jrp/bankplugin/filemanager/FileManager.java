@@ -1,7 +1,6 @@
 package se.jrp.bankplugin.filemanager;
 
 public class FileManager {
-    public final static String FILE_EXTENSION = ".bin";
     public static FileManipulator[] manipulators;
 
     public static void onEnable(FileManipulator[] manipulators) {

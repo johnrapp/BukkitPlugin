@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import se.jrp.marketplugin.MarketPlugin;
+import se.jrp.marketplugin.filemanager.FileManager;
 import se.jrp.marketplugin.filemanager.FileManipulator;
 import se.jrp.marketplugin.filemanager.FileSubscriber;
 import se.jrp.marketplugin.filemanager.ObjectFileManipulator;
