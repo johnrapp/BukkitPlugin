@@ -1,0 +1,15 @@
+name: PlayerTrading
+main: se.jrp.playertrading.PlayerTrading
+version: 1
+depend: [Vault]
+commands:
+   auction:
+      description: Trade with other Players using auctions.
+      usage: /auction <auction number:new:all:view:bid:end:delete>
+      permission:
+      permission-message:
+   ad:
+      description: Trade with other Players using ads.
+      usage: /auction <all, view, bid, delete, end, new>
+      permission:
+      permission-message:

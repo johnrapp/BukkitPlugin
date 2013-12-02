@@ -35,7 +35,7 @@ public class MarketPlugin extends JavaPlugin implements CommandExecutor {
         instance = this;
 		directory = getDataFolder() + File.separator;
         pluginName = getDescription().getName();
-        if (!setupEconomy() ) {
+        if(!setupEconomy() ) {
             getLogger().severe("Disabled due to no Vault dependency found!");
             getServer().getPluginManager().disablePlugin(this);
             return;

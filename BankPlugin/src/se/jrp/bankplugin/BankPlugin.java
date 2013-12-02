@@ -1,5 +1,6 @@
 package se.jrp.bankplugin;
 
+import se.jrp.bankplugin.filemanager.Config;
 import se.jrp.bankplugin.commandexecutors.BankStoreCommandExecutor;
 import se.jrp.bankplugin.commandexecutors.BankHelpCommandExecutor;
 import se.jrp.bankplugin.commandexecutors.BankListCommandExecutor;
@@ -31,15 +32,20 @@ public class BankPlugin extends JavaPlugin implements CommandExecutor {
 	@Override
     public void onEnable() {
 		directory = getDataFolder() + File.separator;
-        FileManager.onEnable(new FileManipulator[] {
-			config.getManipulator(Strings.FILE_CONFIG), acceptedItems.getManipulator(Strings.FILE_ACCEPTED),
-			inventory.getManipulator(Strings.FILE_BANK)});
-        getCommand(Strings.COMMAND_BANK).setExecutor(this);
+		
+		config.addProperty(Strings.PROPERTIES_MAX_SLOTS, "54");
+		config.addProperty(Strings.PROPERTIES_INVERT_ACCEPTED, "false");
+		config.addProperty(Strings.PROPERTIES_EVERYTHING_ACCEPTED, "false");
+		
 		commandExecutors.put(Strings.COMMAND_BANK_GET, new BankGetCommandExecutor());
         commandExecutors.put(Strings.COMMAND_BANK_STORE, new BankStoreCommandExecutor());
         commandExecutors.put(Strings.COMMAND_BANK_LIST, new BankListCommandExecutor());
 		commandExecutors.put(Strings.COMMAND_BANK_ACCEPTED, new BankAcceptedCommandExecutor());
 		commandExecutors.put(Strings.COMMAND_BANK_HELP, new BankHelpCommandExecutor());
+		
+        FileManager.onEnable(new FileManipulator[] {
+			config.getManipulator(Strings.FILE_CONFIG), acceptedItems.getManipulator(Strings.FILE_ACCEPTED),
+			inventory.getManipulator(Strings.FILE_BANK)});
 	}
  
     @Override

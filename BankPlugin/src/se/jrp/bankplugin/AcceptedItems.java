@@ -8,12 +8,14 @@ import se.jrp.bankplugin.filemanager.FileManipulator;
 import se.jrp.bankplugin.filemanager.FileSubscriber;
 import se.jrp.bankplugin.filemanager.PropertiesFileManipulator;
 import se.jrp.bankplugin.resources.MaterialParser;
+import se.jrp.bankplugin.resources.Strings;
 import se.jrp.bankplugin.resources.Values;
 
 public class AcceptedItems extends ArrayList<Material> implements FileSubscriber {
 	private PropertiesFileManipulator manipulator;
 
-	public static boolean accepted(Material material, ArrayList<Material> acceptedItems) {
+	public static boolean accepted(Material material, AcceptedItems acceptedItems) {
+		if(acceptedItems.size() <= 0) return true;
 		for(Material mat : acceptedItems) if(mat == material) return true;
 		return false;
 	}
@@ -22,12 +24,17 @@ public class AcceptedItems extends ArrayList<Material> implements FileSubscriber
 		return accepted(material, BankPlugin.acceptedItems);
 	}
 	
+	
 	@Override
 	public void onLoad(String id, Object object) {
+		if(BankPlugin.config.getBoolean(Strings.PROPERTIES_EVERYTHING_ACCEPTED)) return;
+		
 		CustomProperties prop = (CustomProperties) object;
+		boolean invert = BankPlugin.config.getBoolean(Strings.PROPERTIES_INVERT_ACCEPTED);
 		for(String key : prop.stringPropertyNames()) {
-			if(Boolean.parseBoolean(prop.getProperty(key)))
-				this.add(MaterialParser.instance().getMaterial(key));
+			boolean accepted = Boolean.parseBoolean(prop.getProperty(key));
+			if((accepted && !invert) || (!accepted && invert))
+				add(MaterialParser.instance().getMaterial(key));
 		}
 		if(prop.size() < Material.values().length) {
 			manipulator.save(generateFile(this));

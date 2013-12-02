@@ -1,37 +1,33 @@
-package se.jrp.bankplugin;
+package se.jrp.bankplugin.filemanager;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
-import se.jrp.bankplugin.filemanager.CustomProperties;
-import se.jrp.bankplugin.filemanager.FileManipulator;
-import se.jrp.bankplugin.filemanager.FileSubscriber;
-import se.jrp.bankplugin.filemanager.PropertiesFileManipulator;
+import se.jrp.bankplugin.BankPlugin;
 import se.jrp.bankplugin.resources.Functions;
-import se.jrp.bankplugin.resources.Strings;
 
 public class Config implements FileSubscriber {
 	private PropertiesFileManipulator manipulator;
 	
-	private CustomProperties defaultProperties = new CustomProperties();
+	private final HashMap<String, String> defaultProperties = new HashMap<>();
 	private CustomProperties properties;
 
-	public Config() {
-		defaultProperties.put(Strings.PROPERTIES_MAX_SLOTS, "54");
-		defaultProperties.put(Strings.PROPERTIES_INVERT_ACCEPTED, "false");
-		defaultProperties.put(Strings.PROPERTIES_EVERYTHING_ACCEPTED, "false");
-	}
-	
 	public String getString(String key) {
 		return properties.getProperty(key);
 	}
 	
 	public Integer getInteger(String key) {
 		return Functions.getInteger(properties.getProperty(key),
-			defaultProperties.containsKey(key) ? (int) defaultProperties.get(key) : null);
+				Functions.getInteger(defaultProperties.get(key), null));
 	}
 	
 	public Boolean getBoolean(String key) {
 		return Functions.getBoolean(properties.getProperty(key),
-			defaultProperties.containsKey(key) ? (boolean) defaultProperties.get(key) : null);
+				Functions.getBoolean(defaultProperties.get(key), null));
+	}
+	
+	public void addProperty(String key, String value) {
+		defaultProperties.put(key, value);
 	}
 	
 	@Override
@@ -41,9 +37,9 @@ public class Config implements FileSubscriber {
 		return prop;
 	}
 	
-	public CustomProperties generateFile(CustomProperties properties) {
+	public CustomProperties generateFile(Map map) {
 		CustomProperties prop = new CustomProperties();
-		for(Entry<Object, Object> entry : defaultProperties.entrySet())
+		for(Entry<String, String> entry : defaultProperties.entrySet())
 			prop.put(entry.getKey(), prop.containsKey(entry.getKey()) ?
 					entry.getValue() : defaultProperties.get(entry.getKey()));
 		return prop;
@@ -53,9 +49,7 @@ public class Config implements FileSubscriber {
 	public void onLoad(String id, Object object) {
 		properties = (CustomProperties) object;
 		if(properties.size() < defaultProperties.size()) {
-			for(Entry<Object, Object> entry : defaultProperties.entrySet())
-				if(!properties.containsKey(entry.getKey())) properties.put(entry.getKey(), entry.getValue());
-			manipulator.save(properties);
+			manipulator.save(generateFile(properties));
 		}
 	}
 

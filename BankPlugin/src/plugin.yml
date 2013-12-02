@@ -4,6 +4,6 @@ version: 1
 commands:
    bank:
       description: Get, store, or receive help about or view items in bank.
-      usage: /bank <get, store, list, help, acceted>
+      usage: /bank <get, store, list, help, accepted>
       permission:
       permission-message:

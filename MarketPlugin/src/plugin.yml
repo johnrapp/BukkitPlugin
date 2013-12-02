@@ -1,6 +1,7 @@
 name: MarketPlugin
 main: se.jrp.marketplugin.MarketPlugin
 version: 1
+depend: [Vault]
 commands:
    market:
       description: View the price of, sell or buy an item on the Market.
